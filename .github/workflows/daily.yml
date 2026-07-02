@@ -2,15 +2,23 @@ name: AI事务管家 · 每日自动运行
 
 on:
   schedule:
-    # 每天早上8点 检查补发
+    # 每天早上8:02 检查/补发
     - cron: '2 0 * * *'
-    # 每天晚上8点02分 综合简报
+    # 工作日下午3:02 股市简报（北京时间，周末跳过）
+    - cron: '2 7 * * 1-5'
+    # 每天晚上8:02 综合简报
     - cron: '2 12 * * *'
   workflow_dispatch:
+    inputs:
+      task:
+        description: '手动指定任务 (可选)'
+        required: false
+        default: ''
 
 jobs:
-  run:
+  stock-report:
     runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
     steps:
       - uses: actions/checkout@v4
 
@@ -26,12 +34,43 @@ jobs:
         run: echo "Asia/Shanghai" | sudo tee /etc/timezone && sudo apt-get install -y tzdata && sudo ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
       - name: 股市简报
+        env:
+          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
         run: python3 stock_report.py
 
+  daily-briefing:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安装依赖
+        run: pip install requests
+
+      - name: 设置时区 上海
+        run: echo "Asia/Shanghai" | sudo tee /etc/timezone && sudo apt-get install -y tzdata && sudo ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
       - name: 综合简报
+        env:
+          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
         run: python3 order_manager.py briefing
 
       - name: 漏单+待办提醒
+        env:
+          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
         run: |
           python3 order_manager.py remind_orders
           python3 order_manager.py remind_events
