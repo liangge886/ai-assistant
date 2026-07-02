@@ -1,0 +1,41 @@
+name: AI事务管家 · 每日自动运行
+
+on:
+  schedule:
+    # 每天早上8点检查补发
+    - cron: '2 0 * * *'
+    # 每天下午3点02分 股市简报
+    - cron: '2 7 * * 1-5'
+    # 每天下午5点 漏单提醒
+    - cron: '2 9 * * *'
+    # 每天晚上8点02分 综合简报
+    - cron: '2 12 * * *'
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安装依赖
+        run: pip install requests
+
+      - name: 设置时区
+        run: echo "Asia/Shanghai" > /etc/timezone
+
+      - name: 股市简报
+        run: python3 stock_report.py
+
+      - name: 订单+事件综合简报
+        run: python3 order_manager.py briefing
+
+      - name: 漏单+待办提醒
+        run: |
+          python3 order_manager.py remind_orders
+          python3 order_manager.py remind_events
