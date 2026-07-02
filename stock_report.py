@@ -9,6 +9,7 @@ A 股每日行情简报脚本
   - 博实股份 (002698)：机器人热门赛道龙头
 """
 
+import os
 import requests
 import smtplib
 import re
@@ -17,9 +18,9 @@ from email.mime.multipart import MIMEMultipart
 from datetime import datetime
 
 # ============ 配置 ============
-EMAIL_SENDER = "38797137@qq.com"
-EMAIL_PASSWORD = "fpwguhihlqtnbggd"
-EMAIL_RECEIVER = "38797137@qq.com"
+EMAIL_SENDER = os.environ.get("EMAIL_SENDER", "38797137@qq.com")
+EMAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD", "fpwguhihlqtnbggd")
+EMAIL_RECEIVER = os.environ.get("EMAIL_RECEIVER", "38797137@qq.com")
 SMTP_SERVER = "smtp.qq.com"
 SMTP_PORT = 465
 

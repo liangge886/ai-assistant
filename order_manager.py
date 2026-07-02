@@ -29,12 +29,12 @@ from datetime import datetime, date
 ORDERS_DIR = "/workspace/orders"
 ORDERS_FILE = os.path.join(ORDERS_DIR, "orders.json")
 EVENTS_FILE = os.path.join(ORDERS_DIR, "events.json")
-EMAIL_SENDER = "38797137@qq.com"
-EMAIL_PASSWORD = "fpwguhihlqtnbggd"
-EMAIL_RECEIVER = "38797137@qq.com"
+EMAIL_SENDER = os.environ.get("EMAIL_SENDER", "38797137@qq.com")
+EMAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD", "fpwguhihlqtnbggd")
+EMAIL_RECEIVER = os.environ.get("EMAIL_RECEIVER", "38797137@qq.com")
 SMTP_SERVER = "smtp.qq.com"
 SMTP_PORT = 465
-PUSHPLUS_TOKEN = "204353151f4a4173a18c524def9393c2"
+PUSHPLUS_TOKEN = os.environ.get("PUSHPLUS_TOKEN", "204353151f4a4173a18c524def9393c2")
 
 
 # ============ 数据层 ============
