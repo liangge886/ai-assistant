@@ -26,7 +26,9 @@ from email.mime.multipart import MIMEMultipart
 from datetime import datetime, date
 
 # ============ 配置 ============
-ORDERS_DIR = "/workspace/orders"
+# 数据存储在脚本同目录的 orders/ 子目录下（兼容本地 /workspace 和 GitHub Actions 环境）
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ORDERS_DIR = os.path.join(BASE_DIR, "orders")
 ORDERS_FILE = os.path.join(ORDERS_DIR, "orders.json")
 EVENTS_FILE = os.path.join(ORDERS_DIR, "events.json")
 EMAIL_SENDER = os.environ.get("EMAIL_SENDER", "38797137@qq.com")
