@@ -1,24 +1,24 @@
 name: AI事务管家 · 每日自动运行
 
 on:
-  schedule:
-    # 每天早上8:17 检查/补发（避开整点高峰，减少延迟）
-    - cron: '17 0 * * *'
-    # 工作日下午3:17 股市简报（北京时间，周末跳过）
-    - cron: '17 7 * * 1-5'
-    # 每天晚上8:17 综合简报
-    - cron: '17 12 * * *'
   workflow_dispatch:
     inputs:
       task:
-        description: '手动指定任务 (可选)'
+        description: '执行哪个任务: stock(股市简报) / briefing(综合简报) / all(全部)'
         required: false
-        default: ''
+        default: 'all'
+  schedule:
+    # 保留 schedule 作为备用（cron-job.org 触发为主）
+    - cron: '17 0 * * *'
 
 jobs:
   stock-report:
     runs-on: ubuntu-latest
-    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    if: |
+      github.event_name == 'schedule' ||
+      github.event.inputs.task == 'stock' ||
+      github.event.inputs.task == 'all' ||
+      github.event.inputs.task == ''
     steps:
       - uses: actions/checkout@v4
 
@@ -42,7 +42,11 @@ jobs:
 
   daily-briefing:
     runs-on: ubuntu-latest
-    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    if: |
+      github.event_name == 'schedule' ||
+      github.event.inputs.task == 'briefing' ||
+      github.event.inputs.task == 'all' ||
+      github.event.inputs.task == ''
     steps:
       - uses: actions/checkout@v4
 
