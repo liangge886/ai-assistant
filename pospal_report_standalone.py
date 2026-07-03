@@ -42,6 +42,14 @@ CONFIG = {
                 "url_prefix": "https://area50-win.pospal.cn:443/",
             },
         },
+        {
+            "name": "觉爱家纺肥城店",
+            "pospal": {
+                "app_id": "C86C896F55B1D5B1837EA99F2FD50765",
+                "app_key": "443475189815541669",
+                "url_prefix": "https://area25-win.pospal.cn:443/",
+            },
+        },
     ],
     "email": {
         "smtp_host": "smtp.qq.com",
