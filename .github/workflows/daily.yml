@@ -82,9 +82,7 @@ jobs:
   pospal-report:
     runs-on: ubuntu-latest
     if: |
-      github.event.inputs.task == 'pospal' ||
-      github.event.inputs.task == 'all' ||
-      github.event.inputs.task == ''
+      github.event.inputs.task == 'pospal'
     steps:
       - uses: actions/checkout@v4
 
