@@ -1,4 +1,13 @@
 {
-  "memories": [],
+  "memories": [
+    {
+      "id": 1,
+      "content": "给肥城店做银豹(PosPal)库存管理资料，需把库存数据更正准确 银豹,库存,肥城店",
+      "tags": [],
+      "created": "2026-07-08",
+      "updated": "2026-07-08",
+      "archived": false
+    }
+  ],
   "todos": []
 }
