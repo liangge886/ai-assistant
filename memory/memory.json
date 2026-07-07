@@ -9,5 +9,14 @@
       "archived": false
     }
   ],
-  "todos": []
+  "todos": [
+    {
+      "id": 1,
+      "task": "交7月电费 2026-07-20",
+      "done": false,
+      "created": "2026-07-08",
+      "done_date": "",
+      "due": ""
+    }
+  ]
 }
