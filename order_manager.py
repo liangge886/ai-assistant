@@ -19,6 +19,7 @@
 
 import json
 import os
+import re
 import smtplib
 import requests
 from email.mime.text import MIMEText
@@ -800,8 +801,9 @@ if __name__ == "__main__":
         print()
         print("📝 事件管理：")
         print("  event add 内容                    - 添加事件（无时间）")
-        print("  event add 时间 内容               - 添加事件（带时间）")
-        print("  event add 时间 内容 备注          - 添加事件（带时间+备注）")
+        print("  event add 时间 内容               - 添加事件（带时间，默认今天）")
+        print("  event add 日期 时间 内容          - 添加事件（指定日期+时间）")
+        print("  event add 日期 时间 内容 备注     - 添加事件（带备注）")
         print("  event list                        - 查看全部事件")
         print("  event check                       - 查看待办事件")
         print("  event done 编号                   - 标记完成")
@@ -850,17 +852,25 @@ if __name__ == "__main__":
                 print("   例: event add 14:00 和张三开会")
                 print("   例: event add 明天 取快递 别忘了带箱子")
                 sys.exit(1)
-            # 智能判断：第一个参数如果像时间（含冒号或"明天"/"后天"等），就当作时间
+            # 智能判断第一个参数的性质
             arg3 = sys.argv[3]
             time_keywords = [":", "今天", "明天", "后天", "下周", "周"]
             is_time = any(k in arg3 for k in time_keywords)
-            
-            # 简易规则：如果 sys.argv[4] 也含冒号，则 arg3 为提醒日期
-            if is_time and len(sys.argv) >= 5 and ":" in sys.argv[4]:
+            is_date = bool(re.match(r"^\d{4}-\d{2}-\d{2}$", arg3))
+
+            # 格式1: 日期 时间 内容 [备注]  → 例: event add 2026-07-08 12:00 给路哥出车险
+            if is_date and len(sys.argv) >= 5 and ":" in sys.argv[4]:
                 remind_date = arg3
                 event_time = sys.argv[4]
                 title = sys.argv[5] if len(sys.argv) > 5 else ""
                 remark = sys.argv[6] if len(sys.argv) > 6 else ""
+            # 格式2: 日期 内容 [备注]       → 例: event add 2026-07-08 给路哥出车险
+            elif is_date:
+                remind_date = arg3
+                event_time = ""
+                title = sys.argv[4] if len(sys.argv) > 4 else ""
+                remark = sys.argv[5] if len(sys.argv) > 5 else ""
+            # 格式3: 时间 内容 [备注]       → 例: event add 12:00 给路哥出车险
             elif is_time and len(sys.argv) >= 5:
                 remind_date = ""
                 event_time = arg3
@@ -871,7 +881,7 @@ if __name__ == "__main__":
                 event_time = ""
                 title = arg3
                 remark = sys.argv[4] if len(sys.argv) > 4 else ""
-            
+
             add_event(title, event_time, remark, remind_date)
 
         elif sub == "list":
