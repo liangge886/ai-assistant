@@ -469,9 +469,9 @@ def event_point_reminder():
         if not t:
             continue
         event_dt = datetime(today.year, today.month, today.day, t[0], t[1])
-        diff_min = abs((now - event_dt).total_seconds()) / 60
-        # 容差 10 分钟，且当天未提醒过才发
-        if diff_min <= 10 and e.get("last_reminded") != today_s:
+        passed_min = (now - event_dt).total_seconds() / 60
+        # 事件发生后 30 分钟内（且当天未提醒过）才发，避免错过
+        if 0 <= passed_min <= 30 and e.get("last_reminded") != today_s:
             hit.append(e)
 
     if not hit:
