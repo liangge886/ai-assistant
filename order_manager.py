@@ -297,12 +297,13 @@ def check_pending():
 #                       事件管理（待办清单）
 # ================================================================
 
-def add_event(title, event_time="", remark=""):
+def add_event(title, event_time="", remark="", remind_date=""):
     """
     添加事件/待办
     title: 事件内容
     event_time: 可选，有时间就带，没有就空
     remark: 备注
+    remind_date: 可选，提醒日期（YYYY-MM-DD），用于显示完整日期时间
     """
     events = load_events()
 
@@ -311,6 +312,7 @@ def add_event(title, event_time="", remark=""):
         "event_id": event_id,
         "title": title,
         "time": event_time,
+        "remind_date": remind_date,
         "remark": remark,
         "created": today_str(),
         "done": False,
@@ -322,7 +324,10 @@ def add_event(title, event_time="", remark=""):
 
     print(f"✅ 事件已记录（编号 {event_id}）")
     if event_time:
-        print(f"   时间：{event_time}")
+        date_str = f"{remind_date} " if remind_date else ""
+        print(f"   时间：{date_str}{event_time}")
+    elif remind_date:
+        print(f"   日期：{remind_date}")
     print(f"   内容：{title}")
     if remark:
         print(f"   备注：{remark}")
@@ -346,8 +351,10 @@ def list_events(show_done=False):
     if pending:
         print("⏳ 待办：")
         for e in pending:
-            time_str = f" [{e['time']}]" if e.get("time") else ""
-            print(f"   {e['event_id']}. {e['title']}{time_str}")
+            dt_str = f"{e['remind_date']} " if e.get('remind_date') else ""
+            time_str = f"{e['time']}" if e.get("time") else ""
+            full_time = f" [{dt_str}{time_str}]" if (dt_str or time_str) else ""
+            print(f"   {e['event_id']}. {e['title']}{full_time}")
             if e.get("remark"):
                 print(f"      备注：{e['remark']}")
     
@@ -371,8 +378,10 @@ def check_events():
     
     print(f"⏳ 你还有 {len(pending)} 件事没做：")
     for e in pending:
-        time_str = f" [{e['time']}]" if e.get("time") else ""
-        print(f"   {e['event_id']}. {e['title']}{time_str}")
+        dt_str = f"{e['remind_date']} " if e.get('remind_date') else ""
+        time_str = f"{e['time']}" if e.get("time") else ""
+        full_time = f" [{dt_str}{time_str}]" if (dt_str or time_str) else ""
+        print(f"   {e['event_id']}. {e['title']}{full_time}")
         if e.get("remark"):
             print(f"      备注：{e['remark']}")
     return pending
@@ -414,7 +423,8 @@ def event_reminder():
     lines.append(f"你还有 {len(pending)} 件事没做：")
     lines.append("")
     for e in pending:
-        t = f"[{e['time']}] " if e.get("time") else ""
+        dt_str = f"{e['remind_date']} " if e.get('remind_date') else ""
+        t = f"[{dt_str}{e['time']}] " if e.get('time') else (f"[{dt_str.strip()}] " if dt_str else "")
         lines.append(f"  {e['event_id']}. {t}{e['title']}")
         if e.get("remark"):
             lines.append(f"     备注：{e['remark']}")
@@ -422,6 +432,71 @@ def event_reminder():
     content = "\n".join(lines)
     push_wechat(f"⏰ 待办提醒（{len(pending)}项）", content)
     print(content)
+
+
+def event_point_reminder():
+    """
+    精确时间点事件提醒：每 15 分钟检查一次，
+    命中「今天 + 当前时段」的事件就单独发微信提醒，避免重复。
+    """
+    from datetime import datetime, date
+    import re
+
+    events = load_events()
+    now = datetime.now()
+    today = now.date()
+    today_s = today_str()
+
+    def parse_hm(time_str):
+        if not time_str:
+            return None
+        m = re.search(r"(\d{1,2}):(\d{2})", time_str)
+        if m:
+            return int(m.group(1)), int(m.group(2))
+        return None
+
+    hit = []
+    for e in events:
+        if e.get("done") or not e.get("remind_date"):
+            continue
+        try:
+            ed = datetime.strptime(e["remind_date"], "%Y-%m-%d").date()
+        except ValueError:
+            continue
+        if ed != today:
+            continue
+        t = parse_hm(e["time"])
+        if not t:
+            continue
+        event_dt = datetime(today.year, today.month, today.day, t[0], t[1])
+        diff_min = abs((now - event_dt).total_seconds()) / 60
+        # 容差 10 分钟，且当天未提醒过才发
+        if diff_min <= 10 and e.get("last_reminded") != today_s:
+            hit.append(e)
+
+    if not hit:
+        print("✅ 当前时段无到点事件")
+        return
+
+    for e in hit:
+        title = e["title"]
+        t = e["time"]
+        remark = e.get("remark", "")
+        lines = [
+            f"🔔 到点提醒 — {e['remind_date']} {t}",
+            "",
+            f"📌 {title}",
+        ]
+        if remark:
+            lines.append(f"备注：{remark}")
+        content = "\n".join(lines)
+        push_wechat(f"🔔 到点提醒：{title}", content)
+        print(content)
+        # 标记已提醒，避免 15 分钟内重复
+        e["last_reminded"] = today_s
+
+    save_events(events)
+    print(f"✅ 已推送 {len(hit)} 条到点提醒")
 
 
 def order_reminder():
@@ -564,7 +639,9 @@ def daily_briefing():
     if pending_events:
         pending_items = ""
         for e in pending_events:
-            time_str = f"<span style='color:#4a6cf7;font-weight:bold;'>{e['time']}</span> " if e.get("time") else ""
+            dt_str = f"{e['remind_date']} " if e.get('remind_date') else ""
+            full_time = f"{dt_str}{e['time']}" if e.get('time') else dt_str.strip()
+            time_str = f"<span style='color:#4a6cf7;font-weight:bold;'>{full_time}</span> " if full_time else ""
             remark_str = f"<div style='font-size:12px;color:#888;margin-top:2px;'>{e['remark']}</div>" if e.get("remark") else ""
             pending_items += f"""
             <div style="background:#f0f4ff; border-radius:6px; padding:10px 14px; margin-bottom:8px;">
@@ -726,16 +803,24 @@ if __name__ == "__main__":
             time_keywords = [":", "今天", "明天", "后天", "下周", "周"]
             is_time = any(k in arg3 for k in time_keywords)
             
-            if is_time and len(sys.argv) >= 5:
+            # 简易规则：如果 sys.argv[4] 也含冒号，则 arg3 为提醒日期
+            if is_time and len(sys.argv) >= 5 and ":" in sys.argv[4]:
+                remind_date = arg3
+                event_time = sys.argv[4]
+                title = sys.argv[5] if len(sys.argv) > 5 else ""
+                remark = sys.argv[6] if len(sys.argv) > 6 else ""
+            elif is_time and len(sys.argv) >= 5:
+                remind_date = ""
                 event_time = arg3
                 title = sys.argv[4]
                 remark = sys.argv[5] if len(sys.argv) > 5 else ""
             else:
+                remind_date = ""
                 event_time = ""
                 title = arg3
                 remark = sys.argv[4] if len(sys.argv) > 4 else ""
             
-            add_event(title, event_time, remark)
+            add_event(title, event_time, remark, remind_date)
 
         elif sub == "list":
             list_events(show_done=True)
@@ -773,6 +858,8 @@ if __name__ == "__main__":
         order_reminder()
     elif cmd == "remind":
         quick_remind(" ".join(sys.argv[2:]))
+    elif cmd == "event_remind":
+        event_point_reminder()
 
     else:
         print(f"❌ 未知命令: {cmd}")

@@ -99,3 +99,26 @@ jobs:
 
       - name: 银豹经营日报
         run: python3 pospal_report_standalone.py
+
+  event-check:
+    runs-on: ubuntu-latest
+    if: |
+      github.event.inputs.task == 'event_check'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安装依赖
+        run: pip install requests
+
+      - name: 设置时区 上海
+        run: echo "Asia/Shanghai" | sudo tee /etc/timezone && sudo apt-get install -y tzdata && sudo ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
+      - name: 精确时间点事件提醒
+        env:
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+        run: python3 order_manager.py event_remind
