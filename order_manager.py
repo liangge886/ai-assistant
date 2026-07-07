@@ -73,6 +73,18 @@ def save_events(events):
         json.dump(events, f, ensure_ascii=False, indent=2)
 
 
+def load_memory():
+    """读取「第二大脑」记忆库（记忆 + 待办），文件不存在/损坏时返回空结构"""
+    mem_file = os.path.join(BASE_DIR, "memory", "memory.json")
+    if not os.path.exists(mem_file):
+        return {"memories": [], "todos": []}
+    try:
+        with open(mem_file, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {"memories": [], "todos": []}
+
+
 def today_str():
     return datetime.now().strftime("%Y-%m-%d")
 
@@ -670,6 +682,37 @@ def daily_briefing():
         {done_items}
     </div>"""
 
+    # 待办清单（第二大脑）
+    mem = load_memory()
+    mem_todos = mem.get("todos", [])
+    pending_todos = [t for t in mem_todos if not t.get("done")]
+    done_todos = [t for t in mem_todos if t.get("done")]
+    if pending_todos or done_todos:
+        todo_items = ""
+        for t in sorted(pending_todos, key=lambda x: x.get("id", 0)):
+            due = f" <span style='color:#e67e22;font-size:12px;'>· 截止 {t['due']}</span>" if t.get("due") else ""
+            todo_items += f"""
+            <div style="background:#fffaf0; border-radius:6px; padding:10px 14px; margin-bottom:8px;">
+                <span style="font-weight:bold;color:#e67e22;">☐</span>
+                <span style="font-size:15px;margin-left:6px;">{t['task']}</span>{due}
+            </div>"""
+        for t in sorted(done_todos, key=lambda x: x.get("id", 0)):
+            todo_items += f"""
+            <div style="background:#f0fff0; border-radius:6px; padding:10px 14px; margin-bottom:8px; opacity:0.7;">
+                <span style="font-weight:bold;color:#27ae60;">☑</span>
+                <span style="font-size:15px;margin-left:6px;text-decoration:line-through;">{t['task']}</span>
+                <span style="font-size:12px;color:#888;margin-left:6px;">{t.get('done_date','')} 完成</span>
+            </div>"""
+        todo_section = f"""
+    <h2 style="font-size:17px; color:#e67e22; border-bottom:2px solid #e67e22; padding-bottom:8px; margin-bottom:12px;">✅ 待办清单（第二大脑 · {len(pending_todos)} 项未完成）</h2>
+    {todo_items}"""
+    else:
+        todo_section = """
+    <h2 style="font-size:17px; color:#e67e22; border-bottom:2px solid #e67e22; padding-bottom:8px; margin-bottom:12px;">✅ 待办清单（第二大脑）</h2>
+    <div style="background:#f8f9fc; padding:14px; border-radius:6px; text-align:center; color:#888; margin-bottom:20px;">
+        暂无待办，轻松 😎
+    </div>"""
+
     html = f"""<!DOCTYPE html>
 <html>
 <head><meta charset="utf-8"></head>
@@ -679,13 +722,16 @@ def daily_briefing():
 
 <div style="background:linear-gradient(135deg,#2c3e50,#3498db); color:#fff; padding:24px 32px; text-align:center;">
     <h1 style="margin:0 0 4px 0; font-size:22px;">📋 每日简报</h1>
-    <p style="margin:0; opacity:0.8; font-size:13px;">{today} · 订单 + 日程</p>
+    <p style="margin:0; opacity:0.8; font-size:13px;">{today} · 订单 + 日程 + 待办</p>
 </div>
 
 <div style="padding:24px 32px;">
 
 <!-- 事件部分 -->
 {event_section}
+
+<!-- 待办清单（第二大脑） -->
+{todo_section}
 
 <!-- 订单部分 -->
 <h2 style="font-size:17px; color:#e91e63; border-bottom:2px solid #e91e63; padding-bottom:8px; margin-bottom:12px;">📦 今日订单</h2>
@@ -703,7 +749,7 @@ def daily_briefing():
     send_email(
         f"📋 每日简报 - {today}",
         html,
-        f"每日简报 - {today}\n订单 {len(today_orders)} 单 | 未发货 {len(pending)} | 待办事件 {len(pending_events)} 项 | 今日完成 {len(today_done)} 项"
+        f"每日简报 - {today}\n订单 {len(today_orders)} 单 | 未发货 {len(pending)} | 待办事件 {len(pending_events)} 项 | 待办清单 {len(pending_todos)} 项 | 今日完成 {len(today_done)} 项"
     )
 
     # 同时推送微信
@@ -726,7 +772,13 @@ def daily_briefing():
         wx_lines.append(f"🎉 今日完成（{len(today_done)}项）：")
         for e in today_done:
             wx_lines.append(f"  ✅ {e['title']}")
-    if not today_orders and not pending_events and not today_done:
+    if pending_todos:
+        wx_lines.append("")
+        wx_lines.append(f"✅ 待办清单（{len(pending_todos)}项）：")
+        for t in sorted(pending_todos, key=lambda x: x.get("id", 0)):
+            due = f" (截止{t['due']})" if t.get("due") else ""
+            wx_lines.append(f"  ☐ {t['task']}{due}")
+    if not today_orders and not pending_events and not today_done and not pending_todos:
         wx_lines.append("今日无订单、无待办事件。")
 
     push_wechat(f"📋 {today} 简报", "\n".join(wx_lines))
