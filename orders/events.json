@@ -1,83 +1,90 @@
 [
   {
     "event_id": 1,
-    "title": "抢故宫门票",
-    "time": "20:00",
-    "remark": "7月10日参观故宫，今晚20:00故宫博物院小程序抢票",
-    "created": "2026-07-02",
+    "title": "出发自驾去北京·中和大饭店",
+    "time": "06:00",
+    "remind_date": "2026-07-13",
+    "remark": "7/13 早6点泰安自驾出发(G3京台高速)，已预约中和大饭店房间，下午到店办理入住",
+    "created": "2026-07-01",
     "done": false,
-    "done_date": ""
+    "done_date": "",
+    "last_reminded": ""
   },
   {
     "event_id": 2,
-    "title": "抢天安门预约",
-    "time": "20:00",
-    "remark": "7月15日参观天安门，天安门广场小程序预约",
-    "created": "2026-07-02",
+    "title": "天安门广场",
+    "time": "14:00",
+    "remind_date": "2026-07-13",
+    "remark": "7/13 下午 天安门广场，已预约参观时间（具体时段待你确认，当前按14:00占位）",
+    "created": "2026-07-01",
     "done": false,
-    "done_date": ""
+    "done_date": "",
+    "last_reminded": ""
   },
   {
     "event_id": 3,
-    "title": "抢北大预约入校",
-    "time": "08:00",
-    "remark": "7月16日参观北大，提前7天，北京大学预约小程序",
-    "created": "2026-07-02",
+    "title": "北京环球影城",
+    "time": "07:00",
+    "remind_date": "2026-07-14",
+    "remark": "7/14 北京环球影城，门票已买2张，早出发避免排队",
+    "created": "2026-07-01",
     "done": false,
-    "done_date": ""
+    "done_date": "",
+    "last_reminded": ""
   },
   {
     "event_id": 4,
-    "title": "抢清华预约入校",
+    "title": "故宫博物院（参观日）",
     "time": "08:00",
-    "remark": "7月16日参观清华，提前7天，清华大学预约小程序",
-    "created": "2026-07-02",
+    "remind_date": "2026-07-15",
+    "remark": "7/15 故宫参观，提前7天(7/8晚20:00)已抢票；午门进、神武门出。故宫周一闭馆，7/15周三正常",
+    "created": "2026-07-01",
     "done": false,
-    "done_date": ""
+    "done_date": "",
+    "last_reminded": ""
   },
   {
     "event_id": 5,
-    "title": "出发去北京",
-    "time": "07:00",
-    "remark": "7月13日泰安出发，G3京台高速，15-16点到达酒店，办理入住",
-    "created": "2026-07-02",
+    "title": "北大·清华（参观日）",
+    "time": "08:00",
+    "remind_date": "2026-07-16",
+    "remark": "7/16 北大/清华参观，提前7天(7/9早8:00)已预约入校；北大入校时段08:00-11:00、13:00-16:00",
+    "created": "2026-07-01",
     "done": false,
-    "done_date": ""
+    "done_date": "",
+    "last_reminded": ""
   },
   {
     "event_id": 6,
-    "title": "北京环球影城",
-    "time": "07:00-07:20",
-    "remark": "7月14日，自驾出发，停官方停车场，环球票已买2张",
-    "created": "2026-07-02",
+    "title": "退房返泰安",
+    "time": "12:00",
+    "remind_date": "2026-07-17",
+    "remark": "7/17 12:00前退房，下午自驾返泰安",
+    "created": "2026-07-01",
     "done": false,
-    "done_date": ""
+    "done_date": "",
+    "last_reminded": ""
   },
   {
     "event_id": 7,
-    "title": "天安门 + 故宫 + 景山 + 什刹海",
-    "time": "07:00",
-    "remark": "7月15日，酒店接驳到瀛海A口，8号线进城，故宫午门进神武门出",
-    "created": "2026-07-02",
+    "title": "抢故宫门票",
+    "time": "20:00",
+    "remind_date": "2026-07-08",
+    "remark": "故宫提前7天放票：今晚20:00 故宫博物院小程序抢7/15门票（实名、不售当日票）",
+    "created": "2026-07-01",
     "done": false,
-    "done_date": ""
+    "done_date": "",
+    "last_reminded": ""
   },
   {
     "event_id": 8,
-    "title": "北大/清华 + 颐和园或圆明园",
-    "time": "07:00",
-    "remark": "7月16日，早上中和退房，开车到宣武门/菜市口酒店寄存，4号线北上",
-    "created": "2026-07-02",
+    "title": "抢北大/清华入校预约",
+    "time": "08:00",
+    "remind_date": "2026-07-09",
+    "remark": "北大/清华提前7天放票：今早8:00 参观北大/参观清华小程序抢7/16入校名额（名额紧张，准点抢）",
+    "created": "2026-07-01",
     "done": false,
-    "done_date": ""
-  },
-  {
-    "event_id": 9,
-    "title": "退房返泰安",
-    "time": "12:00",
-    "remark": "7月17日，12:00前退房，14-15点离京返泰安",
-    "created": "2026-07-02",
-    "done": false,
-    "done_date": ""
+    "done_date": "",
+    "last_reminded": ""
   }
 ]
