@@ -1,14 +1,5 @@
 {
-  "memories": [
-    {
-      "id": 1,
-      "content": "我的车险到期日是每年3月15日，保险公司是人保 车,保险",
-      "tags": [],
-      "created": "2026-07-08",
-      "updated": "2026-07-08",
-      "archived": false
-    }
-  ],
+  "memories": [],
   "todos": [
     {
       "id": 1,
