@@ -96,16 +96,5 @@
     "created": "2026-07-08",
     "done": false,
     "done_date": ""
-  },
-  {
-    "event_id": 99,
-    "title": "【系统自检·测试】提醒链路正常",
-    "time": "13:35",
-    "remind_date": "2026-07-11",
-    "remark": "本条目为提醒系统自检用，验证后即删除",
-    "created": "2026-07-11",
-    "done": false,
-    "done_date": "",
-    "last_reminded": ""
   }
 ]
