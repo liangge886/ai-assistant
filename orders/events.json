@@ -72,8 +72,8 @@
     "remind_date": "2026-07-08",
     "remark": "故宫提前7天放票：今晚20:00 故宫博物院小程序抢7/15门票（实名、不售当日票）",
     "created": "2026-07-01",
-    "done": false,
-    "done_date": "",
+    "done": true,
+    "done_date": "2026-07-11",
     "last_reminded": ""
   },
   {
@@ -83,8 +83,8 @@
     "remind_date": "2026-07-09",
     "remark": "北大/清华提前7天放票：今早8:00 参观北大/参观清华小程序抢7/16入校名额（名额紧张，准点抢）",
     "created": "2026-07-01",
-    "done": false,
-    "done_date": "",
+    "done": true,
+    "done_date": "2026-07-11",
     "last_reminded": ""
   },
   {
@@ -94,7 +94,7 @@
     "remind_date": "2026-07-08",
     "remark": "",
     "created": "2026-07-08",
-    "done": false,
-    "done_date": ""
+    "done": true,
+    "done_date": "2026-07-11"
   }
 ]
