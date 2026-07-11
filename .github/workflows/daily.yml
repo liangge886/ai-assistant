@@ -11,9 +11,14 @@ on:
     # 保留 schedule 作为备用（cron-job.org 触发为主）
     - cron: '17 0 * * *'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   stock-report:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     if: |
       github.event_name == 'schedule' ||
       github.event.inputs.task == 'stock' ||
@@ -42,6 +47,7 @@ jobs:
 
   daily-briefing:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     if: |
       github.event_name == 'schedule' ||
       github.event.inputs.task == 'briefing' ||
@@ -81,6 +87,7 @@ jobs:
 
   pospal-report:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     if: |
       github.event.inputs.task == 'pospal'
     steps:
@@ -102,6 +109,7 @@ jobs:
 
   event-check:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     if: |
       github.event.inputs.task == 'event_check'
     steps:
