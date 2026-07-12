@@ -251,28 +251,46 @@ def todo_del(tid):
 
 # ============ CLI ============
 def parse_tags(argv):
+    """支持两种写法：--tag=a,b,c 和 --tag a,b,c"""
     tags = []
     rest = []
-    for a in argv:
-        if a.startswith("--tag"):
-            val = a.split("=", 1)[1] if "=" in a else None
-            if val:
-                tags += [t.strip() for t in val.split(",") if t.strip()]
+    i = 0
+    while i < len(argv):
+        a = argv[i]
+        if a == "--tag" or a.startswith("--tag="):
+            if "=" in a:
+                val = a.split("=", 1)[1]
+            else:
+                i += 1
+                val = argv[i] if i < len(argv) else ""
+            tags += [t.strip() for t in val.split(",") if t.strip()]
+            # 合并前面因无等号而误并入 rest 的标签词
+            if rest and rest[-1] == val:
+                rest.pop()
         else:
             rest.append(a)
+        i += 1
     return tags, rest
 
 
 def parse_due(argv):
+    """支持两种写法：--due=YYYY-MM-DD 和 --due YYYY-MM-DD"""
     due = ""
     rest = []
-    for a in argv:
-        if a.startswith("--due"):
-            val = a.split("=", 1)[1] if "=" in a else None
-            if val:
-                due = val.strip()
+    i = 0
+    while i < len(argv):
+        a = argv[i]
+        if a == "--due" or a.startswith("--due="):
+            if "=" in a:
+                due = a.split("=", 1)[1].strip()
+            else:
+                i += 1
+                due = argv[i].strip() if i < len(argv) else ""
+            if rest and rest[-1] == due:
+                rest.pop()
         else:
             rest.append(a)
+        i += 1
     return due, rest
 
 
