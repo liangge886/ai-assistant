@@ -53,14 +53,6 @@
   ],
   "todos": [
     {
-      "id": 1,
-      "task": "给肥城店做银豹(PosPal)库存管理资料，把库存更正准确",
-      "done": false,
-      "created": "2026-07-08",
-      "done_date": "",
-      "due": ""
-    },
-    {
       "id": 2,
       "task": "【每日】查看群消息，及时处理出库/入库",
       "done": false,
