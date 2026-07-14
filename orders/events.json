@@ -6,8 +6,8 @@
     "remind_date": "2026-07-13",
     "remark": "7/13 早6点泰安自驾出发(G3京台高速)，已预约中和大饭店房间，下午到店办理入住",
     "created": "2026-07-01",
-    "done": false,
-    "done_date": "",
+    "done": true,
+    "done_date": "2026-07-13",
     "last_reminded": ""
   },
   {
@@ -17,8 +17,8 @@
     "remind_date": "2026-07-13",
     "remark": "7/13 下午 天安门广场，已预约参观时间（具体时段待你确认，当前按14:00占位）",
     "created": "2026-07-01",
-    "done": false,
-    "done_date": "",
+    "done": true,
+    "done_date": "2026-07-13",
     "last_reminded": ""
   },
   {
@@ -96,5 +96,16 @@
     "created": "2026-07-08",
     "done": true,
     "done_date": "2026-07-11"
+  },
+  {
+    "event_id": 10,
+    "title": "提醒：抖音来客涉税信息确认",
+    "time": "20:00",
+    "remind_date": "2026-07-14",
+    "remark": "连锁总户账号需在「抖音来客电脑端-资金财务-涉税管理」完成2026年第2季度涉税报送信息确认，截止7/19 24:00。逾期视为同意平台按已公示规则报送。",
+    "created": "2026-07-14",
+    "done": false,
+    "done_date": "",
+    "last_reminded": ""
   }
 ]
