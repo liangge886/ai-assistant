@@ -1,0 +1,32 @@
+name: 觉爱家纺·老板每日经营分析报表
+
+on:
+  schedule:
+    # 每晚 21:40（北京时间）= 13:40 UTC
+    - cron: '40 13 * * *'
+  workflow_dispatch:
+    inputs:
+      task:
+        description: '执行任务（默认 boss_report）'
+        required: false
+        default: 'boss_report'
+
+jobs:
+  boss-report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      TZ: Asia/Shanghai
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安装依赖
+        run: pip install requests
+
+      - name: 生成并发送老板每日经营分析报表
+        run: python3 boss_daily_report.py
