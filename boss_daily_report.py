@@ -508,6 +508,12 @@ def main():
             send_email(html, reply, report_date)
         except Exception as e:
             print(f"[ERROR] 邮件发送失败: {e}")
+        # 飞书推送（未配置 FEISHU_WEBHOOK 时自动跳过）
+        try:
+            import feishu_notify
+            feishu_notify.send_report(reply, report_date)
+        except Exception as e:
+            print(f"[WARN] 飞书推送失败: {e}")
 
 
 if __name__ == "__main__":

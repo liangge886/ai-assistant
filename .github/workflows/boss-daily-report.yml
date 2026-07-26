@@ -17,6 +17,8 @@ jobs:
     timeout-minutes: 15
     env:
       TZ: Asia/Shanghai
+      FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+      FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
     steps:
       - uses: actions/checkout@v4
 
