@@ -6,8 +6,7 @@
     一、今日经营汇总（营业额/毛利/毛利率/订单/客单价/总成本/净利润/净利率 + 昨日&上周对比 + 新增会员）
     二、门店对比（排名 + 每店 营业额/毛利/订单/客单价/日成本/净利润/净利率 + 成本明细）
     三、商品销售排名（按门店单独列出：当日销量排名全部有销量商品 + 近30天销量>1排名）
-    四、成本明细（各店 工资+提成+房租=日成本→净利润；昨日对比）
-    五、补货提醒（当月有销量且库存≤2，按门店分开）
+    四、补货提醒（近30天动销且库存≤2，按门店分开；含换季提前备货提醒）
 
 数据：银豹(PosPal) API（复用 pospal_report_standalone 取数）
 推送：① QQ 邮箱（保留）；② 飞书 `lark-cli` 私聊老板（open_id）
@@ -210,7 +209,33 @@ def cost_breakdown(sales, cfg):
 
 
 # ============================================================
-# 报表生成（5 段）
+# 换季提醒：当前月份应提前备货的品类关键词
+# ============================================================
+def seasonal_keywords(month):
+    """按月份返回应提前备货的换季品类关键词（用于换季提醒）。
+
+    逻辑：在季节切换前，提前关注下一季主力品类的库存，避免换季断货。
+    例如 7 月（夏末）应关注「春秋被/冬被」的铺货。
+    """
+    table = {
+        1: ["冬被", "加厚", "绒", "毛毯"],
+        2: ["春秋被", "春"],
+        3: ["春秋被", "春", "薄被"],
+        4: ["夏被", "凉席", "夏凉", "冰丝"],
+        5: ["夏被", "凉席", "夏凉", "冰丝"],
+        6: ["夏被", "凉席", "夏凉", "冰丝"],
+        7: ["春秋被", "冬被"],
+        8: ["春秋被", "冬被", "加厚", "绒"],
+        9: ["冬被", "加厚", "绒", "毛毯"],
+        10: ["冬被", "加厚", "绒", "毛毯"],
+        11: ["冬被", "加厚", "绒", "毛毯"],
+        12: ["春秋被", "春"],
+    }
+    return table.get(month, [])
+
+
+# ============================================================
+# 报表生成（4 段）
 # ============================================================
 def build_report(date_str, yest_str, lw_str, stores_data):
     g = stores_data["global"]
@@ -298,32 +323,44 @@ def build_report(date_str, yest_str, lw_str, stores_data):
             s3 += "<p>· 近30天无销量＞1的商品</p>"
     sec("三、商品销售排名（按门店）", s3)
 
-    # ---------- 四、成本明细（含昨日对比） ----------
-    s4 = "<table><tr><th>门店</th><th>今日日成本</th><th>今日净利润</th><th>昨日日成本</th><th>昨日净利润</th></tr>"
-    for s in ranked:
-        s4 += (f"<tr><td>{s['name']}</td><td>{fmt_money(s['day_cost'])}</td><td>{fmt_money(s['net'])}</td>"
-               f"<td>{fmt_money(s['yest_cost'])}</td><td>{fmt_money(s['yest_net'])}</td></tr>")
-    s4 += f"<tr style='font-weight:700'><td>合计</td><td>{fmt_money(tc)}</td><td>{fmt_money(tn)}</td><td>{fmt_money(yc)}</td><td>{fmt_money(yn)}</td></tr>"
-    s4 += "</table>"
-    sec("四、成本明细", s4)
-
-    # ---------- 五、补货提醒（按门店分开） ----------
+    # ---------- 四、补货提醒（近30天动销+库存≤2，按门店；含换季提醒） ----------
     any_repl = False
+    any_season = False
     s5 = ""
     for s in stores_data["stores"]:
         items = s.get("replen", [])
-        if not items:
+        season_items = s.get("seasonal", [])
+        if not items and not season_items:
             continue
-        any_repl = True
-        s5 += f"<h3>{s['name']}</h3><table><tr><th>商品</th><th>当前库存</th><th>当月销量</th><th>售价</th></tr>"
-        for it in items:
-            s5 += f"<tr><td>{it['name']}</td><td class='bad'>{it['stock']}</td><td>{it['month_qty']:.0f}</td><td>{fmt_money(it['price'])}</td></tr>"
-        s5 += "</table>"
-    if not any_repl:
-        s5 = "<p>当前无「当月有销量且库存≤2」的商品，库存健康。✅</p>"
+        s5 += f"<h3>{s['name']}</h3>"
+        # 近30天有销量且库存≤2
+        if items:
+            any_repl = True
+            s5 += "<h4>▌近30天动销且库存≤2（建议补货）</h4>"
+            s5 += "<table><tr><th>商品</th><th>当前库存</th><th>近30天销量</th><th>售价</th></tr>"
+            for it in items:
+                s5 += (f"<tr><td>{it['name']}</td><td class='bad'>{it['stock']:.0f}</td>"
+                       f"<td>{it['sold_qty']:.0f}</td><td>{fmt_money(it['price'])}</td></tr>")
+            s5 += "</table>"
+        # 换季提醒：当前应提前备货的品类，库存≤2
+        if season_items:
+            any_season = True
+            kw = "、".join(s.get("season_kw", []))
+            s5 += f"<h4>▌换季提醒 · 关注品类：{kw}（库存≤2，建议提前备货）</h4>"
+            s5 += "<table><tr><th>商品</th><th>当前库存</th><th>售价</th></tr>"
+            for it in season_items:
+                s5 += f"<tr><td>{it['name']}</td><td class='bad'>{it['stock']:.0f}</td><td>{fmt_money(it['price'])}</td></tr>"
+            s5 += "</table>"
+    if not any_repl and not any_season:
+        s5 = "<p>当前无紧急补货商品，库存健康。✅</p>"
     else:
-        s5 += "<ul class='ana'><li>· 以上商品当月有动销但库存≤2，建议尽快补货/调货，避免断货流失。</li></ul>"
-    sec("五、补货提醒", s5)
+        notes = []
+        if any_repl:
+            notes.append("· 以上商品近30天有动销但库存≤2，建议尽快补货/调货，避免断货流失。")
+        if any_season:
+            notes.append("· 以上为换季需提前备货的品类（当前库存≤2），请结合季节需求提前铺货，避免换季断货。")
+        s5 += "<ul class='ana'>" + "".join(f"<li>{n}</li>" for n in notes) + "</ul>"
+    sec("四、补货提醒", s5)
 
     # ---------- 组装 ----------
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -392,14 +429,28 @@ tr:hover td{{background:#fff8f8;}}
             L.append(f"· 近30天(＞1)：{shown}{more}")
         else:
             L.append("· 近30天无销量＞1的商品")
-    L.append("—— 补货提醒 ——")
+    L.append("—— 补货提醒（近30天动销+库存≤2，按门店） ——")
     found = False
     for s in stores_data["stores"]:
-        for it in s.get("replen", []):
+        items = s.get("replen", [])
+        if items:
             found = True
-            L.append(f"{s['name']}：{it['name']} 库存{it['stock']}/当月售{it['month_qty']:.0f}")
+            top = sorted(items, key=lambda x: x["sold_qty"], reverse=True)[:5]
+            ex = "；".join(f"{it['name']}(库{it['stock']:.0f}/30天{it['sold_qty']:.0f})" for it in top)
+            L.append(f"{s['name']}：共 {len(items)} 项，示例 {ex}（完整见邮件）")
+        else:
+            L.append(f"{s['name']}：近30天动销且库存≤2 无")
+    L.append("—— 换季提醒（按门店） ——")
+    for s in stores_data["stores"]:
+        items = s.get("seasonal", [])
+        kw = "、".join(s.get("season_kw", []))
+        if items:
+            found = True
+            L.append(f"{s['name']}【{kw}】共 {len(items)} 款需提前备货（完整见邮件）")
+        else:
+            L.append(f"{s['name']}【{kw}】库存充足")
     if not found:
-        L.append("当前无紧急补货商品 ✅")
+        L.append("当前无紧急补货/换季商品 ✅")
     text = "\n".join(L)
     return html, text
 
@@ -499,14 +550,25 @@ def main():
         today_tk = fetch_tickets(p, report_date, "今日")
         yest_tk = fetch_tickets(p, yest_str, "昨日")
         lw_tk = fetch_tickets(p, lw_str, "上周同期")
-        month_tk = fetch_monthly(p, report_date)
         rank30_tk = fetch_30d(p, report_date)
         inv = fetch_inventory(p)
+        # fetch_inventory 返回原始商品列表；analyze_inventory 的 stock_summary 仅取库存前50（高库存），
+        # 会漏掉低库存商品，故这里直接遍历原始列表提取在售商品的 名称/库存/售价（不过滤库存量）
+        inv_sum = []
+        if isinstance(inv, list):
+            for pr in inv:
+                if pr.get("enable") != 1 or pr.get("noStock") == 1:
+                    continue
+                inv_sum.append({
+                    "name": pr.get("name", ""),
+                    "stock": float(pr.get("stock", 0) or 0),
+                    "sell_price": float(pr.get("sellPrice", 0) or 0),
+                })
         members = fetch_members(p, report_date)
         global_members += len(members)
         raw[name] = {
             "today": len(today_tk), "yesterday": len(yest_tk),
-            "lastweek": len(lw_tk), "month": len(month_tk), "rank30": len(rank30_tk),
+            "lastweek": len(lw_tk), "rank30": len(rank30_tk),
             "inventory": len(inv), "members": len(members),
         }
 
@@ -529,18 +591,23 @@ def main():
         ynet = yest_a["total_profit"] - yday_cost
         net_margin = (net / today_a["total_sales"] * 100) if today_a["total_sales"] else 0
 
-        # 补货：当月有销量 且 库存≤2
-        month_prod = agg_products(month_tk)
-        stock_map = {it["name"]: it for it in inv.get("stock_summary", [])} if isinstance(inv, dict) else {}
-        # analyze_inventory 返回的 stock_summary 在 inv["stock_summary"]
+        # 补货：近30天有销量 且 库存≤2（按门店，不混）
         replen = []
-        inv_sum = inv.get("stock_summary", []) if isinstance(inv, dict) else []
         for it in inv_sum:
             nm = it.get("name", "")
-            mp = month_prod.get(nm)
-            if mp and mp["quantity"] > 0 and float(it.get("stock", 0) or 0) <= 2:
+            rp = rank30_prod.get(nm)
+            if rp and rp["quantity"] > 0 and float(it.get("stock", 0) or 0) <= 2:
                 replen.append({"name": nm, "stock": float(it.get("stock", 0) or 0),
-                                "month_qty": mp["quantity"], "price": float(it.get("sell_price", 0) or 0)})
+                                "sold_qty": rp["quantity"], "price": float(it.get("sell_price", 0) or 0)})
+        # 换季提醒：当前应提前备货的品类（库存≤2 即提示，不看近期销量）
+        season_kw = seasonal_keywords(dt.month)
+        seasonal = []
+        if season_kw:
+            for it in inv_sum:
+                nm = it.get("name", "")
+                if any(k in nm for k in season_kw) and float(it.get("stock", 0) or 0) <= 2:
+                    seasonal.append({"name": nm, "stock": float(it.get("stock", 0) or 0),
+                                     "price": float(it.get("sell_price", 0) or 0)})
 
         stores_data["stores"].append({
             "name": name,
@@ -552,6 +619,8 @@ def main():
             "yest_cost": yday_cost, "yest_net": ynet,
             "lw_sales": lw_a["total_sales"],
             "replen": replen,
+            "seasonal": seasonal,
+            "season_kw": season_kw,
             "today_products": today_products,
             "rank30_products": rank30_products,
         })
