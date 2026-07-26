@@ -5,7 +5,7 @@
 按最新规格实现，报表结构：
     一、今日经营汇总（营业额/毛利/毛利率/订单/客单价/总成本/净利润/净利率 + 昨日&上周对比 + 新增会员）
     二、门店对比（排名 + 每店 营业额/毛利/订单/客单价/日成本/净利润/净利率 + 成本明细）
-    三、销售 TOP5 商品（按金额，含所属门店）
+    三、商品销售排名（按门店单独列出：当日销量排名全部有销量商品 + 近30天销量>1排名）
     四、成本明细（各店 工资+提成+房租=日成本→净利润；昨日对比）
     五、补货提醒（当月有销量且库存≤2，按门店分开）
 
@@ -117,6 +117,30 @@ def fetch_monthly(store_pospal, date_str):
         return []
 
 
+def fetch_30d(store_pospal, date_str):
+    """拉取指定日期往前 30 天（含当日，共 30 天）的销售单据，按门店标记"""
+    api_sleep()
+    try:
+        dt = datetime.strptime(date_str, "%Y-%m-%d")
+        start = (dt - timedelta(days=29)).strftime("%Y-%m-%d")
+        payload = {
+            "startTime": f"{start} 00:00:00",
+            "endTime": f"{date_str} 23:59:59",
+            "noLimitTimeRange": 1,
+        }
+        tk = pp.fetch_all_pages(
+            store_pospal["url_prefix"], store_pospal["app_id"], store_pospal["app_key"],
+            "/pospal-api2/openapi/v1/ticketOpenApi/queryTicketPages",
+            payload,
+        )
+        for t in tk:
+            t["_store"] = store_pospal.get("_name", "")
+        return tk
+    except Exception as e:
+        print(f"[WARN] {store_pospal.get('_name')} 近30天取数失败: {e}")
+        return []
+
+
 def fetch_inventory(store_pospal):
     api_sleep()
     try:
@@ -156,6 +180,21 @@ def agg_products(tickets):
             rec["profit"] += float(it.get("totalProfit", 0) or 0)
             if store:
                 rec["stores"].add(store)
+    return d
+
+
+def agg_store_products(tickets):
+    """单店商品聚合（不含门店集合，按销量/金额/毛利汇总）"""
+    d = {}
+    for t in tickets:
+        if t.get("ticketType") != "SELL" or t.get("invalid", 0) != 0:
+            continue
+        for it in t.get("items", []):
+            name = it.get("name", "")
+            rec = d.setdefault(name, {"name": name, "quantity": 0.0, "amount": 0.0, "profit": 0.0})
+            rec["quantity"] += float(it.get("quantity", 0) or 0)
+            rec["amount"] += float(it.get("totalAmount", 0) or 0)
+            rec["profit"] += float(it.get("totalProfit", 0) or 0)
     return d
 
 
@@ -231,17 +270,33 @@ def build_report(date_str, yest_str, lw_str, stores_data):
     s2 += "</table>"
     sec("二、门店对比", s2)
 
-    # ---------- 三、销售 TOP5 ----------
-    top5 = stores_data["top5"]
-    if top5:
-        trows = ""
-        for i, p in enumerate(top5, 1):
-            stores_txt = "、".join(p["stores"]) if p["stores"] else "—"
-            trows += f"<tr><td>{i}</td><td>{p['name']}</td><td>{fmt_money(p['amount'])}</td><td>{stores_txt}</td></tr>"
-        s3 = f"<table><tr><th>排名</th><th>商品</th><th>销售金额</th><th>所属门店</th></tr>{trows}</table>"
-    else:
-        s3 = "<p>今日无销售数据。</p>"
-    sec("三、销售 TOP5 商品", s3)
+    # ---------- 三、商品销售排名（按门店单独列出） ----------
+    s3 = ""
+    for s in stores_data["stores"]:
+        s3 += f"<h3>{s['name']}</h3>"
+        # 当日销量排名：所有有销量的商品
+        tp = s.get("today_products", [])
+        if tp:
+            s3 += "<h4>▌当日销量排名（全部有销量商品）</h4>"
+            s3 += "<table><tr><th>排名</th><th>商品</th><th>销量</th><th>销售额</th><th>毛利</th></tr>"
+            for i, p in enumerate(tp, 1):
+                s3 += (f"<tr><td>{i}</td><td>{p['name']}</td><td>{p['quantity']:.0f}</td>"
+                       f"<td>{fmt_money(p['amount'])}</td><td>{fmt_money(p['profit'])}</td></tr>")
+            s3 += "</table>"
+        else:
+            s3 += "<p>· 当日无销售</p>"
+        # 近30天销量排名：销量>1 的商品
+        r30 = s.get("rank30_products", [])
+        if r30:
+            s3 += "<h4>▌近30天销量排名（销量＞1）</h4>"
+            s3 += "<table><tr><th>排名</th><th>商品</th><th>销量</th><th>销售额</th><th>毛利</th></tr>"
+            for i, p in enumerate(r30, 1):
+                s3 += (f"<tr><td>{i}</td><td>{p['name']}</td><td>{p['quantity']:.0f}</td>"
+                       f"<td>{fmt_money(p['amount'])}</td><td>{fmt_money(p['profit'])}</td></tr>")
+            s3 += "</table>"
+        else:
+            s3 += "<p>· 近30天无销量＞1的商品</p>"
+    sec("三、商品销售排名（按门店）", s3)
 
     # ---------- 四、成本明细（含昨日对比） ----------
     s4 = "<table><tr><th>门店</th><th>今日日成本</th><th>今日净利润</th><th>昨日日成本</th><th>昨日净利润</th></tr>"
@@ -285,6 +340,7 @@ body{{font-family:-apple-system,"Microsoft YaHei",sans-serif;background:#f0f2f5;
 .section{{background:#fff;padding:20px 24px;margin-bottom:14px;border-radius:8px;}}
 .section h2{{font-size:17px;color:#b71c1c;border-left:4px solid #e53935;padding-left:10px;margin-bottom:14px;}}
 h3{{font-size:15px;color:#444;margin:14px 0 8px;}}
+h4{{font-size:13.5px;color:#b71c1c;margin:14px 0 6px;font-weight:600;}}
 .kpi-grid{{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:12px;}}
 .kpi-card{{background:#fafafa;border:1px solid #eee;border-radius:6px;padding:12px;text-align:center;}}
 .kpi-card .label{{font-size:12px;color:#777;}}
@@ -320,9 +376,22 @@ tr:hover td{{background:#fff8f8;}}
     L.append("—— 门店对比（营业额/净利润） ——")
     for s in ranked:
         L.append(f"{s['name']}：营业额 {fmt_money(s['today_sales'])}，净利润 {fmt_money(s['net'])}（净利率 {fmt_pct(s['net_margin'])}），成本 {fmt_money(s['day_cost'])}")
-    L.append("—— TOP5 商品 ——")
-    for i, p in enumerate(top5, 1):
-        L.append(f"{i}. {p['name']} {fmt_money(p['amount'])}（{'、'.join(p['stores']) or '—'}）")
+    L.append("—— 商品销售排名（按门店） ——")
+    for s in stores_data["stores"]:
+        L.append(f"【{s['name']}】")
+        tp = s.get("today_products", [])
+        if tp:
+            L.append("· 当日销量：" + "；".join(f"{p['name']} {p['quantity']:.0f}件" for p in tp))
+        else:
+            L.append("· 当日无销售")
+        r30 = s.get("rank30_products", [])
+        if r30:
+            # 文本版限前 15 条，避免超长；邮件/网页版为完整全部
+            shown = "；".join(f"{p['name']} {p['quantity']:.0f}件" for p in r30[:15])
+            more = f"（共 {len(r30)} 项，更多见邮件）" if len(r30) > 15 else ""
+            L.append(f"· 近30天(＞1)：{shown}{more}")
+        else:
+            L.append("· 近30天无销量＞1的商品")
     L.append("—— 补货提醒 ——")
     found = False
     for s in stores_data["stores"]:
@@ -415,7 +484,6 @@ def main():
     print(f"[INFO] 报表日期 {report_date}（昨日 {yest_str} / 上周同期 {lw_str}）")
 
     stores_data = {"stores": [], "global": {}}
-    all_today_tk = []
     global_members = 0
     raw = {}
 
@@ -432,19 +500,28 @@ def main():
         yest_tk = fetch_tickets(p, yest_str, "昨日")
         lw_tk = fetch_tickets(p, lw_str, "上周同期")
         month_tk = fetch_monthly(p, report_date)
+        rank30_tk = fetch_30d(p, report_date)
         inv = fetch_inventory(p)
         members = fetch_members(p, report_date)
         global_members += len(members)
         raw[name] = {
             "today": len(today_tk), "yesterday": len(yest_tk),
-            "lastweek": len(lw_tk), "month": len(month_tk),
+            "lastweek": len(lw_tk), "month": len(month_tk), "rank30": len(rank30_tk),
             "inventory": len(inv), "members": len(members),
         }
 
         today_a = pp.analyze_sales(today_tk)
         yest_a = pp.analyze_sales(yest_tk)
         lw_a = pp.analyze_sales(lw_tk)
-        all_today_tk.extend(today_tk)
+
+        # 单店商品销量排名
+        today_prod = agg_store_products(today_tk)
+        today_products = sorted(today_prod.values(), key=lambda x: x["quantity"], reverse=True)
+        rank30_prod = agg_store_products(rank30_tk)
+        rank30_products = sorted(
+            [v for v in rank30_prod.values() if v["quantity"] > 1],
+            key=lambda x: x["quantity"], reverse=True,
+        )
 
         wage, comm, rent, day_cost = cost_breakdown(today_a["total_sales"], cfg)
         ywage, ycomm, yrent, yday_cost = cost_breakdown(yest_a["total_sales"], cfg)
@@ -475,6 +552,8 @@ def main():
             "yest_cost": yday_cost, "yest_net": ynet,
             "lw_sales": lw_a["total_sales"],
             "replen": replen,
+            "today_products": today_products,
+            "rank30_products": rank30_products,
         })
 
     # 全局汇总
@@ -496,13 +575,6 @@ def main():
         "yest_sales": ys, "yest_profit": yp, "yest_cost": yc, "yest_net": yn,
         "lw_sales": lw_sales, "members": global_members,
     }
-
-    # TOP5（全局，按金额，带门店）
-    gp = agg_products(all_today_tk)
-    top5 = sorted(gp.values(), key=lambda x: x["amount"], reverse=True)[:5]
-    for p in top5:
-        p["stores"] = sorted(p["stores"])
-    stores_data["top5"] = top5
 
     # 存档原始计数
     _os.makedirs(DATA_DIR, exist_ok=True)
