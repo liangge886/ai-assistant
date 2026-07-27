@@ -494,7 +494,20 @@ def build_report(date_str, yest_str, lw_str, stores_data):
     # ---------- 四、补货提醒（近30天动销+库存≤2，按门店；含换季提醒） ----------
     any_repl = False
     any_season = False
+    any_neg = False
     s5 = ""
+    # 负库存预警（销大于存，库存为负数）——选项 B：保留负数并标红
+    neg_stores = [s for s in stores_data["stores"] if s.get("negative")]
+    if neg_stores:
+        any_neg = True
+        s5 += '<h4 class="neg">▌⚠️ 负库存预警（销大于存，需立即盘点 / 紧急补货）</h4>'
+        for s in neg_stores:
+            s5 += f"<h5 class='neg'>{s['name']}</h5>"
+            s5 += "<table><tr><th>商品</th><th>当前库存</th><th>售价</th></tr>"
+            for it in s["negative"]:
+                s5 += (f"<tr><td>{it['name']}</td><td class='neg-stock'>{it['stock']:.0f}</td>"
+                       f"<td>{fmt_money(it['price'])}</td></tr>")
+            s5 += "</table>"
     for s in stores_data["stores"]:
         items = s.get("replen", [])
         season_items = s.get("seasonal", [])
@@ -519,7 +532,7 @@ def build_report(date_str, yest_str, lw_str, stores_data):
             for it in season_items:
                 s5 += f"<tr><td>{it['name']}</td><td class='bad'>{it['stock']:.0f}</td><td>{fmt_money(it['price'])}</td></tr>"
             s5 += "</table>"
-    if not any_repl and not any_season:
+    if not any_repl and not any_season and not any_neg:
         s5 = "<p>当前无紧急补货商品，库存健康。✅</p>"
     else:
         notes = []
@@ -527,6 +540,8 @@ def build_report(date_str, yest_str, lw_str, stores_data):
             notes.append("· 以上商品近30天有动销但库存≤2，建议尽快补货/调货，避免断货流失。")
         if any_season:
             notes.append("· 以上为换季需提前备货的品类（当前库存≤2），请结合季节需求提前铺货，避免换季断货。")
+        if any_neg:
+            notes.append("· ⚠️ 负库存：上表商品「销大于存」，库存已为负，通常为漏盘 / 未录入进货导致，需立即复盘实际库存并补货，否则报表库存失真。")
         s5 += "<ul class='ana'>" + "".join(f"<li>{n}</li>" for n in notes) + "</ul>"
     sec("四、补货提醒", s5)
 
@@ -623,6 +638,9 @@ def build_report(date_str, yest_str, lw_str, stores_data):
         problems.append("会员成交占比 0%，成交客户未转会员，客户资产流失")
     if tn < 0:
         problems.append("净利润为负，成本已超过毛利")
+    neg_total = sum(len(s.get("negative", [])) for s in stores_data["stores"])
+    if neg_total:
+        problems.append(f"负库存 {neg_total} 个商品（销大于存，需立即盘点补货，否则库存失真）")
     s_sum += "<h3>二、今日最大问题</h3><ul class='ana'>"
     if problems:
         for pr in problems:
@@ -702,6 +720,8 @@ tr:hover td{{background:#fff8f8;}}
 .trend.good{{color:#2e7d32;}}
 .trend.bad{{color:#c62828;}}
 .bad{{color:#c62828;}}
+.neg{{color:#c62828;font-weight:700;}}
+.neg-stock{{color:#fff;background:#c62828;font-weight:700;padding:2px 7px;border-radius:4px;}}
 .form{{background:#f7f9fc;border:1px dashed #c9d3e0;border-radius:6px;padding:12px 14px;margin:8px 0;font-size:13.5px;line-height:2;color:#444;}}
 .form p{{margin:4px 0;}}
 .acts{{margin:6px 0 2px 20px;padding:0;}}
@@ -751,6 +771,13 @@ tr:hover td{{background:#fff8f8;}}
             L.append(f"{s['name']}：共 {len(items)} 项，示例 {ex}（完整见邮件）")
         else:
             L.append(f"{s['name']}：近30天动销且库存≤2 无")
+    # 负库存（销大于存，负数）——选项 B：保留并标红
+    for s in stores_data["stores"]:
+        negs = s.get("negative", [])
+        if negs:
+            found = True
+            ex = "；".join(f"{it['name']}({it['stock']:.0f})" for it in negs[:5])
+            L.append(f"  ⚠️ {s['name']} 负库存 {len(negs)} 项：{ex}（销大于存，需盘点补货）")
     L.append("—— 换季提醒（按门店） ——")
     for s in stores_data["stores"]:
         items = s.get("seasonal", [])
@@ -967,6 +994,13 @@ def main():
                 if any(k in nm for k in season_kw) and float(it.get("stock", 0) or 0) <= 2:
                     seasonal.append({"name": nm, "stock": float(it.get("stock", 0) or 0),
                                      "price": float(it.get("sell_price", 0) or 0)})
+        # 负库存：扣减后库存 < 0（保留负数，报表中标红预警）
+        negative = []
+        for it in inv_sum:
+            st = float(it.get("stock", 0) or 0)
+            if st < 0:
+                negative.append({"name": it.get("name", ""), "stock": st,
+                                 "price": float(it.get("sell_price", 0) or 0)})
 
         stores_data["stores"].append({
             "name": name,
@@ -979,6 +1013,7 @@ def main():
             "lw_sales": lw_a["total_sales"],
             "replen": replen,
             "seasonal": seasonal,
+            "negative": negative,
             "season_kw": season_kw,
             "today_products": today_products,
             "rank30_products": rank30_products,
