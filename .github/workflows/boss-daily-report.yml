@@ -1,9 +1,8 @@
 name: 觉爱家纺·老板每日经营分析报表
 
 on:
-  schedule:
-    # 每晚 21:40（北京时间）= 13:40 UTC
-    - cron: '40 13 * * *'
+  # 定时触发改由 cron-job.org 负责（每天 21:40 北京时间，可靠准点）
+  # GitHub 自带 schedule 不准时（常延迟约3小时），已弃用
   workflow_dispatch:
     inputs:
       task:
