@@ -45,7 +45,8 @@ jobs:
           EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
         run: python3 stock_report.py
 
-  daily-briefing:
+  daily-reminder:
+    # 仅保留微信提醒（漏单/待办）。每日简报邮件已取消。
     runs-on: ubuntu-latest
     timeout-minutes: 10
     if: |
@@ -67,19 +68,8 @@ jobs:
       - name: 设置时区 上海
         run: echo "Asia/Shanghai" | sudo tee /etc/timezone && sudo apt-get install -y tzdata && sudo ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-      - name: 综合简报
+      - name: 漏单+待办微信提醒
         env:
-          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
-          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
-          EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
-          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
-        run: python3 order_manager.py briefing
-
-      - name: 漏单+待办提醒
-        env:
-          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
-          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
-          EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
           PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
         run: |
           python3 order_manager.py remind_orders
