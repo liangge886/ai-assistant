@@ -7,6 +7,8 @@
     二、门店对比（排名 + 每店 营业额/毛利/订单/客单价/日成本/净利润/净利率 + 成本明细）
     三、商品销售排名（按门店单独列出：当日销量排名全部有销量商品 + 近30天销量>1排名）
     四、补货提醒（近30天动销且库存≤2，按门店分开；含换季提前备货提醒）
+    五、客户资产分析（会员管理：今日新增/会员成交/会员占比/门店新增 + 人工复盘问卷 + 维护建议）
+    六、老板每日经营总结（亮点/最大问题/重点门店/推广商品/明日三动作）
 
 数据：银豹(PosPal) API（复用 pospal_report_standalone 取数）
 推送：① QQ 邮箱（保留）；② 飞书 `lark-cli` 私聊老板（open_id）
@@ -149,13 +151,18 @@ def fetch_inventory(store_pospal):
         return []
 
 
-def fetch_members(store_pospal, date_str):
+def fetch_members(store_pospal):
+    """拉取该门店全部会员（会员按门店隔离，各店凭证只返回本店会员）。
+
+    注意：银豹 queryCustomerPages 的 startCreateDateTime 参数在本环境不生效（返回 0），
+    故这里拉全部，由调用方用 createdDate 字段在 Python 中筛选「今日新增」。
+    """
     api_sleep()
     try:
         return pp.fetch_all_pages(
             store_pospal["url_prefix"], store_pospal["app_id"], store_pospal["app_key"],
             "/pospal-api2/openapi/v1/customerOpenApi/queryCustomerPages",
-            {"startCreateDateTime": f"{date_str} 00:00:00"},
+            {},
         )
     except Exception as e:
         print(f"[WARN] {store_pospal.get('_name')} 会员取数失败: {e}")
@@ -248,6 +255,17 @@ def build_report(date_str, yest_str, lw_str, stores_data):
     gm = (tp / ts * 100) if ts else 0
     avg = (ts / to) if to else 0
     members = g["members"]
+
+    # 全局当日商品聚合（用于亮点/推广商品的金额、利润排名）
+    g_prod = {}
+    for s in stores_data["stores"]:
+        for p in s.get("today_products", []):
+            rec = g_prod.setdefault(p["name"], {"name": p["name"], "quantity": 0.0, "amount": 0.0, "profit": 0.0})
+            rec["quantity"] += p["quantity"]
+            rec["amount"] += p["amount"]
+            rec["profit"] += p["profit"]
+    top_amt = sorted(g_prod.values(), key=lambda x: x["amount"], reverse=True)[:5]
+    top_profit = sorted(g_prod.values(), key=lambda x: x["profit"], reverse=True)[:5]
 
     W = []
 
@@ -362,7 +380,146 @@ def build_report(date_str, yest_str, lw_str, stores_data):
         s5 += "<ul class='ana'>" + "".join(f"<li>{n}</li>" for n in notes) + "</ul>"
     sec("四、补货提醒", s5)
 
-    # ---------- 组装 ----------
+    # ---------- 五、客户资产分析（会员管理） ----------
+    g_mnew = g.get("member_new_total", 0)
+    g_mtotal = g.get("member_total", 0)
+    g_mtxn = g.get("member_txn_total", 0)
+    g_mamt = g.get("member_amt_total", 0.0)
+    mratio = (g_mamt / ts * 100) if ts else 0
+
+    s_mem = '<div class="kpi-grid">'
+    s_mem += f'<div class="kpi-card"><div class="label">今日新增会员</div><div class="value">{g_mnew} 人</div></div>'
+    s_mem += f'<div class="kpi-card"><div class="label">会员总数(沉淀)</div><div class="value">{g_mtotal} 人</div></div>'
+    s_mem += f'<div class="kpi-card"><div class="label">今日会员成交</div><div class="value">{g_mtxn} 单</div></div>'
+    s_mem += f'<div class="kpi-card"><div class="label">会员销售金额</div><div class="value">{fmt_money(g_mamt)}</div></div>'
+    s_mem += f'<div class="kpi-card"><div class="label">会员销售占比</div><div class="value">{fmt_pct(mratio)}</div></div>'
+    s_mem += "</div>"
+    # 三家门店会员新增情况
+    s_mem += "<h3>三家门店会员新增情况</h3><table><tr><th>门店</th><th>今日新增</th><th>会员总数</th><th>会员成交单</th><th>会员金额</th><th>会员占比</th></tr>"
+    for s in stores_data["stores"]:
+        samt = s.get("member_amt", 0.0)
+        sratio = (samt / s["today_sales"] * 100) if s["today_sales"] else 0
+        s_mem += (f"<tr><td>{s['name']}</td><td>{s.get('member_new', 0)}</td><td>{s.get('member_total', 0)}</td>"
+                  f"<td>{s.get('member_txn', 0)}</td><td>{fmt_money(samt)}</td><td>{fmt_pct(sratio)}</td></tr>")
+    s_mem += "</table>"
+    # 系统分析
+    s_mem += "<h3>一、系统自动统计 · 分析</h3><ul class='ana'>"
+    best_mem = max(stores_data["stores"], key=lambda s: s.get("member_total", 0)) if stores_data["stores"] else None
+    s_mem += f"<li>· 今日新增会员 <b>{g_mnew}</b> 人，会员沉淀总数 <b>{g_mtotal}</b> 人"
+    if best_mem:
+        s_mem += f"；会员沉淀最好的是 <b>{best_mem['name']}</b>（{best_mem.get('member_total', 0)} 人）。"
+    s_mem += "</li>"
+    if mratio == 0:
+        s_mem += ("<li class='bad'>· ⚠️ 今日会员成交占比为 0%：所有成交单据均未挂会员（customerUid 全为 0），"
+                  "存在严重的「成交客户未转会员」问题，客户资产未沉淀，需立即整改——每笔成交必须录入会员。</li>")
+    else:
+        s_mem += f"<li>· 会员成交占比 {fmt_pct(mratio)}，会员销售贡献 {fmt_money(g_mamt)}。</li>"
+    s_mem += "</ul>"
+    # 人工复盘问卷
+    s_mem += "<h3>二、店员人工复盘（每日填写）</h3><div class='form'>"
+    s_mem += "<p><b>1. 今天新增会员主要来源？</b><br>　☐ 新客户进店　☐ 老客户介绍　☐ 活动客户　☐ 其他：______</p>"
+    s_mem += "<p><b>2. 今天有没有值得长期维护的客户？</b>（婚庆 / 新房 / 高消费 / 有复购需求）<br>　答：______</p>"
+    s_mem += "<p><b>3. 今天有没有进行老客户维护？</b><br>　☐ 电话回访　☐ 微信沟通　☐ 活动通知　☐ 无</p>"
+    s_mem += "</div>"
+    # 客户维护建议
+    s_mem += "<h3>三、客户维护建议（数据驱动）</h3><ul class='ana'>"
+    if g_mnew == 0:
+        s_mem += "<li>· 今日无新增会员，拓客与转会员力度不足，建议「每单必录会员 + 开卡礼」拉动登记。</li>"
+    else:
+        s_mem += f"<li>· 今日新增 {g_mnew} 名会员，建议在 48 小时内微信/电话首访，建立客户档案。</li>"
+    if mratio == 0:
+        s_mem += "<li class='bad'>· 重点：把一次购买客户转化为长期会员资产——成交即录入，杜绝散客流失。</li>"
+    worst_mem = min(stores_data["stores"], key=lambda s: s.get("member_total", 0)) if stores_data["stores"] else None
+    if worst_mem and worst_mem.get("member_total", 0) <= 1:
+        s_mem += (f"<li>· {worst_mem['name']} 会员沉淀薄弱（仅 {worst_mem.get('member_total', 0)} 人），"
+                  "需重点抓会员登记与老客激活。</li>")
+    s_mem += "<li>· 关注家庭客户 / 婚庆客户 / 高价值会员积累，建立复购提醒机制。</li>"
+    s_mem += "</ul>"
+    sec("五、客户资产分析（会员管理）", s_mem)
+
+    # ---------- 六、老板每日经营总结 ----------
+    best_store = ranked[0] if ranked else None
+    worst_store = ranked[-1] if ranked and len(ranked) > 1 else (ranked[0] if ranked else None)
+    s_sum = ""
+
+    # 一、经营亮点
+    s_sum += "<h3>一、今日经营亮点</h3><ul class='ana'>"
+    s_sum += f"<li>· 今日总营业额 {fmt_money(ts)}，毛利率 {fmt_pct(gm)}，净利润 {fmt_money(tn)}（净利率 {fmt_pct(tnm)}）。</li>"
+    if best_store:
+        s_sum += (f"<li>· 表现优秀门店：<b>{best_store['name']}</b>（营业额 {fmt_money(best_store['today_sales'])}，"
+                  f"净利润 {fmt_money(best_store['net'])}，净利率 {fmt_pct(best_store['net_margin'])}）。</li>")
+    if top_amt:
+        s_sum += f"<li>· 热销商品（按金额）：" + "、".join(f"{p['name']}({fmt_money(p['amount'])})" for p in top_amt[:3]) + "。</li>"
+    if top_profit:
+        s_sum += f"<li>· 高利润商品（按毛利）：" + "、".join(f"{p['name']}({fmt_money(p['profit'])})" for p in top_profit[:3]) + "。</li>"
+    if ts > ys:
+        s_sum += f"<li>· 营业额较昨日 {fmt_money(ys)} {trend(ts, ys)}，势头良好，优秀门店打法/热销品陈列经验可复制。</li>"
+    elif ts == ys:
+        s_sum += "<li>· 营业额与昨日持平，可参考亮点经验寻求突破。</li>"
+    else:
+        s_sum += f"<li class='bad'>· 营业额较昨日 {trend(ts, ys)}，原因需结合客流/天气/竞品/人员排查（数据无法判断处，请补充）。</li>"
+    s_sum += "</ul>"
+
+    # 二、最大问题
+    problems = []
+    if ts < ys:
+        problems.append(f"营业额异常下降（{trend(ts, ys)}），建议核查时段客流与品类动销")
+    if gm and gm < 30:
+        problems.append(f"毛利率 {fmt_pct(gm)} 偏低，关注折扣力度与低毛利品占比")
+    if best_store and worst_store and best_store is not worst_store and worst_store["avg_price"] and best_store["avg_price"]:
+        if worst_store["avg_price"] < best_store["avg_price"] * 0.6:
+            problems.append(f"客单价分化：{worst_store['name']}（{fmt_money(worst_store['avg_price'])}）明显低于 {best_store['name']}（{fmt_money(best_store['avg_price'])}），需提升连带")
+    if mratio == 0:
+        problems.append("会员成交占比 0%，成交客户未转会员，客户资产流失")
+    if tn < 0:
+        problems.append("净利润为负，成本已超过毛利")
+    s_sum += "<h3>二、今日最大问题</h3><ul class='ana'>"
+    if problems:
+        for pr in problems:
+            s_sum += f"<li class='bad'>· ⚠️ {pr}</li>"
+    else:
+        s_sum += "<li>· 今日各项指标平稳，无显著异常。</li>"
+        s_sum += "<li>· 若仍有未识别问题（如具体商品动销弱、人员状态），请老板/店员补充。</li>"
+    s_sum += "</ul>"
+
+    # 三、重点关注门店
+    s_sum += "<h3>三、重点关注门店</h3><ul class='ana'>"
+    if worst_store:
+        reasons = []
+        if worst_store["net"] < 0:
+            reasons.append("净利润为负")
+        if worst_store["today_sales"] == min(s["today_sales"] for s in stores_data["stores"]):
+            reasons.append("营业额最低")
+        if worst_store.get("member_total", 0) <= 1:
+            reasons.append("会员沉淀最弱")
+        s_sum += (f"<li>· <b>{worst_store['name']}</b>：{('、'.join(reasons) if reasons else '各项居中')}。"
+                   "建议：提升客单价与连带销售、强化会员登记与老客激活。</li>")
+    s_sum += "</ul>"
+
+    # 四、重点推广商品
+    s_sum += "<h3>四、重点推广商品</h3><ul class='ana'>"
+    if top_amt:
+        champ = top_amt[0]
+        s_sum += (f"<li>· 今日销售冠军：<b>{champ['name']}</b>（{fmt_money(champ['amount'])}，{champ['quantity']:.0f} 件）。"
+                  "建议加强陈列、保证库存、可做主推活动。</li>")
+    if top_profit:
+        s_sum += (f"<li>· 利润贡献商品：{top_profit[0]['name']}（毛利 {fmt_money(top_profit[0]['profit'])}），"
+                  "建议优先推广。</li>")
+    s_sum += "<li>· 是否需增加库存 / 做活动，请结合第四节库存与季节判断。</li>"
+    s_sum += "</ul>"
+
+    # 五、明日三个经营动作
+    s_sum += "<h3>五、明日三个经营动作</h3><ol class='acts'>"
+    acts = []
+    if top_amt:
+        acts.append(f"加强「{top_amt[0]['name']}」体验式销售与陈列，提高连带购买与客单价")
+    if worst_store and best_store and worst_store is not best_store:
+        acts.append(f"{worst_store['name']} 调整销售重点（提升客单价/连带），目标营业额回升")
+    acts.append("成交客户全部录入会员、建立客户档案，启动老客复购提醒（解决会员占比 0% 问题）")
+    for a in acts[:3]:
+        s_sum += f"<li>{a}</li>"
+    s_sum += "</ol>"
+    sec("六、老板每日经营总结", s_sum)
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     html = f"""<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -395,6 +552,10 @@ tr:hover td{{background:#fff8f8;}}
 .trend.good{{color:#2e7d32;}}
 .trend.bad{{color:#c62828;}}
 .bad{{color:#c62828;}}
+.form{{background:#f7f9fc;border:1px dashed #c9d3e0;border-radius:6px;padding:12px 14px;margin:8px 0;font-size:13.5px;line-height:2;color:#444;}}
+.form p{{margin:4px 0;}}
+.acts{{margin:6px 0 2px 20px;padding:0;}}
+.acts li{{font-size:13.5px;line-height:1.9;margin:4px 0;}}
 .footer{{text-align:center;color:#999;font-size:12px;padding:14px;}}
 </style></head><body><div class="container">
 <div class="header"><h1>📊 觉爱家纺 · 每日经营分析报表</h1>
@@ -451,6 +612,22 @@ tr:hover td{{background:#fff8f8;}}
             L.append(f"{s['name']}【{kw}】库存充足")
     if not found:
         L.append("当前无紧急补货/换季商品 ✅")
+    # 五、客户资产分析（飞书摘要）
+    L.append("—— 五、客户资产分析 ——")
+    L.append(f"今日新增会员 {g_mnew}人（总沉淀{g_mtotal}人）｜会员成交 {g_mtxn}单｜会员金额 {fmt_money(g_mamt)}｜会员占比 {fmt_pct(mratio)}")
+    for s in stores_data["stores"]:
+        L.append(f"  {s['name']}：新增{s.get('member_new', 0)}/总{s.get('member_total', 0)}")
+    if mratio == 0:
+        L.append("  ⚠️ 会员成交占比0%，成交客户未转会员，须整改")
+    # 六、老板经营总结（飞书摘要）
+    L.append("—— 六、老板经营总结 ——")
+    if best_store:
+        L.append(f"亮点：{best_store['name']} 表现最好；热销 {top_amt[0]['name'] if top_amt else '—'}")
+    L.append(f"问题：{('、'.join(problems) if problems else '各项平稳')}")
+    if worst_store:
+        L.append(f"关注门店：{worst_store['name']}")
+    if acts:
+        L.append("明日动作：" + "；".join(acts[:3]))
     text = "\n".join(L)
     return html, text
 
@@ -564,12 +741,22 @@ def main():
                     "stock": float(pr.get("stock", 0) or 0),
                     "sell_price": float(pr.get("sellPrice", 0) or 0),
                 })
-        members = fetch_members(p, report_date)
-        global_members += len(members)
+        members_all = fetch_members(p)
+        # 今日新增会员：用 createdDate 字段筛选（接口日期参数不生效）
+        new_members = [m for m in members_all if (m.get("createdDate") or "").startswith(report_date)]
+        n_new = len(new_members)
+        global_members += n_new
+        # 会员成交：当日有效销售单中 customerUid 非 0 即为会员单
+        mem_txn = 0
+        mem_amt = 0.0
+        for t in today_tk:
+            if t.get("ticketType") == "SELL" and t.get("invalid", 0) == 0 and t.get("customerUid", 0) not in (0, None, ""):
+                mem_txn += 1
+                mem_amt += float(t.get("totalAmount", 0) or 0)
         raw[name] = {
             "today": len(today_tk), "yesterday": len(yest_tk),
             "lastweek": len(lw_tk), "rank30": len(rank30_tk),
-            "inventory": len(inv), "members": len(members),
+            "inventory": len(inv), "members": len(members_all), "members_new": n_new,
         }
 
         today_a = pp.analyze_sales(today_tk)
@@ -623,6 +810,10 @@ def main():
             "season_kw": season_kw,
             "today_products": today_products,
             "rank30_products": rank30_products,
+            "member_new": n_new,
+            "member_total": len(members_all),
+            "member_txn": mem_txn,
+            "member_amt": mem_amt,
         })
 
     # 全局汇总
@@ -636,13 +827,19 @@ def main():
     yc = sum(s["yest_cost"] for s in stores_data["stores"])
     yn = sum(s["yest_net"] for s in stores_data["stores"])
     lw_sales = sum(s.get("lw_sales", 0) for s in stores_data["stores"])
+    member_new_total = sum(s.get("member_new", 0) for s in stores_data["stores"])
+    member_total = sum(s.get("member_total", 0) for s in stores_data["stores"])
+    member_txn_total = sum(s.get("member_txn", 0) for s in stores_data["stores"])
+    member_amt_total = sum(s.get("member_amt", 0.0) for s in stores_data["stores"])
 
     stores_data["global"] = {
         "today_sales": ts, "today_profit": tp, "today_orders": to,
         "today_cost": tc, "today_net": tn,
         "today_net_margin": (tn / ts * 100) if ts else 0,
         "yest_sales": ys, "yest_profit": yp, "yest_cost": yc, "yest_net": yn,
-        "lw_sales": lw_sales, "members": global_members,
+        "lw_sales": lw_sales, "members": member_new_total,
+        "member_new_total": member_new_total, "member_total": member_total,
+        "member_txn_total": member_txn_total, "member_amt_total": member_amt_total,
     }
 
     # 存档原始计数
