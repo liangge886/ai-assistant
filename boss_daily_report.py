@@ -170,6 +170,156 @@ def fetch_members(store_pospal):
 
 
 # ============================================================
+# 缓存机制：降低银豹 API 调用量
+# - 库存：每 7 天全量同步，平时用当日单据 quantity 扣减本地库存
+# - 30天销量排名：滚动窗口每日追加当日聚合，不再拉 30 天全量单据
+# - 会员：每 7 天全量同步，平时读缓存总数（今日新增仅在全量同步日准确）
+# 缓存文件持久化到 DATA_DIR，由 workflow 末尾 git push 回仓库
+# ============================================================
+import re as _re
+
+CACHE_DIR = DATA_DIR  # 复用 /workspace/scripts/data/
+
+
+def _safe_store_name(name):
+    """门店名 -> 文件安全名（中文保留，去掉括号/特殊字符）"""
+    s = _re.sub(r'[（）()【】\[\]/\\:*?"<>|]', '_', name)
+    s = _re.sub(r'_+', '_', s).strip('_')
+    return s
+
+
+def _cache_path(kind, safe_name):
+    return os.path.join(CACHE_DIR, f"{kind}_{safe_name}.json")
+
+
+def _load_cache(kind, safe_name):
+    path = _cache_path(kind, safe_name)
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError, OSError):
+        return {}  # 降级：返回空，调用方走全量
+
+
+def _save_cache(kind, safe_name, data):
+    _os.makedirs(CACHE_DIR, exist_ok=True)
+    path = _cache_path(kind, safe_name)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def _days_between(d1, d2):
+    """两个 YYYY-MM-DD 日期相差天数（绝对值）"""
+    try:
+        return abs((datetime.strptime(d2, "%Y-%m-%d") - datetime.strptime(d1, "%Y-%m-%d")).days)
+    except Exception:
+        return 999  # 解析失败视为很久以前，触发全量
+
+
+def _parse_inv_sum(inv):
+    """原始库存商品列表 -> [{name, stock, sell_price}]（复用原 734-743 行逻辑）"""
+    inv_sum = []
+    if isinstance(inv, list):
+        for pr in inv:
+            if pr.get("enable") != 1 or pr.get("noStock") == 1:
+                continue
+            inv_sum.append({
+                "name": pr.get("name", ""),
+                "stock": float(pr.get("stock", 0) or 0),
+                "sell_price": float(pr.get("sellPrice", 0) or 0),
+            })
+    return inv_sum
+
+
+def get_inventory_cached(store_pospal, report_date_str):
+    """返回 inv_sum（list of {name,stock,sell_price}）。
+    - 缓存不存在或 last_full_sync > 7 天 -> 全量刷新
+    - 否则 -> 读缓存（扣减由调用方在 main 中用今日单据完成）
+    返回 (inv_sum, just_synced)
+    """
+    safe = _safe_store_name(store_pospal["_name"])
+    cache = _load_cache("inventory_cache", safe)
+    last = cache.get("last_full_sync")
+    need_full = (not last) or _days_between(last, report_date_str) > 7
+
+    if need_full:
+        inv = fetch_inventory(store_pospal)  # 全量 API 调用
+        inv_sum = _parse_inv_sum(inv)
+        _save_cache("inventory_cache", safe, {
+            "last_full_sync": report_date_str,
+            "store_name": store_pospal["_name"],
+            "products": inv_sum,
+        })
+        return inv_sum, True
+
+    # 读缓存（扣减由调用方做）
+    inv_sum = list(cache.get("products", []))
+    return inv_sum, False
+
+
+def get_sales_tally_cached(store_pospal, report_date_str, today_tk):
+    """返回 rank30_prod（dict: name -> {name,quantity,amount,profit}）。
+    每天追加当日聚合，剔除 >30 天的日期，不再拉 30 天全量单据。
+    """
+    safe = _safe_store_name(store_pospal["_name"])
+    cache = _load_cache("sales_tally", safe)
+    daily = cache.get("daily", {})
+
+    # 追加当日（用当日单据聚合，复用 agg_store_products）
+    today_agg = agg_store_products(today_tk)
+    daily[report_date_str] = {
+        nm: {"quantity": v["quantity"], "amount": v["amount"], "profit": v["profit"]}
+        for nm, v in today_agg.items()
+    }
+
+    # 剔除 >30 天（含当日共 30 天）
+    cutoff = (datetime.strptime(report_date_str, "%Y-%m-%d") - timedelta(days=29)).strftime("%Y-%m-%d")
+    daily = {d: v for d, v in daily.items() if d >= cutoff}
+
+    _save_cache("sales_tally", safe, {
+        "store_name": store_pospal["_name"],
+        "last_updated": report_date_str,
+        "window_start": cutoff,
+        "daily": daily,
+    })
+
+    # 聚合全部窗口
+    rank30_prod = {}
+    for d, prods in daily.items():
+        for nm, v in prods.items():
+            rec = rank30_prod.setdefault(nm, {"name": nm, "quantity": 0.0, "amount": 0.0, "profit": 0.0})
+            rec["quantity"] += v["quantity"]
+            rec["amount"] += v["amount"]
+            rec["profit"] += v["profit"]
+    return rank30_prod
+
+
+def get_members_cached(store_pospal, report_date_str):
+    """返回 (member_total, n_new_today, just_synced)。
+    - 缓存不存在或 >7 天 -> 全量刷新，用 createdDate 筛今日新增
+    - 否则 -> 读缓存总数，n_new=0（customerUid 全0无法从单据推断，保留现状）
+    """
+    safe = _safe_store_name(store_pospal["_name"])
+    cache = _load_cache("member_cache", safe)
+    last = cache.get("last_full_sync")
+    need_full = (not last) or _days_between(last, report_date_str) > 7
+
+    if need_full:
+        members_all = fetch_members(store_pospal)
+        n_new = len([m for m in members_all if (m.get("createdDate", "")).startswith(report_date_str)])
+        total = len(members_all)
+        _save_cache("member_cache", safe, {
+            "store_name": store_pospal["_name"],
+            "last_full_sync": report_date_str,
+            "member_total": total,
+        })
+        return total, n_new, True
+
+    total = cache.get("member_total", 0)
+    return total, 0, False
+
+
+# ============================================================
 # 商品聚合（带门店归属）
 # ============================================================
 def agg_products(tickets):
@@ -727,24 +877,46 @@ def main():
         today_tk = fetch_tickets(p, report_date, "今日")
         yest_tk = fetch_tickets(p, yest_str, "昨日")
         lw_tk = fetch_tickets(p, lw_str, "上周同期")
-        rank30_tk = fetch_30d(p, report_date)
-        inv = fetch_inventory(p)
-        # fetch_inventory 返回原始商品列表；analyze_inventory 的 stock_summary 仅取库存前50（高库存），
-        # 会漏掉低库存商品，故这里直接遍历原始列表提取在售商品的 名称/库存/售价（不过滤库存量）
-        inv_sum = []
-        if isinstance(inv, list):
-            for pr in inv:
-                if pr.get("enable") != 1 or pr.get("noStock") == 1:
-                    continue
-                inv_sum.append({
-                    "name": pr.get("name", ""),
-                    "stock": float(pr.get("stock", 0) or 0),
-                    "sell_price": float(pr.get("sellPrice", 0) or 0),
+
+        # --- 30天销量排名：从缓存读取（基于今日单据追加），不再调 fetch_30d ---
+        try:
+            rank30_prod = get_sales_tally_cached(p, report_date, today_tk)
+        except Exception as e:
+            print(f"[WARN] {name} 30天销量缓存失败，回退全量: {e}")
+            rank30_tk = fetch_30d(p, report_date)
+            rank30_prod = agg_store_products(rank30_tk)
+
+        # --- 库存：缓存 + 当日扣减（7天全量同步一次）---
+        try:
+            inv_sum, just_synced = get_inventory_cached(p, report_date)
+            if not just_synced:
+                # 用今日单据扣减库存（以销定存）
+                _today_prod_for_inv = agg_store_products(today_tk)
+                for it in inv_sum:
+                    nm = it.get("name", "")
+                    if nm in _today_prod_for_inv:
+                        it["stock"] = float(it.get("stock", 0)) - _today_prod_for_inv[nm]["quantity"]
+                # 保存扣减后的库存回缓存（供次日读）
+                _safe = _safe_store_name(name)
+                _prev_inv_cache = _load_cache("inventory_cache", _safe)
+                _save_cache("inventory_cache", _safe, {
+                    "last_full_sync": _prev_inv_cache.get("last_full_sync", report_date),
+                    "store_name": name,
+                    "products": inv_sum,
                 })
-        members_all = fetch_members(p)
-        # 今日新增会员：用 createdDate 字段筛选（接口日期参数不生效）
-        new_members = [m for m in members_all if (m.get("createdDate") or "").startswith(report_date)]
-        n_new = len(new_members)
+        except Exception as e:
+            print(f"[WARN] {name} 库存缓存失败，回退全量: {e}")
+            inv = fetch_inventory(p)
+            inv_sum = _parse_inv_sum(inv)
+
+        # --- 会员：缓存（7天全量同步一次；平时今日新增=0）---
+        try:
+            member_total, n_new, _ = get_members_cached(p, report_date)
+        except Exception as e:
+            print(f"[WARN] {name} 会员缓存失败，回退全量: {e}")
+            members_all = fetch_members(p)
+            n_new = len([m for m in members_all if (m.get("createdDate") or "").startswith(report_date)])
+            member_total = len(members_all)
         global_members += n_new
         # 会员成交：当日有效销售单中 customerUid 非 0 即为会员单
         mem_txn = 0
@@ -755,8 +927,8 @@ def main():
                 mem_amt += float(t.get("totalAmount", 0) or 0)
         raw[name] = {
             "today": len(today_tk), "yesterday": len(yest_tk),
-            "lastweek": len(lw_tk), "rank30": len(rank30_tk),
-            "inventory": len(inv), "members": len(members_all), "members_new": n_new,
+            "lastweek": len(lw_tk), "rank30": len(rank30_prod),
+            "inventory": len(inv_sum), "members": member_total, "members_new": n_new,
         }
 
         today_a = pp.analyze_sales(today_tk)
@@ -766,7 +938,7 @@ def main():
         # 单店商品销量排名
         today_prod = agg_store_products(today_tk)
         today_products = sorted(today_prod.values(), key=lambda x: x["quantity"], reverse=True)
-        rank30_prod = agg_store_products(rank30_tk)
+        # rank30_prod 已由缓存函数返回，结构一致（dict: name -> {name,quantity,amount,profit}）
         rank30_products = sorted(
             [v for v in rank30_prod.values() if v["quantity"] > 1],
             key=lambda x: x["quantity"], reverse=True,
@@ -811,7 +983,7 @@ def main():
             "today_products": today_products,
             "rank30_products": rank30_products,
             "member_new": n_new,
-            "member_total": len(members_all),
+            "member_total": member_total,
             "member_txn": mem_txn,
             "member_amt": mem_amt,
         })
@@ -868,6 +1040,24 @@ def main():
             send_feishu(text)
         except Exception as e:
             print(f"[WARN] 飞书推送失败: {e}")
+
+    # 缓存持久化：在 GitHub Actions 环境中把缓存文件 git push 回仓库
+    # （本地运行不会触发，避免误提交）
+    if _os.environ.get("GITHUB_ACTIONS") == "true":
+        try:
+            _os.chdir(SCRIPT_DIR)
+            subprocess.run(["git", "add", "scripts/data/"], check=True)
+            r = subprocess.run(["git", "commit", "-m", f"chore: update cache data {report_date}"],
+                               capture_output=True, text=True)
+            if r.returncode == 0:
+                subprocess.run(["git", "push"], check=True)
+                print("[OK] 缓存数据已 git push 回仓库")
+            else:
+                print(f"[INFO] 缓存无变化或提交失败（可能无变更）: {r.stdout.strip()[:100]}")
+        except subprocess.CalledProcessError as e:
+            print(f"[WARN] git push 缓存失败: {e}")
+        except Exception as e:
+            print(f"[WARN] 缓存持久化异常: {e}")
 
 
 if __name__ == "__main__":

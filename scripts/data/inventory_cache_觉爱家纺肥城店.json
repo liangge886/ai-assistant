@@ -1,0 +1,1776 @@
+{
+  "last_full_sync": "2026-07-27",
+  "store_name": "觉爱家纺肥城店",
+  "products": [
+    {
+      "name": "清风吟竹牛奶奶线四件套",
+      "stock": 1.0,
+      "sell_price": 199.0
+    },
+    {
+      "name": "毛绒四件套",
+      "stock": 9.0,
+      "sell_price": 99.0
+    },
+    {
+      "name": "金棉四件套",
+      "stock": 17.0,
+      "sell_price": 99.0
+    },
+    {
+      "name": "如意",
+      "stock": 1.0,
+      "sell_price": 569.0
+    },
+    {
+      "name": "高端全棉数码印花四件套",
+      "stock": 10.0,
+      "sell_price": 199.0
+    },
+    {
+      "name": "特价 活性全棉环保四件套",
+      "stock": 19.0,
+      "sell_price": 139.0
+    },
+    {
+      "name": "木洗棉四件套",
+      "stock": 10.0,
+      "sell_price": 199.0
+    },
+    {
+      "name": "米色回忆四件套",
+      "stock": 3.0,
+      "sell_price": 699.0
+    },
+    {
+      "name": "春日之约-四件套",
+      "stock": 2.0,
+      "sell_price": 2399.0
+    },
+    {
+      "name": "四件套-鲜花小镇",
+      "stock": 6.0,
+      "sell_price": 1499.0
+    },
+    {
+      "name": "四件套-贤雅生活",
+      "stock": 6.0,
+      "sell_price": 1099.5
+    },
+    {
+      "name": "花满盈阁",
+      "stock": 1.0,
+      "sell_price": 399.0
+    },
+    {
+      "name": "婚庆四件套-吾家大喜",
+      "stock": 1.0,
+      "sell_price": 2650.0
+    },
+    {
+      "name": "凤羽仙姿-四件套",
+      "stock": 3.0,
+      "sell_price": 1329.0
+    },
+    {
+      "name": "华美绽放-四件套",
+      "stock": 1.0,
+      "sell_price": 1795.0
+    },
+    {
+      "name": "良辰相伴-红-四件套",
+      "stock": 0.0,
+      "sell_price": 1329.0
+    },
+    {
+      "name": "喜迎百子-四件套",
+      "stock": 1.0,
+      "sell_price": 1329.0
+    },
+    {
+      "name": "盛世江山-四件套",
+      "stock": 1.0,
+      "sell_price": 1910.0
+    },
+    {
+      "name": "天作之合",
+      "stock": 3.0,
+      "sell_price": 1299.0
+    },
+    {
+      "name": "龙凤双喜-四件套",
+      "stock": 3.0,
+      "sell_price": 1495.0
+    },
+    {
+      "name": "才子佳人",
+      "stock": 1.0,
+      "sell_price": 599.0
+    },
+    {
+      "name": "醉美姻缘",
+      "stock": 2.0,
+      "sell_price": 599.0
+    },
+    {
+      "name": "红妆嫁娶-四件套",
+      "stock": 2.0,
+      "sell_price": 2549.0
+    },
+    {
+      "name": "玉堂春暖-四件套",
+      "stock": 2.0,
+      "sell_price": 2190.0
+    },
+    {
+      "name": "龙凤九天",
+      "stock": 1.0,
+      "sell_price": 1199.0
+    },
+    {
+      "name": "龙飞凤翔-四件套",
+      "stock": 2.0,
+      "sell_price": 2245.0
+    },
+    {
+      "name": "爱在花开",
+      "stock": 1.0,
+      "sell_price": 799.0
+    },
+    {
+      "name": "天生一对",
+      "stock": 2.0,
+      "sell_price": 3119.0
+    },
+    {
+      "name": "福禄同喜-四件套",
+      "stock": 2.0,
+      "sell_price": 2299.0
+    },
+    {
+      "name": "皇家喜嫁-四件套",
+      "stock": 2.0,
+      "sell_price": 2899.0
+    },
+    {
+      "name": "龙凤和玺-四件套",
+      "stock": 2.0,
+      "sell_price": 2899.0
+    },
+    {
+      "name": "佳偶良缘",
+      "stock": 3.0,
+      "sell_price": 499.0
+    },
+    {
+      "name": "龙凤结约",
+      "stock": 2.0,
+      "sell_price": 499.0
+    },
+    {
+      "name": "龙凤新禧",
+      "stock": 1.0,
+      "sell_price": 499.0
+    },
+    {
+      "name": "芳芳爱情",
+      "stock": 2.0,
+      "sell_price": 499.0
+    },
+    {
+      "name": "和和睦睦",
+      "stock": 2.0,
+      "sell_price": 499.0
+    },
+    {
+      "name": "全棉居家绣花四件套",
+      "stock": 4.0,
+      "sell_price": 199.0
+    },
+    {
+      "name": "床笠款三件套",
+      "stock": 1.0,
+      "sell_price": 139.0
+    },
+    {
+      "name": "全棉印花学子三件套",
+      "stock": 3.0,
+      "sell_price": 150.0
+    },
+    {
+      "name": "觉小童乘风破浪四件套",
+      "stock": 3.0,
+      "sell_price": 199.0
+    },
+    {
+      "name": "白衬被",
+      "stock": 31.0,
+      "sell_price": 0.0
+    },
+    {
+      "name": "皱皱纱夏凉被",
+      "stock": 2.0,
+      "sell_price": 39.0
+    },
+    {
+      "name": "89豆豆被（单人全棉）",
+      "stock": 1.0,
+      "sell_price": 89.0
+    },
+    {
+      "name": "1.5x2m 5A抗菌夏被",
+      "stock": 16.0,
+      "sell_price": 89.0
+    },
+    {
+      "name": "5A抗菌夏凉被 (2m x 2.3)",
+      "stock": 1.0,
+      "sell_price": 99.0
+    },
+    {
+      "name": "1.5x2米棉小格水洗布夏被",
+      "stock": 4.0,
+      "sell_price": 99.0
+    },
+    {
+      "name": "安睡舒柔春秋被 (1.5x2m)",
+      "stock": 0.0,
+      "sell_price": 99.0
+    },
+    {
+      "name": "1.5x2米针织绵豆豆被",
+      "stock": 5.0,
+      "sell_price": 89.0
+    },
+    {
+      "name": "太空恒温觉儿暖春秋被 (2x2.3m)",
+      "stock": 10.0,
+      "sell_price": 129.0
+    },
+    {
+      "name": "李官奇原棉舒适大豆春秋被 (2m x 2.3m)",
+      "stock": 1.0,
+      "sell_price": 139.0
+    },
+    {
+      "name": "7A抗菌双层春秋被",
+      "stock": 10.0,
+      "sell_price": 345.0
+    },
+    {
+      "name": "5A抗菌冬被 2米",
+      "stock": 3.0,
+      "sell_price": 139.0
+    },
+    {
+      "name": "纱布双人豆豆被",
+      "stock": 0.0,
+      "sell_price": 129.0
+    },
+    {
+      "name": "李官奇舒暖大豆春秋被 (1.5x2m)",
+      "stock": 3.0,
+      "sell_price": 219.0
+    },
+    {
+      "name": "李官奇 2米舒暖大豆春秋被",
+      "stock": 1.0,
+      "sell_price": 239.0
+    },
+    {
+      "name": "李官奇 2米星光璀璨春秋",
+      "stock": 1.0,
+      "sell_price": 299.0
+    },
+    {
+      "name": "四喜临门春秋被甜甜蜜蜜（柔玉）",
+      "stock": 3.0,
+      "sell_price": 299.0
+    },
+    {
+      "name": "四喜临门春秋被（金桂灰色）",
+      "stock": 2.0,
+      "sell_price": 299.0
+    },
+    {
+      "name": "华复一号大豆春秋被",
+      "stock": 6.0,
+      "sell_price": 369.0
+    },
+    {
+      "name": "福禄 四喜临门冬被",
+      "stock": 2.0,
+      "sell_price": 349.0
+    },
+    {
+      "name": "四喜临门东北（幸福米）",
+      "stock": 1.0,
+      "sell_price": 349.0
+    },
+    {
+      "name": "四喜临门冬被甜甜蜜蜜（柔玉）",
+      "stock": 3.0,
+      "sell_price": 349.0
+    },
+    {
+      "name": "大宝被冬被",
+      "stock": 2.0,
+      "sell_price": 369.0
+    },
+    {
+      "name": "高弹大豆双胎被北方 (夏+春秋)",
+      "stock": 1.0,
+      "sell_price": 269.0
+    },
+    {
+      "name": "爱之蜜语",
+      "stock": 1.0,
+      "sell_price": 399.0
+    },
+    {
+      "name": "如梦令香妃大豆冬被 2.5kg",
+      "stock": 1.0,
+      "sell_price": 489.0
+    },
+    {
+      "name": "福禄蚕丝春秋被 2x2.3m",
+      "stock": 3.0,
+      "sell_price": 699.0
+    },
+    {
+      "name": "5A抗菌1.5米桑蚕丝春秋被700g",
+      "stock": 1.0,
+      "sell_price": 699.0
+    },
+    {
+      "name": "李官奇臻品蚕丝大豆二合一冬被",
+      "stock": 3.0,
+      "sell_price": 799.0
+    },
+    {
+      "name": "全家福桑蚕丝春秋被 2x2.3m",
+      "stock": 3.0,
+      "sell_price": 899.0
+    },
+    {
+      "name": "5A抗菌桑蚕丝被 2米1kg",
+      "stock": 2.0,
+      "sell_price": 999.0
+    },
+    {
+      "name": "落樱桑蚕丝被 2x2.3m",
+      "stock": 7.0,
+      "sell_price": 1299.0
+    },
+    {
+      "name": "全家福桑蚕丝冬被",
+      "stock": 2.0,
+      "sell_price": 1399.0
+    },
+    {
+      "name": "清韵金兰黄金双宫 1kg",
+      "stock": 2.0,
+      "sell_price": 1499.0
+    },
+    {
+      "name": "极光雁鹅绒被600g",
+      "stock": 0.0,
+      "sell_price": 1499.0
+    },
+    {
+      "name": "180度双宫茧开口桑蚕丝春秋被 (2x2.3)",
+      "stock": 1.0,
+      "sell_price": 1729.0
+    },
+    {
+      "name": "王者双宫桑蚕丝被",
+      "stock": 2.0,
+      "sell_price": 1999.0
+    },
+    {
+      "name": "秋丰白玉桑蚕丝被",
+      "stock": 1.0,
+      "sell_price": 2499.0
+    },
+    {
+      "name": "极光雁鸭绒被1200g",
+      "stock": 1.0,
+      "sell_price": 2199.0
+    },
+    {
+      "name": "秋丰白玉",
+      "stock": 1.0,
+      "sell_price": 1299.0
+    },
+    {
+      "name": "伯爵亲肤鹅绒被1kg",
+      "stock": 1.0,
+      "sell_price": 2299.0
+    },
+    {
+      "name": "臻品鹅绒春秋被 600g",
+      "stock": 1.0,
+      "sell_price": 2399.0
+    },
+    {
+      "name": "清韵金兰黄金双宫茧桑蚕丝被",
+      "stock": 1.0,
+      "sell_price": 2499.0
+    },
+    {
+      "name": "范登布鲁克斯鹅绒被1250g",
+      "stock": 1.0,
+      "sell_price": 3299.0
+    },
+    {
+      "name": "知心春秋被 (1.55x2.1m)",
+      "stock": 3.0,
+      "sell_price": 189.0
+    },
+    {
+      "name": "珠联璧合蚕丝羽绒二合一四季被",
+      "stock": 1.0,
+      "sell_price": 3799.0
+    },
+    {
+      "name": "爱意绵绵大豆被",
+      "stock": 1.0,
+      "sell_price": 169.0
+    },
+    {
+      "name": "色织水洗棉花春秋被 (2x2.3m)",
+      "stock": 0.0,
+      "sell_price": 189.0
+    },
+    {
+      "name": "双层纱全棉棉花被 (1.2x1.5m)",
+      "stock": 9.0,
+      "sell_price": 89.0
+    },
+    {
+      "name": "锦氨宝宝夏被",
+      "stock": 3.0,
+      "sell_price": 89.0
+    },
+    {
+      "name": "双层纱大豆蛋白被 (2x2.3m)",
+      "stock": 6.0,
+      "sell_price": 169.0
+    },
+    {
+      "name": "双层纱大豆蛋白夏被 (1.5x2m)",
+      "stock": 1.0,
+      "sell_price": 149.0
+    },
+    {
+      "name": "大重玺蚕丝冬被",
+      "stock": 2.0,
+      "sell_price": 1399.0
+    },
+    {
+      "name": "大重玺蚕丝春秋被",
+      "stock": 1.0,
+      "sell_price": 899.0
+    },
+    {
+      "name": "1.5x2米海风微澜暖被",
+      "stock": 6.0,
+      "sell_price": 149.0
+    },
+    {
+      "name": "2x2.3米海风微澜夏被",
+      "stock": 8.0,
+      "sell_price": 169.0
+    },
+    {
+      "name": "1.5x2米糯棉冰丝夏凉被",
+      "stock": 4.0,
+      "sell_price": 109.0
+    },
+    {
+      "name": "2x2.3米糯棉冰丝夏凉被",
+      "stock": 7.0,
+      "sell_price": 129.0
+    },
+    {
+      "name": "2x2.3米冰凌沫沫凉感夏被",
+      "stock": 26.0,
+      "sell_price": 189.0
+    },
+    {
+      "name": "1.5x2米凉感丝夏被",
+      "stock": 21.0,
+      "sell_price": 59.0
+    },
+    {
+      "name": "2x2.3米凉感丝夏被",
+      "stock": 17.0,
+      "sell_price": 69.0
+    },
+    {
+      "name": "1.5x2米全棉夏被",
+      "stock": 1.0,
+      "sell_price": 89.0
+    },
+    {
+      "name": "2x2.3米全棉夏被",
+      "stock": 3.0,
+      "sell_price": 99.0
+    },
+    {
+      "name": "凉豆豆软席三件套（1.8*2）",
+      "stock": 2.0,
+      "sell_price": 189.0
+    },
+    {
+      "name": "凉豆豆软席三件套（1.5*2）",
+      "stock": 0.0,
+      "sell_price": 169.0
+    },
+    {
+      "name": "床裙款凉豆豆软席",
+      "stock": 3.0,
+      "sell_price": 229.0
+    },
+    {
+      "name": "冰凌沫沫夏被",
+      "stock": 16.0,
+      "sell_price": 169.0
+    },
+    {
+      "name": "织梦蚕丝夏被",
+      "stock": 3.0,
+      "sell_price": 299.0
+    },
+    {
+      "name": "舒香丝绸夏被",
+      "stock": 4.0,
+      "sell_price": 59.0
+    },
+    {
+      "name": "特价枕套",
+      "stock": 0.0,
+      "sell_price": 20.0
+    },
+    {
+      "name": "36枕套（全棉纯色）",
+      "stock": 14.0,
+      "sell_price": 36.0
+    },
+    {
+      "name": "磨毛枕套",
+      "stock": 4.0,
+      "sell_price": 24.0
+    },
+    {
+      "name": "29枕套（信封加大）",
+      "stock": 7.0,
+      "sell_price": 29.0
+    },
+    {
+      "name": "24枕套（信封）",
+      "stock": 8.0,
+      "sell_price": 24.0
+    },
+    {
+      "name": "49枕套（贝壳边）",
+      "stock": 4.0,
+      "sell_price": 49.0
+    },
+    {
+      "name": "纱布棉枕套",
+      "stock": 4.0,
+      "sell_price": 49.0
+    },
+    {
+      "name": "39枕套（棉纱大号）",
+      "stock": 2.0,
+      "sell_price": 39.0
+    },
+    {
+      "name": "29枕套（印花大号）",
+      "stock": 7.0,
+      "sell_price": 29.0
+    },
+    {
+      "name": "19枕套（印花小号）",
+      "stock": 0.0,
+      "sell_price": 19.0
+    },
+    {
+      "name": "粗布枕套",
+      "stock": 3.0,
+      "sell_price": 29.0
+    },
+    {
+      "name": "纱布枕套 大",
+      "stock": 4.0,
+      "sell_price": 49.0
+    },
+    {
+      "name": "纱布枕套 小",
+      "stock": 3.0,
+      "sell_price": 18.0
+    },
+    {
+      "name": "纯棉枕套",
+      "stock": 5.0,
+      "sell_price": 29.0
+    },
+    {
+      "name": "凉豆豆枕套",
+      "stock": 0.0,
+      "sell_price": 29.0
+    },
+    {
+      "name": "凉感藤枕套",
+      "stock": 16.0,
+      "sell_price": 19.0
+    },
+    {
+      "name": "全棉AB版工艺被套 (1.6x2.1m)",
+      "stock": 1.0,
+      "sell_price": 79.0
+    },
+    {
+      "name": "金棉斜纹加厚被套 (1.6x2.1m)",
+      "stock": 5.0,
+      "sell_price": 89.0
+    },
+    {
+      "name": "特价被套",
+      "stock": 16.0,
+      "sell_price": 45.0
+    },
+    {
+      "name": "特价被套 2*2.3",
+      "stock": 1.0,
+      "sell_price": 49.0
+    },
+    {
+      "name": "全棉斜纹加厚床单（1.6*2.2）",
+      "stock": 8.0,
+      "sell_price": 49.0
+    },
+    {
+      "name": "全棉斜纹床单",
+      "stock": 4.0,
+      "sell_price": 59.0
+    },
+    {
+      "name": "全棉斜纹加厚床单（2.3*2.5）",
+      "stock": 4.0,
+      "sell_price": 69.0
+    },
+    {
+      "name": "全棉纯色床单",
+      "stock": 2.0,
+      "sell_price": 69.0
+    },
+    {
+      "name": "长绒棉绣花床单",
+      "stock": 1.0,
+      "sell_price": 109.0
+    },
+    {
+      "name": "特价磨毛全棉床单",
+      "stock": 1.0,
+      "sell_price": 39.0
+    },
+    {
+      "name": "绒床单",
+      "stock": 1.0,
+      "sell_price": 49.0
+    },
+    {
+      "name": "宽边老粗布三件套（2.5*2.5）",
+      "stock": 10.0,
+      "sell_price": 199.0
+    },
+    {
+      "name": "宽边老粗布三件套（2*2.3）",
+      "stock": 7.0,
+      "sell_price": 169.0
+    },
+    {
+      "name": "小边老粗布三件套（2*2.3）",
+      "stock": 4.0,
+      "sell_price": 149.0
+    },
+    {
+      "name": "特价粗布床单（2.5*2.5）",
+      "stock": 1.0,
+      "sell_price": 49.0
+    },
+    {
+      "name": "特价粗布床单（2*2.3）",
+      "stock": 7.0,
+      "sell_price": 39.0
+    },
+    {
+      "name": "纯棉被罩 1.6×2.3m",
+      "stock": 19.0,
+      "sell_price": 69.0
+    },
+    {
+      "name": "纯棉被罩 1.8×2.2m",
+      "stock": 16.0,
+      "sell_price": 79.0
+    },
+    {
+      "name": "纯棉被罩 2×2.3m",
+      "stock": 17.0,
+      "sell_price": 89.0
+    },
+    {
+      "name": "纯棉床单 1.6×2.3m",
+      "stock": 14.0,
+      "sell_price": 35.0
+    },
+    {
+      "name": "纯棉床单 2.1×2.3m",
+      "stock": 13.0,
+      "sell_price": 49.0
+    },
+    {
+      "name": "纯棉床单 2.4×2.3m",
+      "stock": 11.0,
+      "sell_price": 55.0
+    },
+    {
+      "name": "纯棉床笠 1.5×2",
+      "stock": 8.0,
+      "sell_price": 119.0
+    },
+    {
+      "name": "好床笠(长绒棉) 1.8×2m",
+      "stock": 0.0,
+      "sell_price": 149.0
+    },
+    {
+      "name": "1.8×2米纯棉床笠",
+      "stock": 4.0,
+      "sell_price": 129.0
+    },
+    {
+      "name": "床笠 1.8x2m",
+      "stock": 0.0,
+      "sell_price": 69.0
+    },
+    {
+      "name": "欧若拉纱布床盖三件套 2.5x2.5m",
+      "stock": 3.0,
+      "sell_price": 269.0
+    },
+    {
+      "name": "宝宝绒床盖 0.9x2m",
+      "stock": 1.0,
+      "sell_price": 59.0
+    },
+    {
+      "name": "(棉绒) 宝宝绒床盖 1.5x2m",
+      "stock": 4.0,
+      "sell_price": 89.0
+    },
+    {
+      "name": "宝宝绒床盖 2x2.3m",
+      "stock": 15.0,
+      "sell_price": 109.0
+    },
+    {
+      "name": "天丝绒单床盖 2x2.3m",
+      "stock": 19.0,
+      "sell_price": 149.0
+    },
+    {
+      "name": "2x2.3米天丝床盖",
+      "stock": 4.0,
+      "sell_price": 149.0
+    },
+    {
+      "name": "星洛砂洗毯 2x2.2m",
+      "stock": 23.0,
+      "sell_price": 169.0
+    },
+    {
+      "name": "双面纯棉床盖 1.5x2.2m",
+      "stock": 6.0,
+      "sell_price": 99.0
+    },
+    {
+      "name": "繁花床盖三件套 2.5x2.5m",
+      "stock": 4.0,
+      "sell_price": 289.0
+    },
+    {
+      "name": "传承粗布三件套 2.5x2.5m",
+      "stock": 11.0,
+      "sell_price": 119.0
+    },
+    {
+      "name": "传承粗布床单 2x2.4m",
+      "stock": 1.0,
+      "sell_price": 59.0
+    },
+    {
+      "name": "竹纤维三件套 2.5x2.6m",
+      "stock": 3.0,
+      "sell_price": 269.0
+    },
+    {
+      "name": "全棉纯色枕套",
+      "stock": 17.0,
+      "sell_price": 29.0
+    },
+    {
+      "name": "羽绒被壳 1.6x2.1m",
+      "stock": 3.0,
+      "sell_price": 349.0
+    },
+    {
+      "name": "羽绒被壳 1.8x2.2m",
+      "stock": 5.0,
+      "sell_price": 369.0
+    },
+    {
+      "name": "羽绒被壳 2x2.3m",
+      "stock": 7.0,
+      "sell_price": 389.0
+    },
+    {
+      "name": "水洗棉羽绒被壳 2.15x2.4m",
+      "stock": 11.0,
+      "sell_price": 399.0
+    },
+    {
+      "name": "蒙恬里斯被壳 215×240cm",
+      "stock": 3.0,
+      "sell_price": 399.0
+    },
+    {
+      "name": "2×2.3m 棉感静音被壳",
+      "stock": 1.0,
+      "sell_price": 399.0
+    },
+    {
+      "name": "2×2.3m 糯棉被壳",
+      "stock": 8.0,
+      "sell_price": 349.0
+    },
+    {
+      "name": "2×2.3m 柔赛丝被壳",
+      "stock": 9.0,
+      "sell_price": 199.0
+    },
+    {
+      "name": "柔赛丝被壳(银白) 2×2.3m",
+      "stock": 4.0,
+      "sell_price": 299.0
+    },
+    {
+      "name": "奥克兰全棉大提花羽绒被壳",
+      "stock": 7.0,
+      "sell_price": 489.0
+    },
+    {
+      "name": "2×2.3m 60S天丝大提花蚕丝被壳(春日浪漫)",
+      "stock": 0.0,
+      "sell_price": 299.0
+    },
+    {
+      "name": "2×2.3m 金喜娘娘蚕丝被壳",
+      "stock": 2.0,
+      "sell_price": 229.0
+    },
+    {
+      "name": "2×2.3m 全棉蚕丝被壳(星耀之光)",
+      "stock": 5.0,
+      "sell_price": 319.0
+    },
+    {
+      "name": "丝蕴江南护颈蚕丝被壳",
+      "stock": 2.0,
+      "sell_price": 319.0
+    },
+    {
+      "name": "招财进宝喜燕蚕丝被壳",
+      "stock": 2.0,
+      "sell_price": 199.0
+    },
+    {
+      "name": "全棉蚕丝被壳（星耀之光）",
+      "stock": 2.0,
+      "sell_price": 259.0
+    },
+    {
+      "name": "60S天丝大提花蚕丝被壳 春日浪漫(被边款)",
+      "stock": 2.0,
+      "sell_price": 269.0
+    },
+    {
+      "name": "60S天丝大提花蚕丝被壳 旷谷幽兰(嵌绳款)",
+      "stock": 2.0,
+      "sell_price": 229.0
+    },
+    {
+      "name": "全棉纱布套A款2.1*2.4",
+      "stock": 3.0,
+      "sell_price": 49.0
+    },
+    {
+      "name": "全棉纱布套B款2.1*2.4",
+      "stock": 1.0,
+      "sell_price": 69.0
+    },
+    {
+      "name": "精品鹅绒（95%纯白鹅绒）2.59元/1g",
+      "stock": 700.0,
+      "sell_price": 2.59
+    },
+    {
+      "name": "90%普白鹅",
+      "stock": 500.0,
+      "sell_price": 1.9
+    },
+    {
+      "name": "95%水洗灰番鸭绒",
+      "stock": 1600.0,
+      "sell_price": 1.36
+    },
+    {
+      "name": "奢享桑蚕丝 双宫茧白丝（100%桑蚕丝）",
+      "stock": 27.0,
+      "sell_price": 499.0
+    },
+    {
+      "name": "非凡桑蚕丝（100%桑蚕丝）",
+      "stock": 6.0,
+      "sell_price": 399.0
+    },
+    {
+      "name": "星耀纯天然黄金丝（100%桑蚕丝-纯天然黄金丝）",
+      "stock": 5.0,
+      "sell_price": 660.0
+    },
+    {
+      "name": "优享桑蚕丝 上茧白丝（100%桑蚕丝）",
+      "stock": 10.0,
+      "sell_price": 500.0
+    },
+    {
+      "name": "榨蚕丝春秋被内胆",
+      "stock": 2.0,
+      "sell_price": 399.0
+    },
+    {
+      "name": "棉花",
+      "stock": 12.0,
+      "sell_price": 16.0
+    },
+    {
+      "name": "臻品鹅绒（90%纯鹅绒）",
+      "stock": 1200.0,
+      "sell_price": 2.18
+    },
+    {
+      "name": "65棉布被衬",
+      "stock": 5.0,
+      "sell_price": 65.0
+    },
+    {
+      "name": "60棉布被衬",
+      "stock": 3.0,
+      "sell_price": 60.0
+    },
+    {
+      "name": "45棉布被衬",
+      "stock": 2.0,
+      "sell_price": 45.0
+    },
+    {
+      "name": "49棉布被衬",
+      "stock": 5.0,
+      "sell_price": 49.0
+    },
+    {
+      "name": "35棉布被衬",
+      "stock": 5.0,
+      "sell_price": 35.0
+    },
+    {
+      "name": "羽绒被壳 2.2x2.4m",
+      "stock": 4.0,
+      "sell_price": 389.0
+    },
+    {
+      "name": "109学生床垫",
+      "stock": 2.0,
+      "sell_price": 109.0
+    },
+    {
+      "name": "299零压薄垫",
+      "stock": 1.0,
+      "sell_price": 299.0
+    },
+    {
+      "name": "米丘励志学生枕",
+      "stock": 3.0,
+      "sell_price": 39.0
+    },
+    {
+      "name": "圆角藤凉茶枕",
+      "stock": 1.0,
+      "sell_price": 23.0
+    },
+    {
+      "name": "颈部记忆枕",
+      "stock": 4.0,
+      "sell_price": 99.0
+    },
+    {
+      "name": "简包纯棉四件套",
+      "stock": 1.0,
+      "sell_price": 99.0
+    },
+    {
+      "name": "全棉印花四件套",
+      "stock": 5.0,
+      "sell_price": 249.0
+    },
+    {
+      "name": "山茶花秋密",
+      "stock": 3.0,
+      "sell_price": 339.0
+    },
+    {
+      "name": "初视归香奈",
+      "stock": 1.0,
+      "sell_price": 249.0
+    },
+    {
+      "name": "绒喜多华尔兹",
+      "stock": 4.0,
+      "sell_price": 299.0
+    },
+    {
+      "name": "国色芳华",
+      "stock": 1.0,
+      "sell_price": 299.0
+    },
+    {
+      "name": "299四件套（全棉磨毛）",
+      "stock": 1.0,
+      "sell_price": 299.0
+    },
+    {
+      "name": "温莎-四件套",
+      "stock": 2.0,
+      "sell_price": 1399.0
+    },
+    {
+      "name": "南希",
+      "stock": 0.0,
+      "sell_price": 319.0
+    },
+    {
+      "name": "流金万象",
+      "stock": 1.0,
+      "sell_price": 399.0
+    },
+    {
+      "name": "欧亚风情-四件套",
+      "stock": 4.0,
+      "sell_price": 995.0
+    },
+    {
+      "name": "纯色磨毛绣花四件套",
+      "stock": 5.0,
+      "sell_price": 399.0
+    },
+    {
+      "name": "布兰妮-四件套",
+      "stock": 1.0,
+      "sell_price": 1045.0
+    },
+    {
+      "name": "巴比伦",
+      "stock": 0.0,
+      "sell_price": 449.0
+    },
+    {
+      "name": "吉祥三宝-4",
+      "stock": 3.0,
+      "sell_price": 1199.0
+    },
+    {
+      "name": "欧尼亚",
+      "stock": 1.0,
+      "sell_price": 449.0
+    },
+    {
+      "name": "浪漫香榭丽-四件套",
+      "stock": 2.0,
+      "sell_price": 1199.0
+    },
+    {
+      "name": "畅享-四件套",
+      "stock": 1.0,
+      "sell_price": 1199.0
+    },
+    {
+      "name": "午后时光",
+      "stock": 5.0,
+      "sell_price": 499.0
+    },
+    {
+      "name": "尚红曼如双股",
+      "stock": 9.0,
+      "sell_price": 499.0
+    },
+    {
+      "name": "一生一世",
+      "stock": 1.0,
+      "sell_price": 399.0
+    },
+    {
+      "name": "温妮公主 A",
+      "stock": 1.0,
+      "sell_price": 499.0
+    },
+    {
+      "name": "柏尼丝",
+      "stock": 1.0,
+      "sell_price": 589.0
+    },
+    {
+      "name": "香草美人-四件套",
+      "stock": 1.0,
+      "sell_price": 1490.0
+    },
+    {
+      "name": "豆蔻-四件套",
+      "stock": 2.0,
+      "sell_price": 1680.0
+    },
+    {
+      "name": "四件套-诗韵花海",
+      "stock": 1.0,
+      "sell_price": 1459.0
+    },
+    {
+      "name": "凯芙琳-四件套",
+      "stock": 2.0,
+      "sell_price": 1650.0
+    },
+    {
+      "name": "金鱼光辉",
+      "stock": 1.0,
+      "sell_price": 689.0
+    },
+    {
+      "name": "美杜莎定制四件套",
+      "stock": 1.0,
+      "sell_price": 899.0
+    },
+    {
+      "name": "天丝棉四丝夜装银",
+      "stock": 3.0,
+      "sell_price": 1199.0
+    },
+    {
+      "name": "国潮提花",
+      "stock": 1.0,
+      "sell_price": 999.0
+    },
+    {
+      "name": "晚风流光",
+      "stock": 3.0,
+      "sell_price": 1199.0
+    },
+    {
+      "name": "喜愿",
+      "stock": 1.0,
+      "sell_price": 929.0
+    },
+    {
+      "name": "活性数码新疆棉四件套",
+      "stock": 4.0,
+      "sell_price": 269.0
+    },
+    {
+      "name": "柔云锦可定制四件套",
+      "stock": 6.0,
+      "sell_price": 400.0
+    },
+    {
+      "name": "非拉格数码印花天丝棉可定制四件套",
+      "stock": 6.0,
+      "sell_price": 699.0
+    },
+    {
+      "name": "德拉庄园-四件套",
+      "stock": 3.0,
+      "sell_price": 610.0
+    },
+    {
+      "name": "全棉双层纱被套 (1.5x2)",
+      "stock": 1.0,
+      "sell_price": 99.0
+    },
+    {
+      "name": "纯棉被套 (1.5x2)",
+      "stock": 13.0,
+      "sell_price": 89.0
+    },
+    {
+      "name": "全棉AB版工艺被套 (1.8x2.2m)",
+      "stock": 2.0,
+      "sell_price": 89.0
+    },
+    {
+      "name": "全棉斜纹加厚被套 (1.8x2.2)",
+      "stock": 2.0,
+      "sell_price": 99.0
+    },
+    {
+      "name": "全棉斜纹加厚被套 (2x2.3)",
+      "stock": 13.0,
+      "sell_price": 107.0
+    },
+    {
+      "name": "长绒棉提花磨毛被套 (2x2.3米)",
+      "stock": 6.0,
+      "sell_price": 129.0
+    },
+    {
+      "name": "长绒棉提花被套 (2x2.3米)",
+      "stock": 3.0,
+      "sell_price": 129.0
+    },
+    {
+      "name": "喷气全棉被套 (2x2.3)",
+      "stock": 5.0,
+      "sell_price": 129.0
+    },
+    {
+      "name": "长绒棉绣花被套 (2x2.3)",
+      "stock": 7.0,
+      "sell_price": 149.0
+    },
+    {
+      "name": "特价1.5x2米被套",
+      "stock": 14.0,
+      "sell_price": 39.0
+    },
+    {
+      "name": "莫代尔床盖 (2.3×2.4m)",
+      "stock": 24.0,
+      "sell_price": 129.0
+    },
+    {
+      "name": "双面全棉床盖 (2×2.2m)",
+      "stock": 4.0,
+      "sell_price": 129.0
+    },
+    {
+      "name": "棉麻床盖三件套 (2.6宽×2.3长)",
+      "stock": 1.0,
+      "sell_price": 129.0
+    },
+    {
+      "name": "婚庆娃娃",
+      "stock": 4.0,
+      "sell_price": 79.0
+    },
+    {
+      "name": "婴童凉席两件套",
+      "stock": 3.0,
+      "sell_price": 49.0
+    },
+    {
+      "name": "PE凉感藤席 (0.9×2m)",
+      "stock": 3.0,
+      "sell_price": 79.0
+    },
+    {
+      "name": "鑫缘折叠凉感藤席 (1.5×2m)",
+      "stock": 2.0,
+      "sell_price": 159.0
+    },
+    {
+      "name": "鑫缘折叠凉感藤席 (1.8×2m)",
+      "stock": 1.0,
+      "sell_price": 179.0
+    },
+    {
+      "name": "美希好阳光竹席 (1.8×2m)",
+      "stock": 3.0,
+      "sell_price": 199.0
+    },
+    {
+      "name": "马上有财纯色床盖 (2×2.3m)",
+      "stock": 3.0,
+      "sell_price": 169.0
+    },
+    {
+      "name": "超柔睡眠枕",
+      "stock": 22.0,
+      "sell_price": 29.0
+    },
+    {
+      "name": "29茶叶枕",
+      "stock": 5.0,
+      "sell_price": 29.0
+    },
+    {
+      "name": "儿童大通荞麦枕",
+      "stock": 2.0,
+      "sell_price": 29.0
+    },
+    {
+      "name": "卡通牙枕",
+      "stock": 3.0,
+      "sell_price": 29.0
+    },
+    {
+      "name": "全棉针织儿童枕",
+      "stock": 0.0,
+      "sell_price": 29.0
+    },
+    {
+      "name": "滑板熊决明子枕",
+      "stock": 0.0,
+      "sell_price": 39.0
+    },
+    {
+      "name": "嫩肤豆枕",
+      "stock": 0.0,
+      "sell_price": 39.0
+    },
+    {
+      "name": "立体六分区枕",
+      "stock": 1.0,
+      "sell_price": 39.0
+    },
+    {
+      "name": "立体定型枕",
+      "stock": 28.0,
+      "sell_price": 49.0
+    },
+    {
+      "name": "美度决明子枕",
+      "stock": 7.0,
+      "sell_price": 49.0
+    },
+    {
+      "name": "舒柔健康儿童枕",
+      "stock": 5.0,
+      "sell_price": 49.0
+    },
+    {
+      "name": "小巴拉儿童枕",
+      "stock": 13.0,
+      "sell_price": 49.0
+    },
+    {
+      "name": "舒梦零压枕",
+      "stock": 7.0,
+      "sell_price": 59.0
+    },
+    {
+      "name": "小巴拉学生枕",
+      "stock": 6.0,
+      "sell_price": 59.0
+    },
+    {
+      "name": "舒柔健康学生枕",
+      "stock": 5.0,
+      "sell_price": 59.0
+    },
+    {
+      "name": "大福枕",
+      "stock": 1.0,
+      "sell_price": 69.0
+    },
+    {
+      "name": "淘气熊婴幼儿生物基枕",
+      "stock": 0.0,
+      "sell_price": 69.0
+    },
+    {
+      "name": "原棉立体中枕",
+      "stock": 2.0,
+      "sell_price": 69.0
+    },
+    {
+      "name": "胶囊枕（小号）",
+      "stock": 1.0,
+      "sell_price": 69.0
+    },
+    {
+      "name": "抑菌鹅绒棉枕 中枕",
+      "stock": 1.0,
+      "sell_price": 69.0
+    },
+    {
+      "name": "BABY枕",
+      "stock": 2.0,
+      "sell_price": 199.0
+    },
+    {
+      "name": "草本颈养枕",
+      "stock": 0.0,
+      "sell_price": 79.0
+    },
+    {
+      "name": "胶囊枕（中号）",
+      "stock": 2.0,
+      "sell_price": 79.0
+    },
+    {
+      "name": "云朵护颈零压枕",
+      "stock": 4.0,
+      "sell_price": 79.0
+    },
+    {
+      "name": "臻绒华夫枕",
+      "stock": 3.0,
+      "sell_price": 190.0
+    },
+    {
+      "name": "抑菌鹅绒棉枕 高枕",
+      "stock": 2.0,
+      "sell_price": 79.0
+    },
+    {
+      "name": "胶囊枕（大号）",
+      "stock": 1.0,
+      "sell_price": 89.0
+    },
+    {
+      "name": "原单乳胶枕",
+      "stock": 2.0,
+      "sell_price": 89.0
+    },
+    {
+      "name": "水洗棉天然乳胶枕",
+      "stock": 5.0,
+      "sell_price": 89.0
+    },
+    {
+      "name": "蚕丝草本枕",
+      "stock": 2.0,
+      "sell_price": 99.0
+    },
+    {
+      "name": "决明子木棉枕",
+      "stock": 3.0,
+      "sell_price": 99.0
+    },
+    {
+      "name": "亚朵第四代双拼记忆枕",
+      "stock": 0.0,
+      "sell_price": 99.0
+    },
+    {
+      "name": "觉夏1号枕",
+      "stock": 8.0,
+      "sell_price": 99.0
+    },
+    {
+      "name": "零压凝胶枕",
+      "stock": 7.0,
+      "sell_price": 109.0
+    },
+    {
+      "name": "他她枕",
+      "stock": 2.0,
+      "sell_price": 119.0
+    },
+    {
+      "name": "醇氧乳胶枕",
+      "stock": 4.0,
+      "sell_price": 129.0
+    },
+    {
+      "name": "阿拉关键枕",
+      "stock": 4.0,
+      "sell_price": 129.0
+    },
+    {
+      "name": "红石榴多福凝胶枕",
+      "stock": 0.0,
+      "sell_price": 159.0
+    },
+    {
+      "name": "凝胶面包枕 低枕",
+      "stock": 4.0,
+      "sell_price": 169.0
+    },
+    {
+      "name": "凝胶面包枕 中枕",
+      "stock": 3.0,
+      "sell_price": 189.0
+    },
+    {
+      "name": "全家福健康枕 小号",
+      "stock": 2.0,
+      "sell_price": 199.0
+    },
+    {
+      "name": "凝胶面包枕 高枕",
+      "stock": 4.0,
+      "sell_price": 209.0
+    },
+    {
+      "name": "全家福健康枕 中号",
+      "stock": 4.0,
+      "sell_price": 319.0
+    },
+    {
+      "name": "全家福健康枕 大号",
+      "stock": 3.0,
+      "sell_price": 399.0
+    },
+    {
+      "name": "M4 生物基云浮枕",
+      "stock": 14.0,
+      "sell_price": 199.0
+    },
+    {
+      "name": "M5 生物基云浮枕",
+      "stock": 12.0,
+      "sell_price": 189.0
+    },
+    {
+      "name": "莱卡学生乳胶枕",
+      "stock": 4.0,
+      "sell_price": 59.0
+    },
+    {
+      "name": "莱卡儿童乳胶枕",
+      "stock": 4.0,
+      "sell_price": 49.0
+    },
+    {
+      "name": "亚朵星球三代护颈软枕 小号",
+      "stock": 10.0,
+      "sell_price": 69.0
+    },
+    {
+      "name": "亚朵星球三代护颈软枕 中号",
+      "stock": 8.0,
+      "sell_price": 79.0
+    },
+    {
+      "name": "亚朵星球三代护颈软枕 大号",
+      "stock": 5.0,
+      "sell_price": 89.0
+    },
+    {
+      "name": "亚朵星球三代护颈软枕 超大号",
+      "stock": 14.0,
+      "sell_price": 99.0
+    },
+    {
+      "name": "永恒之心凝胶枕",
+      "stock": 6.0,
+      "sell_price": 99.0
+    },
+    {
+      "name": "马上有钱枕",
+      "stock": 14.0,
+      "sell_price": 89.0
+    },
+    {
+      "name": "冰丝儿童小象枕",
+      "stock": 15.0,
+      "sell_price": 35.0
+    },
+    {
+      "name": "吉祥小马枕",
+      "stock": 4.0,
+      "sell_price": 69.0
+    },
+    {
+      "name": "冰面包枕",
+      "stock": 7.0,
+      "sell_price": 49.0
+    },
+    {
+      "name": "悦享生物基枕",
+      "stock": 3.0,
+      "sell_price": 99.0
+    },
+    {
+      "name": "凉感豆棉枕 小号",
+      "stock": 11.0,
+      "sell_price": 19.0
+    },
+    {
+      "name": "凉感豆棉枕 大号",
+      "stock": 7.0,
+      "sell_price": 29.0
+    },
+    {
+      "name": "冰菱形猫肚枕",
+      "stock": 13.0,
+      "sell_price": 39.0
+    },
+    {
+      "name": "清凉一梦记忆枕",
+      "stock": 10.0,
+      "sell_price": 69.0
+    },
+    {
+      "name": "粗布荞麦枕",
+      "stock": 1.0,
+      "sell_price": 45.0
+    },
+    {
+      "name": "小毛巾",
+      "stock": 26.0,
+      "sell_price": 0.0
+    },
+    {
+      "name": "蚕丝复合舒适枕",
+      "stock": 4.0,
+      "sell_price": 169.0
+    },
+    {
+      "name": "分区释压枕",
+      "stock": 10.0,
+      "sell_price": 59.0
+    },
+    {
+      "name": "米丘PE双面立体枕",
+      "stock": 0.0,
+      "sell_price": 69.0
+    },
+    {
+      "name": "直角凉豆茶枕",
+      "stock": 4.0,
+      "sell_price": 25.0
+    },
+    {
+      "name": "原棉老粗布三件套",
+      "stock": 14.0,
+      "sell_price": 49.0
+    },
+    {
+      "name": "悦峰雪藤席 1.8×2米",
+      "stock": 1.0,
+      "sell_price": 229.0
+    },
+    {
+      "name": "悦峰雪藤席 1.5×2米",
+      "stock": 2.0,
+      "sell_price": 209.0
+    },
+    {
+      "name": "丝丝美凉感童席 60×140厘米",
+      "stock": 3.0,
+      "sell_price": 48.0
+    },
+    {
+      "name": "美希好阳光精竹席 1.5×2米",
+      "stock": 2.0,
+      "sell_price": 179.0
+    },
+    {
+      "name": "三琪色织凉感毯 1.5×2米",
+      "stock": 7.0,
+      "sell_price": 79.0
+    },
+    {
+      "name": "三琪色织凉感毯 2×2.3米",
+      "stock": 6.0,
+      "sell_price": 149.0
+    },
+    {
+      "name": "素雅布毯 1.6×2.1米",
+      "stock": 10.0,
+      "sell_price": 119.0
+    },
+    {
+      "name": "天然汉麻枕巾 一对",
+      "stock": 4.0,
+      "sell_price": 29.0
+    },
+    {
+      "name": "幼眠时代朱荷纱罗童毯 1.2×1.5米",
+      "stock": 4.0,
+      "sell_price": 79.0
+    },
+    {
+      "name": "贝瑞拉竹纤维冰舒毯 1.5×2米",
+      "stock": 10.0,
+      "sell_price": 109.0
+    },
+    {
+      "name": "两层竹棉盖毯 1.2×1.5米",
+      "stock": 3.0,
+      "sell_price": 49.0
+    },
+    {
+      "name": "喜竹纳福生物基枕",
+      "stock": 6.0,
+      "sell_price": 79.0
+    },
+    {
+      "name": "觉爱经典格子床垫",
+      "stock": 2.0,
+      "sell_price": 129.0
+    },
+    {
+      "name": "棉麻床垫",
+      "stock": 4.0,
+      "sell_price": 129.0
+    },
+    {
+      "name": "米丘甘朴立体藤凉枕",
+      "stock": 2.0,
+      "sell_price": 49.0
+    },
+    {
+      "name": "馨柔提花桑蚕丝春秋被",
+      "stock": 3.0,
+      "sell_price": 1499.0
+    },
+    {
+      "name": "皱皱纱四件套",
+      "stock": 7.0,
+      "sell_price": 99.0
+    },
+    {
+      "name": "学生全棉三件套",
+      "stock": 9.0,
+      "sell_price": 159.0
+    },
+    {
+      "name": "29元枕套（全棉纯色）",
+      "stock": 17.0,
+      "sell_price": 29.0
+    },
+    {
+      "name": "90石墨烯乳胶床垫",
+      "stock": 1.0,
+      "sell_price": 499.0
+    },
+    {
+      "name": "90零压力慢回弹床垫",
+      "stock": 2.0,
+      "sell_price": 249.0
+    },
+    {
+      "name": "传承粗布枕套",
+      "stock": 11.0,
+      "sell_price": 29.0
+    },
+    {
+      "name": "传承粗布床单 2.5*2.5",
+      "stock": 11.0,
+      "sell_price": 79.0
+    }
+  ]
+}

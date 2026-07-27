@@ -18,8 +18,12 @@ jobs:
       TZ: Asia/Shanghai
       FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
       FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
+    permissions:
+      contents: write   # 允许脚本把缓存数据 git push 回仓库
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: true   # 保留 GITHUB_TOKEN 供 git push
 
       - name: 设置 Python
         uses: actions/setup-python@v5
@@ -28,6 +32,11 @@ jobs:
 
       - name: 安装依赖
         run: pip install requests
+
+      - name: 配置 git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: 生成并发送老板每日经营分析报表
         run: python3 boss_daily_report.py
