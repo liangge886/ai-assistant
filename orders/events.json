@@ -28,8 +28,8 @@
     "remind_date": "2026-07-14",
     "remark": "7/14 北京环球影城，门票已买2张，早出发避免排队",
     "created": "2026-07-01",
-    "done": false,
-    "done_date": "",
+    "done": true,
+    "done_date": "2026-07-28",
     "last_reminded": ""
   },
   {
@@ -39,8 +39,8 @@
     "remind_date": "2026-07-15",
     "remark": "7/15 故宫参观，提前7天(7/8晚20:00)已抢票；午门进、神武门出。故宫周一闭馆，7/15周三正常",
     "created": "2026-07-01",
-    "done": false,
-    "done_date": "",
+    "done": true,
+    "done_date": "2026-07-28",
     "last_reminded": ""
   },
   {
@@ -50,8 +50,8 @@
     "remind_date": "2026-07-16",
     "remark": "7/16 北大/清华参观，提前7天(7/9早8:00)已预约入校；北大入校时段08:00-11:00、13:00-16:00",
     "created": "2026-07-01",
-    "done": false,
-    "done_date": "",
+    "done": true,
+    "done_date": "2026-07-28",
     "last_reminded": ""
   },
   {
@@ -61,8 +61,8 @@
     "remind_date": "2026-07-17",
     "remark": "7/17 12:00前退房，下午自驾返泰安",
     "created": "2026-07-01",
-    "done": false,
-    "done_date": "",
+    "done": true,
+    "done_date": "2026-07-28",
     "last_reminded": ""
   },
   {
