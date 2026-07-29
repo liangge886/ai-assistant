@@ -7,9 +7,6 @@ on:
         description: '报告日期 (YYYY-MM-DD)，留空为当天'
         required: false
         default: ''
-  schedule:
-    # 北京时间 16:30（收盘后）周一至周五 = UTC 08:30
-    - cron: '30 8 * * 1-5'
 
 jobs:
   brief:
