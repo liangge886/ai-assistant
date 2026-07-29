@@ -1,0 +1,36 @@
+name: A股每日行情简报
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: '报告日期 (YYYY-MM-DD)，留空为当天'
+        required: false
+        default: ''
+  schedule:
+    # 北京时间 16:30（收盘后）周一至周五 = UTC 08:30
+    - cron: '30 8 * * 1-5'
+
+jobs:
+  brief:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安装依赖
+        run: pip install requests
+
+      - name: 生成并发送 A 股行情简报
+        env:
+          REPORT_DATE: ${{ github.event.inputs.date }}
+        run: |
+          if [ -n "$REPORT_DATE" ]; then
+            python3 stock_briefing.py --date "$REPORT_DATE"
+          else
+            python3 stock_briefing.py
+          fi
