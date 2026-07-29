@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺肥城店",
-  "last_updated": "2026-07-28",
-  "window_start": "2026-06-29",
+  "last_updated": "2026-07-29",
+  "window_start": "2026-06-30",
   "daily": {
     "2026-07-27": {
       "立体定型枕": {
@@ -55,6 +55,38 @@
         "quantity": 4.0,
         "amount": 156.0,
         "profit": 48.0
+      }
+    },
+    "2026-07-29": {
+      "原棉老粗布三件套": {
+        "quantity": 2.0,
+        "amount": 78.0,
+        "profit": 24.0
+      },
+      "立体定型枕": {
+        "quantity": 2.0,
+        "amount": 98.0,
+        "profit": 49.0
+      },
+      "美希好阳光精竹席 1.5×2米": {
+        "quantity": 1.0,
+        "amount": 160.0,
+        "profit": 70.5
+      },
+      "亚朵星球三代护颈软枕 小号": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 34.5
+      },
+      "特价粗布床单（2.5*2.5）": {
+        "quantity": 1.0,
+        "amount": 45.0,
+        "profit": 20.5
+      },
+      "1.5x2米凉感丝夏被": {
+        "quantity": 1.0,
+        "amount": 59.0,
+        "profit": 29.5
       }
     }
   }
