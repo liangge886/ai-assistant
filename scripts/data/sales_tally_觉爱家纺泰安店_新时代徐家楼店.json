@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺泰安店（新时代徐家楼店）",
-  "last_updated": "2026-07-29",
-  "window_start": "2026-06-30",
+  "last_updated": "2026-07-30",
+  "window_start": "2026-07-01",
   "daily": {
     "2026-07-27": {
       "竹纤维凉感毯1.5m": {
@@ -202,6 +202,53 @@
         "quantity": 1.0,
         "amount": 45.0,
         "profit": 25.0
+      }
+    },
+    "2026-07-30": {
+      "皱皱纱枕套": {
+        "quantity": 1.0,
+        "amount": 19.0,
+        "profit": 7.0
+      },
+      "水洗棉枕套40*60": {
+        "quantity": 1.0,
+        "amount": 15.0,
+        "profit": 7.5
+      },
+      "特价珊瑚浴巾": {
+        "quantity": 1.0,
+        "amount": 15.0,
+        "profit": 5.0
+      },
+      "棉麻月牙荞麦枕30*64": {
+        "quantity": 1.0,
+        "amount": 39.0,
+        "profit": 19.5
+      },
+      "垃圾桶": {
+        "quantity": 1.0,
+        "amount": 3.0,
+        "profit": 1.5
+      },
+      "大红琴瑟和鸣四件套": {
+        "quantity": 1.0,
+        "amount": 499.0,
+        "profit": 269.0
+      },
+      "草本零压枕": {
+        "quantity": 2.0,
+        "amount": 158.0,
+        "profit": 79.0
+      },
+      "7A抗菌双层春秋被": {
+        "quantity": 1.0,
+        "amount": 169.0,
+        "profit": 100.0
+      },
+      "全棉纱布暗扣枕套40*60": {
+        "quantity": 1.0,
+        "amount": 18.0,
+        "profit": 8.5
       }
     }
   }

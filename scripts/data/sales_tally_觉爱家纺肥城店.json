@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺肥城店",
-  "last_updated": "2026-07-29",
-  "window_start": "2026-06-30",
+  "last_updated": "2026-07-30",
+  "window_start": "2026-07-01",
   "daily": {
     "2026-07-27": {
       "立体定型枕": {
@@ -87,6 +87,38 @@
         "quantity": 1.0,
         "amount": 59.0,
         "profit": 29.5
+      }
+    },
+    "2026-07-30": {
+      "29茶叶枕": {
+        "quantity": 3.0,
+        "amount": 87.0,
+        "profit": 42.0
+      },
+      "小边老粗布三件套（2*2.3）": {
+        "quantity": 1.0,
+        "amount": 140.0,
+        "profit": 65.5
+      },
+      "全棉斜纹加厚被套 (2x2.3)": {
+        "quantity": 1.0,
+        "amount": 100.0,
+        "profit": 46.5
+      },
+      "舒柔健康学生枕": {
+        "quantity": 1.0,
+        "amount": 59.0,
+        "profit": 32.0
+      },
+      "全棉斜纹加厚床单（1.6*2.2）": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 24.5
+      },
+      "原棉老粗布三件套": {
+        "quantity": 1.0,
+        "amount": 39.0,
+        "profit": 12.0
       }
     }
   }
