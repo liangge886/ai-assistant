@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺禹城店",
-  "last_updated": "2026-08-01",
-  "window_start": "2026-07-03",
+  "last_updated": "2026-08-02",
+  "window_start": "2026-07-04",
   "daily": {
     "2026-07-27": {
       "149海风微澜蛋白凉感夏被": {
@@ -243,6 +243,68 @@
         "quantity": 1.0,
         "amount": 49.0,
         "profit": 24.5
+      }
+    },
+    "2026-08-02": {
+      "169老粗布三件套": {
+        "quantity": 1.0,
+        "amount": 169.0,
+        "profit": 84.5
+      },
+      "169床盖（2米纯色）": {
+        "quantity": 1.0,
+        "amount": 169.0,
+        "profit": 84.5
+      },
+      "18枕套（扣子纱布）": {
+        "quantity": 1.0,
+        "amount": 17.31,
+        "profit": 7.925
+      },
+      "39枕套（纱布）": {
+        "quantity": 1.0,
+        "amount": 37.52,
+        "profit": 15.52
+      },
+      "59枕套两用": {
+        "quantity": 1.0,
+        "amount": 56.77,
+        "profit": 20.157
+      },
+      "清凉一梦深睡记忆枕（大）": {
+        "quantity": 1.0,
+        "amount": 76.01,
+        "profit": 41.01
+      },
+      "69塞纳乳胶抗菌枕": {
+        "quantity": 1.0,
+        "amount": 66.39,
+        "profit": 38.39
+      },
+      "49床单 全棉斜纹加厚 1.6*2": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 24.5
+      },
+      "149凉豆豆软凉席 1.5*2": {
+        "quantity": 1.0,
+        "amount": 149.0,
+        "profit": 74.5
+      },
+      "169冰凌沫沫凉感夏被": {
+        "quantity": 1.0,
+        "amount": 169.0,
+        "profit": 84.5
+      },
+      "299提花老粗布三件套": {
+        "quantity": 1.0,
+        "amount": 299.0,
+        "profit": 131.0
+      },
+      "169老粗布二件套": {
+        "quantity": 1.0,
+        "amount": 169.0,
+        "profit": 84.0
       }
     }
   }
