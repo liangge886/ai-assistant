@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺泰安店（新时代徐家楼店）",
-  "last_updated": "2026-08-03",
-  "window_start": "2026-07-05",
+  "last_updated": "2026-08-04",
+  "window_start": "2026-07-06",
   "daily": {
     "2026-07-27": {
       "竹纤维凉感毯1.5m": {
@@ -390,6 +390,78 @@
         "quantity": 2.0,
         "amount": 55.64,
         "profit": 26.64
+      }
+    },
+    "2026-08-04": {
+      "法式棉麻被2m": {
+        "quantity": 1.0,
+        "amount": 255.5,
+        "profit": 121.0
+      },
+      "特价纯色长绒棉枕套": {
+        "quantity": 1.0,
+        "amount": 30.0,
+        "profit": 18.0
+      },
+      "清凉一梦深睡记忆枕（大）": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 36.0
+      },
+      "碎花面包荞麦枕55*30": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 26.0
+      },
+      "2层竹棉盖毯1.2*1.5": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 24.5
+      },
+      "全棉斜纹加厚床单2.3*2.5米": {
+        "quantity": 1.0,
+        "amount": 79.0,
+        "profit": 39.0
+      },
+      "全棉云朵纱布枕套48*74": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 24.0
+      },
+      "全棉小边枕套48*74": {
+        "quantity": 2.0,
+        "amount": 56.91,
+        "profit": 22.91
+      },
+      "速干小方巾": {
+        "quantity": 4.0,
+        "amount": 3.92,
+        "profit": 1.92
+      },
+      "羊绒蛋白春秋被1.5米": {
+        "quantity": 1.0,
+        "amount": 76.04,
+        "profit": 37.04
+      },
+      "baby被2m": {
+        "quantity": 1.0,
+        "amount": 316.63,
+        "profit": 152.13
+      },
+      "冰凌沫沫夏被2m": {
+        "quantity": 1.0,
+        "amount": 179.5,
+        "profit": 85.0
+      },
+      "全棉斜纹枕套48*74": {
+        "quantity": 1.0,
+        "amount": 29.0,
+        "profit": 14.0
+      },
+      "零感记忆枕（12cm）": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 54.0
       }
     }
   }

@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺肥城店",
-  "last_updated": "2026-08-03",
-  "window_start": "2026-07-05",
+  "last_updated": "2026-08-04",
+  "window_start": "2026-07-06",
   "daily": {
     "2026-07-27": {
       "立体定型枕": {
@@ -352,6 +352,83 @@
         "quantity": 1.0,
         "amount": 119.0,
         "profit": 59.5
+      }
+    },
+    "2026-08-04": {
+      "吉祥小马枕": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 34.5
+      },
+      "棉花": {
+        "quantity": 1.0,
+        "amount": 32.0,
+        "profit": 24.0
+      },
+      "金棉四件套": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 49.5
+      },
+      "星洛砂洗毯 2x2.2m": {
+        "quantity": 1.0,
+        "amount": 152.0,
+        "profit": 67.5
+      },
+      "全棉印花学子三件套": {
+        "quantity": 1.0,
+        "amount": 149.0,
+        "profit": 24.0
+      },
+      "亚朵星球三代护颈软枕 超大号": {
+        "quantity": 1.0,
+        "amount": 89.0,
+        "profit": 39.5
+      },
+      "亚朵星球三代护颈软枕 大号": {
+        "quantity": 1.0,
+        "amount": 80.0,
+        "profit": 35.5
+      },
+      "亚朵星球三代护颈软枕 中号": {
+        "quantity": 1.0,
+        "amount": 71.0,
+        "profit": 31.5
+      },
+      "喜竹纳福生物基枕": {
+        "quantity": 1.0,
+        "amount": 53.0,
+        "profit": 18.0
+      },
+      "2x2.3米冰凌沫沫凉感夏被": {
+        "quantity": 1.0,
+        "amount": 159.0,
+        "profit": 64.5
+      },
+      "1.5x2米凉感丝夏被": {
+        "quantity": 1.0,
+        "amount": 59.0,
+        "profit": 29.5
+      },
+      "贝瑞拉竹纤维冰舒毯 1.5×2米": {
+        "quantity": 1.0,
+        "amount": 98.0,
+        "profit": 43.5
+      },
+      "两层竹棉盖毯 1.2×1.5米": {
+        "quantity": 1.0,
+        "amount": 45.0,
+        "profit": 20.5
+      },
+      "1.5x2米针织绵豆豆被": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 24.5
+      },
+      "开学季凉感面包枕": {
+        "quantity": 1.0,
+        "amount": 59.0,
+        "profit": 33.0
       }
     }
   }
