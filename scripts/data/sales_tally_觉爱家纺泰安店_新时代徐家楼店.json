@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺泰安店（新时代徐家楼店）",
-  "last_updated": "2026-08-04",
-  "window_start": "2026-07-06",
+  "last_updated": "2026-08-05",
+  "window_start": "2026-07-07",
   "daily": {
     "2026-07-27": {
       "竹纤维凉感毯1.5m": {
@@ -462,6 +462,48 @@
         "quantity": 1.0,
         "amount": 99.0,
         "profit": 54.0
+      }
+    },
+    "2026-08-05": {
+      "竹纤维三件套2.5": {
+        "quantity": 1.0,
+        "amount": 276.84,
+        "profit": 136.84
+      },
+      "水洗布": {
+        "quantity": 4.0,
+        "amount": 95.79,
+        "profit": 45.79
+      },
+      "棉被手工费": {
+        "quantity": 1.0,
+        "amount": 14.37,
+        "profit": -0.63
+      },
+      "速干小方巾": {
+        "quantity": 4.0,
+        "amount": 3.95,
+        "profit": 1.95
+      },
+      "清凉一梦深睡记忆枕（小）": {
+        "quantity": 2.0,
+        "amount": 118.0,
+        "profit": 60.0
+      },
+      "团购凉感丝夏被1.5m": {
+        "quantity": 2.0,
+        "amount": 118.0,
+        "profit": 59.0
+      },
+      "小美好天丝绒床盖三件套": {
+        "quantity": 1.0,
+        "amount": 255.55,
+        "profit": 110.55
+      },
+      "活性环保全棉四件套2*2.3": {
+        "quantity": 1.0,
+        "amount": 139.0,
+        "profit": 51.0
       }
     }
   }

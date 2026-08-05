@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺禹城店",
-  "last_updated": "2026-08-04",
-  "window_start": "2026-07-06",
+  "last_updated": "2026-08-05",
+  "window_start": "2026-07-07",
   "daily": {
     "2026-07-27": {
       "149海风微澜蛋白凉感夏被": {
@@ -349,6 +349,58 @@
         "quantity": 2.0,
         "amount": 238.0,
         "profit": 119.0
+      }
+    },
+    "2026-08-05": {
+      "49粗布床单 2.45*2.5": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 24.5
+      },
+      "49A类针织棉夏被": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 24.5
+      },
+      "69床笠（化纤1.8*2）": {
+        "quantity": 2.0,
+        "amount": 138.0,
+        "profit": 68.0
+      },
+      "79床笠（0.9*2棉）": {
+        "quantity": 1.0,
+        "amount": 79.0,
+        "profit": 34.0
+      },
+      "超柔睡棉枕（新款）": {
+        "quantity": 2.0,
+        "amount": 40.0,
+        "profit": 22.0
+      },
+      "199星硌沙床盖": {
+        "quantity": 1.0,
+        "amount": 188.74,
+        "profit": 89.24
+      },
+      "189冰凌沫沫凉感印花夏被": {
+        "quantity": 2.0,
+        "amount": 358.26,
+        "profit": 169.26
+      },
+      "凉感丝艾草印花夏被-西瓜派": {
+        "quantity": 1.0,
+        "amount": 240.0,
+        "profit": 118.0
+      },
+      "baby被": {
+        "quantity": 2.0,
+        "amount": 580.0,
+        "profit": 242.0
+      },
+      "129床盖（莫代尔）": {
+        "quantity": 1.0,
+        "amount": 129.0,
+        "profit": 52.0
       }
     }
   }
