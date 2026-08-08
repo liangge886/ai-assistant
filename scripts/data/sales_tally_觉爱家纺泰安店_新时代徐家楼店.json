@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺泰安店（新时代徐家楼店）",
-  "last_updated": "2026-08-07",
-  "window_start": "2026-07-09",
+  "last_updated": "2026-08-08",
+  "window_start": "2026-07-10",
   "daily": {
     "2026-07-27": {
       "竹纤维凉感毯1.5m": {
@@ -713,6 +713,73 @@
         "quantity": 1.0,
         "amount": 160.55,
         "profit": 76.05
+      }
+    },
+    "2026-08-08": {
+      "团购凉感丝夏被1.5m": {
+        "quantity": 3.0,
+        "amount": 169.7,
+        "profit": 81.2
+      },
+      "糯棉冰沙夏被2m": {
+        "quantity": 1.0,
+        "amount": 109.6,
+        "profit": 45.1
+      },
+      "幼棉时代毛巾被1.2*1.5": {
+        "quantity": 1.0,
+        "amount": 67.1,
+        "profit": 27.6
+      },
+      "棉+绒圆角床盖2*2.2": {
+        "quantity": 1.0,
+        "amount": 129.0,
+        "profit": 69.0
+      },
+      "速干小方巾": {
+        "quantity": 4.0,
+        "amount": 3.79,
+        "profit": 1.79
+      },
+      "老粗布儿童枕": {
+        "quantity": 2.0,
+        "amount": 8.77,
+        "profit": 3.77
+      },
+      "方格软凉席1.8": {
+        "quantity": 1.0,
+        "amount": 148.1,
+        "profit": 63.6
+      },
+      "粗布荞麦枕": {
+        "quantity": 1.0,
+        "amount": 39.43,
+        "profit": 16.93
+      },
+      "团购凉感丝夏被2m": {
+        "quantity": 2.0,
+        "amount": 124.31,
+        "profit": 55.31
+      },
+      "全棉小边枕套48*74": {
+        "quantity": 1.0,
+        "amount": 26.97,
+        "profit": 9.97
+      },
+      "超洁晾干被1.5*2m": {
+        "quantity": 1.0,
+        "amount": 185.1,
+        "profit": 85.6
+      },
+      "草本零压枕": {
+        "quantity": 2.0,
+        "amount": 146.96,
+        "profit": 67.96
+      },
+      "帆布圆角三件套25*25": {
+        "quantity": 2.0,
+        "amount": 346.87,
+        "profit": 162.87
       }
     }
   }

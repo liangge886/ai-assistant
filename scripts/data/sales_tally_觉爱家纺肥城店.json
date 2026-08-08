@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺肥城店",
-  "last_updated": "2026-08-07",
-  "window_start": "2026-07-09",
+  "last_updated": "2026-08-08",
+  "window_start": "2026-07-10",
   "daily": {
     "2026-07-27": {
       "立体定型枕": {
@@ -585,6 +585,48 @@
         "quantity": 1.0,
         "amount": 39.0,
         "profit": 19.5
+      }
+    },
+    "2026-08-08": {
+      "纯棉床单 2.4×2.3m": {
+        "quantity": 1.0,
+        "amount": 55.0,
+        "profit": 27.5
+      },
+      "星洛砂洗毯 2x2.2m": {
+        "quantity": 3.0,
+        "amount": 456.0,
+        "profit": 202.5
+      },
+      "双面纯棉床盖 1.5x2.2m": {
+        "quantity": 1.0,
+        "amount": 89.0,
+        "profit": 39.5
+      },
+      "婴童凉席两件套": {
+        "quantity": 1.0,
+        "amount": 44.0,
+        "profit": 19.5
+      },
+      "学生全棉三件套": {
+        "quantity": 1.0,
+        "amount": 159.0,
+        "profit": 79.5
+      },
+      "1.5x2米凉感丝夏被": {
+        "quantity": 2.0,
+        "amount": 118.0,
+        "profit": 59.0
+      },
+      "全棉印花学子三件套": {
+        "quantity": 1.0,
+        "amount": 140.0,
+        "profit": 15.0
+      },
+      "亚朵星球三代护颈软枕 中号": {
+        "quantity": 1.0,
+        "amount": 71.0,
+        "profit": 31.5
       }
     }
   }
