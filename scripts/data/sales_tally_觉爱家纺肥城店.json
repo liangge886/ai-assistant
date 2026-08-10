@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺肥城店",
-  "last_updated": "2026-08-09",
-  "window_start": "2026-07-11",
+  "last_updated": "2026-08-10",
+  "window_start": "2026-07-12",
   "daily": {
     "2026-07-27": {
       "立体定型枕": {
@@ -669,6 +669,93 @@
         "quantity": 2.0,
         "amount": 78.0,
         "profit": 39.0
+      }
+    },
+    "2026-08-10": {
+      "传承粗布三件套 2.5x2.5m": {
+        "quantity": 1.0,
+        "amount": 119.0,
+        "profit": 59.5
+      },
+      "云朵护颈零压枕": {
+        "quantity": 2.0,
+        "amount": 158.0,
+        "profit": 88.0
+      },
+      "39枕套（棉纱大号）": {
+        "quantity": 1.0,
+        "amount": 39.0,
+        "profit": 18.0
+      },
+      "米色回忆四件套": {
+        "quantity": 1.0,
+        "amount": 629.0,
+        "profit": 279.5
+      },
+      "四件套-贤雅生活": {
+        "quantity": 1.0,
+        "amount": 395.0,
+        "profit": 175.1
+      },
+      "竹纤维三件套 2.5x2.6m": {
+        "quantity": 1.0,
+        "amount": 240.0,
+        "profit": 105.5
+      },
+      "1.5x2米凉感丝夏被": {
+        "quantity": 1.0,
+        "amount": 59.0,
+        "profit": 29.5
+      },
+      "床裙款凉豆豆软席": {
+        "quantity": 2.0,
+        "amount": 360.0,
+        "profit": 131.0
+      },
+      "原棉老粗布三件套": {
+        "quantity": 2.0,
+        "amount": 78.0,
+        "profit": 24.0
+      },
+      "109学生床垫": {
+        "quantity": 2.0,
+        "amount": 240.0,
+        "profit": 131.0
+      },
+      "觉爱经典格子床垫": {
+        "quantity": 1.0,
+        "amount": 129.0,
+        "profit": 64.0
+      },
+      "立体定型枕": {
+        "quantity": 2.0,
+        "amount": 98.0,
+        "profit": 49.0
+      },
+      "喜竹纳福生物基枕": {
+        "quantity": 1.0,
+        "amount": 59.0,
+        "profit": 24.0
+      },
+      "冰凌沫沫夏被": {
+        "quantity": 1.0,
+        "amount": 159.0,
+        "profit": 74.5
+      },
+      "2x2.3米冰凌沫沫凉感夏被": {
+        "quantity": 2.0,
+        "amount": 318.0,
+        "profit": 129.0
+      },
+      "星洛砂洗毯 2x2.2m": {
+        "quantity": 1.0,
+        "amount": 152.0,
+        "profit": 67.5
+      },
+      "爱意绵绵大豆春秋被1.6米": {
+        "quantity": 1.0,
+        "amount": 149.0,
+        "profit": 81.0
       }
     }
   }
