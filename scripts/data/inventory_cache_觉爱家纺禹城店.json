@@ -1,5 +1,5 @@
 {
-  "last_full_sync": "2026-08-04",
+  "last_full_sync": "2026-08-12",
   "store_name": "觉爱家纺禹城店",
   "products": [
     {
@@ -144,7 +144,7 @@
     },
     {
       "name": "169冰凌沫沫凉感夏被",
-      "stock": 8.0,
+      "stock": 9.0,
       "sell_price": 169.0
     },
     {
@@ -314,7 +314,7 @@
     },
     {
       "name": "全棉华夫格提花羊绒蛋白暖被 冬被",
-      "stock": 1.0,
+      "stock": 2.0,
       "sell_price": 399.0
     },
     {
@@ -659,7 +659,7 @@
     },
     {
       "name": "79草本颈养枕",
-      "stock": 25.0,
+      "stock": 27.0,
       "sell_price": 79.0
     },
     {
@@ -1124,7 +1124,7 @@
     },
     {
       "name": "159床垫",
-      "stock": 6.0,
+      "stock": 7.0,
       "sell_price": 159.0
     },
     {
@@ -1979,6 +1979,66 @@
     },
     {
       "name": "原棉大豆春秋被1.5",
+      "stock": 0.0,
+      "sell_price": 229.0
+    },
+    {
+      "name": "黑金4代枕10cm",
+      "stock": 0.0,
+      "sell_price": 359.0
+    },
+    {
+      "name": "觉美·系列四件套-薇妮",
+      "stock": 2.0,
+      "sell_price": 899.0
+    },
+    {
+      "name": "觉美·系列四件套-慕言",
+      "stock": 2.0,
+      "sell_price": 1300.0
+    },
+    {
+      "name": "觉美·系列四件套-薇妮",
+      "stock": 2.0,
+      "sell_price": 899.0
+    },
+    {
+      "name": "唯爱春秋被",
+      "stock": 2.0,
+      "sell_price": 659.0
+    },
+    {
+      "name": "觉美·系列四件套-慕言",
+      "stock": 2.0,
+      "sell_price": 1300.0
+    },
+    {
+      "name": "觉美·系列四件套-慕言",
+      "stock": 2.0,
+      "sell_price": 1300.0
+    },
+    {
+      "name": "觉美·系列四件套-薇妮",
+      "stock": 2.0,
+      "sell_price": 899.0
+    },
+    {
+      "name": "蚕蛹蛋白春秋被",
+      "stock": 2.0,
+      "sell_price": 799.0
+    },
+    {
+      "name": "蚕蛹蛋白春秋被",
+      "stock": 2.0,
+      "sell_price": 799.0
+    },
+    {
+      "name": "蚕蛹蛋白春秋被",
+      "stock": 2.0,
+      "sell_price": 799.0
+    },
+    {
+      "name": "优尔思零压床垫0.9*1.95m",
       "stock": 0.0,
       "sell_price": 229.0
     }
