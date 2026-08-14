@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺禹城店",
-  "last_updated": "2026-08-13",
-  "window_start": "2026-07-15",
+  "last_updated": "2026-08-14",
+  "window_start": "2026-07-16",
   "daily": {
     "2026-07-27": {
       "149海风微澜蛋白凉感夏被": {
@@ -679,6 +679,53 @@
         "quantity": 1.0,
         "amount": 129.0,
         "profit": 59.0
+      }
+    },
+    "2026-08-14": {
+      "清凉一梦深睡记忆枕（大）": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 34.0
+      },
+      "荞麦枕": {
+        "quantity": 1.0,
+        "amount": 29.0,
+        "profit": 14.0
+      },
+      "99四件套（全棉）": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 29.0
+      },
+      "全棉AB学生三件套": {
+        "quantity": 1.0,
+        "amount": 169.0,
+        "profit": 89.0
+      },
+      "189冰凌沫沫凉感印花夏被": {
+        "quantity": 1.0,
+        "amount": 178.44,
+        "profit": 83.94
+      },
+      "169海风微澜蛋白凉感夏被（2*2.3）": {
+        "quantity": 1.0,
+        "amount": 159.56,
+        "profit": 75.06
+      },
+      "刺绣被套（刺绣被罩）": {
+        "quantity": 2.0,
+        "amount": 598.0,
+        "profit": 324.0
+      },
+      "全家福桑蚕丝春秋被": {
+        "quantity": 1.0,
+        "amount": 899.0,
+        "profit": 380.0
+      },
+      "大重玺桑蚕丝春秋被": {
+        "quantity": 1.0,
+        "amount": 899.0,
+        "profit": 341.0
       }
     }
   }

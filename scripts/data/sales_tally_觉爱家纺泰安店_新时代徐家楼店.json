@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺泰安店（新时代徐家楼店）",
-  "last_updated": "2026-08-13",
-  "window_start": "2026-07-15",
+  "last_updated": "2026-08-14",
+  "window_start": "2026-07-16",
   "daily": {
     "2026-07-27": {
       "竹纤维凉感毯1.5m": {
@@ -1310,6 +1310,78 @@
         "quantity": 1.0,
         "amount": 31.01,
         "profit": 13.51
+      }
+    },
+    "2026-08-14": {
+      "糯棉冰沙夏被2m": {
+        "quantity": 1.0,
+        "amount": 109.65,
+        "profit": 45.15
+      },
+      "全棉云朵纱布枕套48*74": {
+        "quantity": 1.0,
+        "amount": 43.09,
+        "profit": 18.09
+      },
+      "全棉夏被四件套": {
+        "quantity": 1.0,
+        "amount": 175.01,
+        "profit": 50.01
+      },
+      "活性环保全棉四件套2*2.3": {
+        "quantity": 1.0,
+        "amount": 139.0,
+        "profit": 51.0
+      },
+      "M4生物基云浮枕": {
+        "quantity": 1.0,
+        "amount": 179.0,
+        "profit": 79.0
+      },
+      "儿童A类双层纱夏被1.2*1.5m": {
+        "quantity": 2.0,
+        "amount": 178.0,
+        "profit": 89.0
+      },
+      "加工费": {
+        "quantity": 4.0,
+        "amount": 23.13,
+        "profit": -0.87
+      },
+      "月锦贡缎棉（特）": {
+        "quantity": 10.0,
+        "amount": 375.87,
+        "profit": 185.87
+      },
+      "小巴拉学生枕": {
+        "quantity": 1.0,
+        "amount": 55.0,
+        "profit": 30.0
+      },
+      "全棉拼角枕套30*50": {
+        "quantity": 1.0,
+        "amount": 13.0,
+        "profit": 7.0
+      },
+      "网红波浪沙发垫2.1*1": {
+        "quantity": 1.0,
+        "amount": 71.25,
+        "profit": 35.25
+      },
+      "网红波浪沙发垫1.5*1米": {
+        "quantity": 1.0,
+        "amount": 47.5,
+        "profit": 23.5
+      },
+      "网红波浪沙发垫0.9*1米": {
+        "quantity": 1.0,
+        "amount": 23.75,
+        "profit": 11.75
+      },
+      "粗布中枕（圆形)": {
+        "quantity": 1.0,
+        "amount": 12.0,
+        "profit": 6.5
       }
     }
   }
