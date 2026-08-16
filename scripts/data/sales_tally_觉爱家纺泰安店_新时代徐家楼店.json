@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺泰安店（新时代徐家楼店）",
-  "last_updated": "2026-08-15",
-  "window_start": "2026-07-17",
+  "last_updated": "2026-08-16",
+  "window_start": "2026-07-18",
   "daily": {
     "2026-07-27": {
       "竹纤维凉感毯1.5m": {
@@ -1504,6 +1504,68 @@
         "quantity": 1.0,
         "amount": 79.0,
         "profit": 39.0
+      }
+    },
+    "2026-08-16": {
+      "粗布三件套": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 22.0
+      },
+      "原棉大豆春秋被1.5": {
+        "quantity": 1.0,
+        "amount": 229.0,
+        "profit": 114.0
+      },
+      "特价枕头": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 49.0
+      },
+      "清凉一梦深睡记忆枕（大）": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 36.0
+      },
+      "水洗磨毛褥子": {
+        "quantity": 1.0,
+        "amount": 76.86,
+        "profit": 41.86
+      },
+      "卡通小象荞麦枕25*60": {
+        "quantity": 1.0,
+        "amount": 47.67,
+        "profit": 18.67
+      },
+      "爱意绵绵大豆春秋被1.6米": {
+        "quantity": 1.0,
+        "amount": 144.97,
+        "profit": 76.97
+      },
+      "跑量星空浴巾": {
+        "quantity": 1.0,
+        "amount": 19.9,
+        "profit": 4.4
+      },
+      "皱皱纱枕套": {
+        "quantity": 1.0,
+        "amount": 19.0,
+        "profit": 7.0
+      },
+      "喜竹纳福学生枕（小）": {
+        "quantity": 1.0,
+        "amount": 79.0,
+        "profit": 39.5
+      },
+      "清凉一梦深睡记忆枕（小）": {
+        "quantity": 1.0,
+        "amount": 59.0,
+        "profit": 30.0
+      },
+      "儿童枕套白花边30*50": {
+        "quantity": 1.0,
+        "amount": 10.0,
+        "profit": 5.0
       }
     }
   }

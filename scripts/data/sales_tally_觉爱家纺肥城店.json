@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺肥城店",
-  "last_updated": "2026-08-15",
-  "window_start": "2026-07-17",
+  "last_updated": "2026-08-16",
+  "window_start": "2026-07-18",
   "daily": {
     "2026-07-27": {
       "立体定型枕": {
@@ -931,6 +931,78 @@
         "quantity": 1.0,
         "amount": 39.0,
         "profit": 12.0
+      }
+    },
+    "2026-08-16": {
+      "双面全棉床盖 (2×2.2m)": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 34.5
+      },
+      "马上有钱枕": {
+        "quantity": 2.0,
+        "amount": 160.0,
+        "profit": 71.0
+      },
+      "原棉老粗布三件套": {
+        "quantity": 5.0,
+        "amount": 195.0,
+        "profit": 60.0
+      },
+      "纯棉被罩 1.6×2.3m": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 34.5
+      },
+      "亚朵星球三代护颈软枕 小号": {
+        "quantity": 1.0,
+        "amount": 62.0,
+        "profit": 27.5
+      },
+      "亚朵星球三代护颈软枕 大号": {
+        "quantity": 1.0,
+        "amount": 80.0,
+        "profit": 35.5
+      },
+      "开学季凉感面包枕": {
+        "quantity": 2.0,
+        "amount": 106.0,
+        "profit": 54.0
+      },
+      "29枕套（印花大号）": {
+        "quantity": 2.0,
+        "amount": 58.0,
+        "profit": 28.0
+      },
+      "优尔思零压床垫0.9*1.95m": {
+        "quantity": 1.0,
+        "amount": 206.0,
+        "profit": 96.0
+      },
+      "水洗棉学生三件套": {
+        "quantity": 1.0,
+        "amount": 152.0,
+        "profit": 67.5
+      },
+      "爱意绵绵大豆春秋被1.6米": {
+        "quantity": 1.0,
+        "amount": 134.0,
+        "profit": 66.0
+      },
+      "木洗棉四件套": {
+        "quantity": 1.0,
+        "amount": 199.0,
+        "profit": 99.5
+      },
+      "立体六分区枕": {
+        "quantity": 1.0,
+        "amount": 39.0,
+        "profit": 19.5
+      },
+      "全棉印花学子三件套": {
+        "quantity": 1.0,
+        "amount": 149.0,
+        "profit": 24.0
       }
     }
   }
