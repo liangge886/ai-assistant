@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺肥城店",
-  "last_updated": "2026-08-16",
-  "window_start": "2026-07-18",
+  "last_updated": "2026-08-17",
+  "window_start": "2026-07-19",
   "daily": {
     "2026-07-27": {
       "立体定型枕": {
@@ -1003,6 +1003,113 @@
         "quantity": 1.0,
         "amount": 149.0,
         "profit": 24.0
+      }
+    },
+    "2026-08-17": {
+      "分区释压枕": {
+        "quantity": 2.0,
+        "amount": 100.0,
+        "profit": 41.0
+      },
+      "云朵护颈零压枕": {
+        "quantity": 1.0,
+        "amount": 71.0,
+        "profit": 36.0
+      },
+      "凉感豆棉枕 大号": {
+        "quantity": 2.0,
+        "amount": 58.0,
+        "profit": 29.0
+      },
+      "全棉斜纹枕套40*60": {
+        "quantity": 2.0,
+        "amount": 30.0,
+        "profit": 18.0
+      },
+      "全棉斜纹加厚床单（1.6*2.2）": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 24.5
+      },
+      "水洗棉天然乳胶枕": {
+        "quantity": 2.0,
+        "amount": 178.0,
+        "profit": 88.0
+      },
+      "棉麻床垫": {
+        "quantity": 1.0,
+        "amount": 116.0,
+        "profit": 56.0
+      },
+      "全棉印花学子三件套": {
+        "quantity": 1.0,
+        "amount": 134.0,
+        "profit": 9.0
+      },
+      "开学季凉感面包枕": {
+        "quantity": 3.0,
+        "amount": 171.0,
+        "profit": 93.0
+      },
+      "1.5x2米针织绵豆豆被": {
+        "quantity": 1.0,
+        "amount": 71.0,
+        "profit": 26.5
+      },
+      "莫代尔床盖 (2.3×2.4m)": {
+        "quantity": 1.0,
+        "amount": 116.0,
+        "profit": 51.5
+      },
+      "米丘励志学生枕": {
+        "quantity": 1.0,
+        "amount": 39.0,
+        "profit": 19.5
+      },
+      "臻绒华夫枕": {
+        "quantity": 1.0,
+        "amount": 79.0,
+        "profit": 41.0
+      },
+      "双面全棉床盖 (2×2.2m)": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 34.5
+      },
+      "49枕套（贝壳边）": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 21.0
+      },
+      "悦享生物基枕": {
+        "quantity": 2.0,
+        "amount": 180.0,
+        "profit": 81.0
+      },
+      "原棉老粗布三件套": {
+        "quantity": 1.0,
+        "amount": 39.0,
+        "profit": 12.0
+      },
+      "爱意绵绵大豆春秋被1.6米": {
+        "quantity": 1.0,
+        "amount": 134.0,
+        "profit": 66.0
+      },
+      "纱布枕套 大": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 13.954
+      },
+      "宽边老粗布三件套（2*2.3）": {
+        "quantity": 1.0,
+        "amount": 140.0,
+        "profit": 55.5
+      },
+      "特价粗布床单（2*2.3）": {
+        "quantity": 1.0,
+        "amount": 39.0,
+        "profit": 19.5
       }
     }
   }
