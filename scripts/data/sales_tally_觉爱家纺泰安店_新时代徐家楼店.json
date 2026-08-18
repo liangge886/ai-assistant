@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺泰安店（新时代徐家楼店）",
-  "last_updated": "2026-08-17",
-  "window_start": "2026-07-19",
+  "last_updated": "2026-08-18",
+  "window_start": "2026-07-20",
   "daily": {
     "2026-07-27": {
       "竹纤维凉感毯1.5m": {
@@ -1793,6 +1793,108 @@
         "quantity": 1.0,
         "amount": 49.0,
         "profit": 13.954
+      }
+    },
+    "2026-08-18": {
+      "冰凌沫沫夏被2m": {
+        "quantity": 1.0,
+        "amount": 160.65,
+        "profit": 66.15
+      },
+      "冰面包枕": {
+        "quantity": 2.0,
+        "amount": 94.43,
+        "profit": 45.43
+      },
+      "全棉纱布暗扣枕套40*60": {
+        "quantity": 2.0,
+        "amount": 36.0,
+        "profit": 17.0
+      },
+      "垃圾桶": {
+        "quantity": 2.0,
+        "amount": 5.779999999999999,
+        "profit": 2.7800000000000002
+      },
+      "棉小竹床单2.5m": {
+        "quantity": 1.0,
+        "amount": 63.97,
+        "profit": 25.97
+      },
+      "全棉大三件套": {
+        "quantity": 1.0,
+        "amount": 147.41,
+        "profit": 67.41
+      },
+      "儿童A类双层纱夏被1.2*1.5": {
+        "quantity": 1.0,
+        "amount": 82.51,
+        "profit": 38.01
+      },
+      "加工费": {
+        "quantity": 1.0,
+        "amount": 6.0,
+        "profit": 0.0
+      },
+      "40S斜纹棉布": {
+        "quantity": 50.5,
+        "amount": 101.0,
+        "profit": 40.4
+      },
+      "全棉小边枕套48*74": {
+        "quantity": 1.0,
+        "amount": 27.47,
+        "profit": 10.47
+      },
+      "开学季凉感面包枕": {
+        "quantity": 1.0,
+        "amount": 55.87,
+        "profit": 29.87
+      },
+      "超洁晾干被1.5*2m": {
+        "quantity": 1.0,
+        "amount": 188.45,
+        "profit": 88.95
+      },
+      "月锦贡缎棉（特）": {
+        "quantity": 4.0,
+        "amount": 151.86,
+        "profit": 75.86
+      },
+      "水洗棉四件套": {
+        "quantity": 1.0,
+        "amount": 188.45,
+        "profit": 88.95
+      },
+      "小巴拉学生枕": {
+        "quantity": 1.0,
+        "amount": 55.0,
+        "profit": 30.0
+      },
+      "舒梦零压枕": {
+        "quantity": 2.0,
+        "amount": 118.0,
+        "profit": 62.0
+      },
+      "水洗印花布（特）": {
+        "quantity": 25.0,
+        "amount": 65.0,
+        "profit": 32.5
+      },
+      "风吹麦浪软席三件套1.8": {
+        "quantity": 1.0,
+        "amount": 143.6,
+        "profit": 59.1
+      },
+      "竹纤维三件套2.5": {
+        "quantity": 1.0,
+        "amount": 245.6,
+        "profit": 105.6
+      },
+      "磁布U枕氨纶超柔": {
+        "quantity": 1.0,
+        "amount": 29.0,
+        "profit": 15.5
       }
     }
   }

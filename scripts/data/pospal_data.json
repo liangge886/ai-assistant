@@ -1,27 +1,27 @@
 {
   "觉爱家纺禹城店": {
-    "today": 8,
-    "yesterday": 0,
-    "lastweek": 7,
+    "today": 0,
+    "yesterday": 8,
+    "lastweek": 0,
     "rank30": 98,
     "inventory": 408,
     "members": 5,
     "members_new": 0
   },
   "觉爱家纺泰安店（新时代徐家楼店）": {
-    "today": 18,
-    "yesterday": 5,
-    "lastweek": 5,
-    "rank30": 188,
+    "today": 11,
+    "yesterday": 18,
+    "lastweek": 10,
+    "rank30": 192,
     "inventory": 784,
     "members": 1,
     "members_new": 0
   },
   "觉爱家纺肥城店": {
-    "today": 22,
-    "yesterday": 14,
-    "lastweek": 20,
-    "rank30": 105,
+    "today": 14,
+    "yesterday": 22,
+    "lastweek": 5,
+    "rank30": 109,
     "inventory": 365,
     "members": 14,
     "members_new": 0
