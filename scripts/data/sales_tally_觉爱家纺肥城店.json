@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺肥城店",
-  "last_updated": "2026-08-18",
-  "window_start": "2026-07-20",
+  "last_updated": "2026-08-19",
+  "window_start": "2026-07-21",
   "daily": {
     "2026-07-27": {
       "立体定型枕": {
@@ -1182,6 +1182,63 @@
         "quantity": 1.0,
         "amount": 48.0,
         "profit": 23.5
+      }
+    },
+    "2026-08-19": {
+      "舒梦零压枕": {
+        "quantity": 1.0,
+        "amount": 59.0,
+        "profit": 29.5
+      },
+      "纱布枕套 大": {
+        "quantity": 2.0,
+        "amount": 98.0,
+        "profit": 27.908
+      },
+      "美度决明子枕": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 26.0
+      },
+      "优尔思零压床垫0.9*1.95m": {
+        "quantity": 2.0,
+        "amount": 449.0,
+        "profit": 229.0
+      },
+      "清凉一梦记忆枕": {
+        "quantity": 1.0,
+        "amount": 60.0,
+        "profit": 25.5
+      },
+      "双层纱全棉棉花被 (1.2x1.5m)": {
+        "quantity": 1.0,
+        "amount": 89.0,
+        "profit": 44.5
+      },
+      "2x2.3米冰凌沫沫凉感夏被": {
+        "quantity": 1.0,
+        "amount": 150.0,
+        "profit": 55.5
+      },
+      "星洛砂洗毯 2x2.2m": {
+        "quantity": 1.0,
+        "amount": 150.0,
+        "profit": 65.5
+      },
+      "原棉老粗布三件套": {
+        "quantity": 3.0,
+        "amount": 117.0,
+        "profit": 36.0
+      },
+      "冰面包枕": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 24.5
+      },
+      "爱意绵绵大豆春秋被1.6米": {
+        "quantity": 1.0,
+        "amount": 149.0,
+        "profit": 81.0
       }
     }
   }

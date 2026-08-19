@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺泰安店（新时代徐家楼店）",
-  "last_updated": "2026-08-18",
-  "window_start": "2026-07-20",
+  "last_updated": "2026-08-19",
+  "window_start": "2026-07-21",
   "daily": {
     "2026-07-27": {
       "竹纤维凉感毯1.5m": {
@@ -1895,6 +1895,58 @@
         "quantity": 1.0,
         "amount": 29.0,
         "profit": 15.5
+      }
+    },
+    "2026-08-19": {
+      "儿童乳胶枕小号": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 23.0
+      },
+      "全棉水洗棉格子乳胶枕": {
+        "quantity": 1.0,
+        "amount": 89.0,
+        "profit": 88.0
+      },
+      "月锦贡缎棉（特）": {
+        "quantity": 2.3,
+        "amount": 89.7,
+        "profit": 46.0
+      },
+      "安心眠枕套": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 13.954
+      },
+      "舒香调夏被1.5*2m": {
+        "quantity": 1.0,
+        "amount": 92.65,
+        "profit": 38.15
+      },
+      "优尔思特价枕": {
+        "quantity": 2.0,
+        "amount": 78.0,
+        "profit": 39.0
+      },
+      "全棉印花四件套（7）": {
+        "quantity": 1.0,
+        "amount": 169.0,
+        "profit": 66.0
+      },
+      "跑量星空浴巾": {
+        "quantity": 1.0,
+        "amount": 19.9,
+        "profit": 4.4
+      },
+      "孔雀米白沙发巾": {
+        "quantity": 2.0,
+        "amount": 18.0,
+        "profit": 16.0
+      },
+      "喜竹纳福学生枕（大）": {
+        "quantity": 1.0,
+        "amount": 89.0,
+        "profit": 44.5
       }
     }
   }
