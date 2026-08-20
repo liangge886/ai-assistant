@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺肥城店",
-  "last_updated": "2026-08-19",
-  "window_start": "2026-07-21",
+  "last_updated": "2026-08-20",
+  "window_start": "2026-07-22",
   "daily": {
     "2026-07-27": {
       "立体定型枕": {
@@ -1239,6 +1239,63 @@
         "quantity": 1.0,
         "amount": 149.0,
         "profit": 81.0
+      }
+    },
+    "2026-08-20": {
+      "2x2.3米冰凌沫沫凉感夏被": {
+        "quantity": 1.0,
+        "amount": 159.0,
+        "profit": 64.5
+      },
+      "1.5x2米海风微澜暖被": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 24.5
+      },
+      "亚朵星球三代护颈软枕 大号": {
+        "quantity": 2.0,
+        "amount": 178.0,
+        "profit": 89.0
+      },
+      "亚朵星球三代护颈软枕 中号": {
+        "quantity": 1.0,
+        "amount": 79.0,
+        "profit": 39.5
+      },
+      "云朵护颈零压枕": {
+        "quantity": 1.0,
+        "amount": 71.0,
+        "profit": 36.0
+      },
+      "三琪色织凉感毯 2×2.3米": {
+        "quantity": 1.0,
+        "amount": 125.0,
+        "profit": 50.5
+      },
+      "粗布枕套": {
+        "quantity": 1.0,
+        "amount": 29.0,
+        "profit": 14.5
+      },
+      "1.5x2米针织绵豆豆被": {
+        "quantity": 1.0,
+        "amount": 89.0,
+        "profit": 44.5
+      },
+      "纱布枕套 大": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 13.954
+      },
+      "2x2.3米凉感丝夏被": {
+        "quantity": 2.0,
+        "amount": 138.0,
+        "profit": 69.0
+      },
+      "亚朵第四代双拼记忆枕": {
+        "quantity": 1.0,
+        "amount": 89.0,
+        "profit": 39.0
       }
     }
   }
