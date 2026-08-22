@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺肥城店",
-  "last_updated": "2026-08-21",
-  "window_start": "2026-07-23",
+  "last_updated": "2026-08-22",
+  "window_start": "2026-07-24",
   "daily": {
     "2026-07-27": {
       "立体定型枕": {
@@ -1373,6 +1373,68 @@
         "quantity": 1.0,
         "amount": 79.0,
         "profit": 39.5
+      }
+    },
+    "2026-08-22": {
+      "星洛砂洗毯 2x2.2m": {
+        "quantity": 1.0,
+        "amount": 150.0,
+        "profit": 65.5
+      },
+      "宽边老粗布三件套（2*2.3）": {
+        "quantity": 3.0,
+        "amount": 297.0,
+        "profit": 43.5
+      },
+      "小边老粗布三件套（2*2.3）": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 24.5
+      },
+      "优尔思零压床垫0.9*1.95m": {
+        "quantity": 1.0,
+        "amount": 229.0,
+        "profit": 119.0
+      },
+      "原棉老粗布三件套": {
+        "quantity": 4.0,
+        "amount": 156.0,
+        "profit": 48.0
+      },
+      "亚朵星球三代护颈软枕 中号": {
+        "quantity": 1.0,
+        "amount": 71.0,
+        "profit": 31.5
+      },
+      "1.5x2米凉感丝夏被": {
+        "quantity": 1.0,
+        "amount": 59.0,
+        "profit": 29.5
+      },
+      "全棉斜纹枕套40*60": {
+        "quantity": 3.0,
+        "amount": 45.0,
+        "profit": 27.0
+      },
+      "清氧可水洗枕（学生枕）": {
+        "quantity": 1.0,
+        "amount": 80.0,
+        "profit": 37.0
+      },
+      "开学季凉感面包枕": {
+        "quantity": 1.0,
+        "amount": 53.0,
+        "profit": 27.0
+      },
+      "24枕套（信封）": {
+        "quantity": 1.0,
+        "amount": 24.0,
+        "profit": 12.0
+      },
+      "清凉一梦记忆枕": {
+        "quantity": 2.0,
+        "amount": 124.0,
+        "profit": 55.0
       }
     }
   }
