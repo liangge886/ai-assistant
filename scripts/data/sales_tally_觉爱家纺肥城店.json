@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺肥城店",
-  "last_updated": "2026-08-22",
-  "window_start": "2026-07-24",
+  "last_updated": "2026-08-23",
+  "window_start": "2026-07-25",
   "daily": {
     "2026-07-27": {
       "立体定型枕": {
@@ -1435,6 +1435,73 @@
         "quantity": 2.0,
         "amount": 124.0,
         "profit": 55.0
+      }
+    },
+    "2026-08-23": {
+      "优尔思零压床垫0.9*1.95m": {
+        "quantity": 2.0,
+        "amount": 426.0,
+        "profit": 206.0
+      },
+      "美度决明子枕": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 26.0
+      },
+      "90零压力慢回弹床垫": {
+        "quantity": 1.0,
+        "amount": 249.0,
+        "profit": 119.0
+      },
+      "小边老粗布三件套（2*2.3）": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 24.5
+      },
+      "莫代尔床盖 (2.3×2.4m)": {
+        "quantity": 1.0,
+        "amount": 129.0,
+        "profit": 64.5
+      },
+      "纯棉被罩 1.8×2.2m": {
+        "quantity": 1.0,
+        "amount": 79.0,
+        "profit": 39.5
+      },
+      "冰面包枕": {
+        "quantity": 1.0,
+        "amount": 45.0,
+        "profit": 20.5
+      },
+      "2x2.3米海风微澜夏被": {
+        "quantity": 1.0,
+        "amount": 109.0,
+        "profit": 24.5
+      },
+      "全棉斜纹加厚床单（2.3*2.5）": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 34.5
+      },
+      "全棉纯色床单": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 34.5
+      },
+      "原棉老粗布三件套": {
+        "quantity": 1.0,
+        "amount": 39.0,
+        "profit": 12.0
+      },
+      "如意": {
+        "quantity": 1.0,
+        "amount": 510.0,
+        "profit": 225.5
+      },
+      "羊绒蛋白枕": {
+        "quantity": 2.0,
+        "amount": 78.0,
+        "profit": 40.0
       }
     }
   }

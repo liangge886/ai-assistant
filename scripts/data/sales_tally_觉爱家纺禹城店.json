@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺禹城店",
-  "last_updated": "2026-08-22",
-  "window_start": "2026-07-24",
+  "last_updated": "2026-08-23",
+  "window_start": "2026-07-25",
   "daily": {
     "2026-07-27": {
       "149海风微澜蛋白凉感夏被": {
@@ -920,6 +920,48 @@
         "quantity": 1.0,
         "amount": 79.0,
         "profit": 39.5
+      }
+    },
+    "2026-08-23": {
+      "59舒柔健康枕学生枕": {
+        "quantity": 1.0,
+        "amount": 59.0,
+        "profit": 31.0
+      },
+      "全棉AB学生三件套": {
+        "quantity": 1.0,
+        "amount": 169.0,
+        "profit": 89.0
+      },
+      "169老粗布三件套": {
+        "quantity": 1.0,
+        "amount": 169.0,
+        "profit": 84.5
+      },
+      "79草本颈养枕": {
+        "quantity": 1.0,
+        "amount": 79.0,
+        "profit": 42.0
+      },
+      "189冰凌沫沫凉感印花夏被": {
+        "quantity": 2.0,
+        "amount": 364.87,
+        "profit": 175.87
+      },
+      "169冰凌沫沫凉感夏被": {
+        "quantity": 1.0,
+        "amount": 163.13,
+        "profit": 78.63
+      },
+      "199星硌沙床盖": {
+        "quantity": 1.0,
+        "amount": 199.0,
+        "profit": 99.5
+      },
+      "清凉一梦深睡记忆枕（小）": {
+        "quantity": 2.0,
+        "amount": 118.0,
+        "profit": 60.0
       }
     }
   }

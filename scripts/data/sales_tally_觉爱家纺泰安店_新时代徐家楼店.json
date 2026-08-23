@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺泰安店（新时代徐家楼店）",
-  "last_updated": "2026-08-22",
-  "window_start": "2026-07-24",
+  "last_updated": "2026-08-23",
+  "window_start": "2026-07-25",
   "daily": {
     "2026-07-27": {
       "竹纤维凉感毯1.5m": {
@@ -2193,6 +2193,108 @@
         "quantity": 1.0,
         "amount": 2.37,
         "profit": 0.87
+      }
+    },
+    "2026-08-23": {
+      "舒柔健康枕儿童（大）": {
+        "quantity": 1.0,
+        "amount": 59.0,
+        "profit": 29.5
+      },
+      "清凉一梦深睡记忆枕（小）": {
+        "quantity": 1.0,
+        "amount": 59.0,
+        "profit": 30.0
+      },
+      "法师枕巾": {
+        "quantity": 1.0,
+        "amount": 39.0,
+        "profit": 14.0
+      },
+      "宽边莫代尔床盖2.3*2.4m": {
+        "quantity": 1.0,
+        "amount": 125.15,
+        "profit": 60.65
+      },
+      "爱意绵绵春秋被2米": {
+        "quantity": 1.0,
+        "amount": 183.35,
+        "profit": 93.35
+      },
+      "粗布三件套": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 22.0
+      },
+      "羊绒蛋白春秋被1.5米": {
+        "quantity": 1.0,
+        "amount": 79.0,
+        "profit": 40.0
+      },
+      "糯棉冰沙夏被2m": {
+        "quantity": 1.0,
+        "amount": 109.65,
+        "profit": 45.15
+      },
+      "棉小格夏凉被1.5": {
+        "quantity": 1.0,
+        "amount": 92.65,
+        "profit": 38.15
+      },
+      "全棉斜纹加厚被套1.6米": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 52.0
+      },
+      "40S斜纹棉布": {
+        "quantity": 25.0,
+        "amount": 50.0,
+        "profit": 20.0
+      },
+      "网红波浪沙发垫2.1*1": {
+        "quantity": 1.0,
+        "amount": 75.0,
+        "profit": 39.0
+      },
+      "未来之星儿童枕（大）": {
+        "quantity": 3.0,
+        "amount": 117.0,
+        "profit": 58.5
+      },
+      "精品全棉拼色三件套1.6*2.1": {
+        "quantity": 1.0,
+        "amount": 169.0,
+        "profit": 91.0
+      },
+      "优尔思特价枕": {
+        "quantity": 1.0,
+        "amount": 39.0,
+        "profit": 19.5
+      },
+      "全棉纱布暗扣枕套40*60": {
+        "quantity": 1.0,
+        "amount": 18.0,
+        "profit": 8.5
+      },
+      "黑金1代枕10cm": {
+        "quantity": 1.0,
+        "amount": 141.5,
+        "profit": 73.5
+      },
+      "竹纤维三件套2.5": {
+        "quantity": 1.0,
+        "amount": 245.65,
+        "profit": 105.65
+      },
+      "棉花": {
+        "quantity": 5.0,
+        "amount": 110.0,
+        "profit": 55.0
+      },
+      "棉被手工费": {
+        "quantity": 3.0,
+        "amount": 45.0,
+        "profit": 0.0
       }
     }
   }
