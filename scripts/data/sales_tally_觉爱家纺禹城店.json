@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺禹城店",
-  "last_updated": "2026-08-23",
-  "window_start": "2026-07-25",
+  "last_updated": "2026-08-24",
+  "window_start": "2026-07-26",
   "daily": {
     "2026-07-27": {
       "149海风微澜蛋白凉感夏被": {
@@ -962,6 +962,38 @@
         "quantity": 2.0,
         "amount": 118.0,
         "profit": 60.0
+      }
+    },
+    "2026-08-24": {
+      "69凉感丝夏被（1.5*2）": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 34.5
+      },
+      "39特价床单": {
+        "quantity": 2.0,
+        "amount": 78.0,
+        "profit": 40.0
+      },
+      "269竹纤维三件套": {
+        "quantity": 3.0,
+        "amount": 726.0,
+        "profit": 306.0
+      },
+      "49被罩（纯棉2.0）": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 11.0
+      },
+      "7A抗菌双层春秋被": {
+        "quantity": 1.0,
+        "amount": 169.0,
+        "profit": 100.0
+      },
+      "原棉大豆春秋被1.5": {
+        "quantity": 1.0,
+        "amount": 229.0,
+        "profit": 229.0
       }
     }
   }
