@@ -1,7 +1,7 @@
 {
   "store_name": "觉爱家纺禹城店",
-  "last_updated": "2026-08-24",
-  "window_start": "2026-07-26",
+  "last_updated": "2026-08-25",
+  "window_start": "2026-07-27",
   "daily": {
     "2026-07-27": {
       "149海风微澜蛋白凉感夏被": {
@@ -994,6 +994,28 @@
         "quantity": 1.0,
         "amount": 229.0,
         "profit": 229.0
+      }
+    },
+    "2026-08-25": {
+      "169冰凌沫沫凉感夏被": {
+        "quantity": 1.0,
+        "amount": 169.0,
+        "profit": 84.5
+      },
+      "69沙洗爱心枕": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 34.5
+      },
+      "69被罩 1.6*2.1": {
+        "quantity": 2.0,
+        "amount": 138.0,
+        "profit": 69.0
+      },
+      "99纯棉夏被": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 34.0
       }
     }
   }
