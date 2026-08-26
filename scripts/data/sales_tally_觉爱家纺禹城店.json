@@ -1,35 +1,8 @@
 {
   "store_name": "觉爱家纺禹城店",
-  "last_updated": "2026-08-25",
-  "window_start": "2026-07-27",
+  "last_updated": "2026-08-26",
+  "window_start": "2026-07-28",
   "daily": {
-    "2026-07-27": {
-      "149海风微澜蛋白凉感夏被": {
-        "quantity": 1.0,
-        "amount": 120.0,
-        "profit": 45.5
-      },
-      "89决明子木棉枕": {
-        "quantity": 2.0,
-        "amount": 178.0,
-        "profit": 88.0
-      },
-      "39粗布三件套": {
-        "quantity": 1.0,
-        "amount": 39.0,
-        "profit": 10.0
-      },
-      "外穿杆蚊帐": {
-        "quantity": 1.0,
-        "amount": 217.0,
-        "profit": 88.0
-      },
-      "119传承老粗布三件套": {
-        "quantity": 1.0,
-        "amount": 119.0,
-        "profit": 59.5
-      }
-    },
     "2026-07-28": {
       "沙发巾（12元/米）": {
         "quantity": 2.0,
@@ -1016,6 +989,28 @@
         "quantity": 1.0,
         "amount": 99.0,
         "profit": 34.0
+      }
+    },
+    "2026-08-26": {
+      "优尔思零压床垫0.9*1.95m": {
+        "quantity": 1.0,
+        "amount": 194.0,
+        "profit": 84.0
+      },
+      "全棉AB学生三件套": {
+        "quantity": 1.0,
+        "amount": 169.0,
+        "profit": 89.0
+      },
+      "59颈部助眠分区枕": {
+        "quantity": 1.0,
+        "amount": 59.0,
+        "profit": 29.0
+      },
+      "开学季凉感面包枕": {
+        "quantity": 1.0,
+        "amount": 59.0,
+        "profit": 33.0
       }
     }
   }
