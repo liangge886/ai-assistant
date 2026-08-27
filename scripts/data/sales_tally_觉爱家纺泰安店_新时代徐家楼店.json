@@ -1,120 +1,8 @@
 {
   "store_name": "觉爱家纺泰安店（新时代徐家楼店）",
-  "last_updated": "2026-08-26",
-  "window_start": "2026-07-28",
+  "last_updated": "2026-08-27",
+  "window_start": "2026-07-29",
   "daily": {
-    "2026-07-28": {
-      "竹纤维三件套2.5": {
-        "quantity": 1.0,
-        "amount": 280.96,
-        "profit": 140.96
-      },
-      "速干小方巾": {
-        "quantity": 3.0,
-        "amount": 2.92,
-        "profit": 1.42
-      },
-      "高端全棉数码印花四件套": {
-        "quantity": 1.0,
-        "amount": 193.46,
-        "profit": 83.46
-      },
-      "团购凉感丝夏被2m": {
-        "quantity": 2.0,
-        "amount": 134.16,
-        "profit": 65.16
-      },
-      "凉感豆豆棉枕大": {
-        "quantity": 1.0,
-        "amount": 29.0,
-        "profit": 14.0
-      },
-      "特价纱布大毛巾": {
-        "quantity": 2.0,
-        "amount": 16.0,
-        "profit": 6.0
-      },
-      "汗麻成人枕巾": {
-        "quantity": 1.0,
-        "amount": 39.0,
-        "profit": 19.5
-      },
-      "特价条纹粗布床单2m": {
-        "quantity": 1.0,
-        "amount": 39.0,
-        "profit": 14.0
-      },
-      "M4生物基云浮枕": {
-        "quantity": 1.0,
-        "amount": 199.0,
-        "profit": 99.0
-      },
-      "草本零压枕": {
-        "quantity": 2.0,
-        "amount": 158.0,
-        "profit": 79.0
-      },
-      "全棉云朵纱布枕套48*74": {
-        "quantity": 1.0,
-        "amount": 49.0,
-        "profit": 24.0
-      },
-      "决明子舒适枕": {
-        "quantity": 1.0,
-        "amount": 89.0,
-        "profit": 51.0
-      },
-      "传承粗布三件套2.5": {
-        "quantity": 2.0,
-        "amount": 226.1,
-        "profit": 114.1
-      },
-      "特价磨毛床单": {
-        "quantity": 2.0,
-        "amount": 78.0,
-        "profit": 40.0
-      },
-      "团购凉感丝夏被1.5m": {
-        "quantity": 1.0,
-        "amount": 59.0,
-        "profit": 29.5
-      },
-      "定制全棉床单2*2.3": {
-        "quantity": 1.0,
-        "amount": 49.0,
-        "profit": 24.5
-      },
-      "绘梦枕巾": {
-        "quantity": 1.0,
-        "amount": 39.0,
-        "profit": 19.0
-      },
-      "棉麻月牙荞麦枕30*64": {
-        "quantity": 1.0,
-        "amount": 39.0,
-        "profit": 19.5
-      },
-      "全棉儿童枕": {
-        "quantity": 1.0,
-        "amount": 25.0,
-        "profit": 16.2
-      },
-      "未来之星儿童枕（大）": {
-        "quantity": 1.0,
-        "amount": 39.0,
-        "profit": 19.5
-      },
-      "全棉拼角枕套30*50": {
-        "quantity": 1.0,
-        "amount": 13.0,
-        "profit": 7.0
-      },
-      "活性环保全棉四件套2*2.3": {
-        "quantity": 1.0,
-        "amount": 139.0,
-        "profit": 51.0
-      }
-    },
     "2026-07-29": {
       "安心眠枕套": {
         "quantity": 1.0,
@@ -2403,6 +2291,93 @@
         "quantity": 1.0,
         "amount": 109.6,
         "profit": 45.1
+      }
+    },
+    "2026-08-27": {
+      "未来之星儿童枕（大）": {
+        "quantity": 2.0,
+        "amount": 78.0,
+        "profit": 39.434
+      },
+      "全棉拼角枕套30*50": {
+        "quantity": 1.0,
+        "amount": 13.0,
+        "profit": 7.0
+      },
+      "皱皱纱枕套": {
+        "quantity": 2.0,
+        "amount": 38.0,
+        "profit": 14.0
+      },
+      "清氧可水洗儿童枕": {
+        "quantity": 2.0,
+        "amount": 138.0,
+        "profit": 72.0
+      },
+      "儿童枕套白花边30*50": {
+        "quantity": 5.0,
+        "amount": 50.0,
+        "profit": 25.0
+      },
+      "清凉一梦深睡记忆枕（大）": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 36.0
+      },
+      "羊绒蛋白春秋被2米": {
+        "quantity": 2.0,
+        "amount": 198.0,
+        "profit": 104.0
+      },
+      "网红波浪沙发垫2.1*1": {
+        "quantity": 1.0,
+        "amount": 71.25,
+        "profit": 35.25
+      },
+      "网红波浪沙发垫1.5*1米": {
+        "quantity": 1.0,
+        "amount": 47.5,
+        "profit": 23.5
+      },
+      "双层纱花边春秋被2米": {
+        "quantity": 1.0,
+        "amount": 239.0,
+        "profit": 124.0
+      },
+      "高晶密提花沙发垫0.9": {
+        "quantity": 1.0,
+        "amount": 55.0,
+        "profit": 30.0
+      },
+      "草本零压枕": {
+        "quantity": 2.0,
+        "amount": 158.0,
+        "profit": 79.0
+      },
+      "皇家乳胶床垫三件套0.9": {
+        "quantity": 1.0,
+        "amount": 759.0,
+        "profit": 360.0
+      },
+      "粗布中枕（圆形)": {
+        "quantity": 1.0,
+        "amount": 12.0,
+        "profit": 6.5
+      },
+      "精品全棉拼色三件套1.6*2.1": {
+        "quantity": 1.0,
+        "amount": 169.0,
+        "profit": 91.0
+      },
+      "法师枕巾": {
+        "quantity": 1.0,
+        "amount": 39.0,
+        "profit": 14.0
+      },
+      "安心眠枕套": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 13.954
       }
     }
   }
