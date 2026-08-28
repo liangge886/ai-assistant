@@ -1,35 +1,8 @@
 {
   "store_name": "觉爱家纺泰安店（新时代徐家楼店）",
-  "last_updated": "2026-08-27",
-  "window_start": "2026-07-29",
+  "last_updated": "2026-08-28",
+  "window_start": "2026-07-30",
   "daily": {
-    "2026-07-29": {
-      "安心眠枕套": {
-        "quantity": 1.0,
-        "amount": 49.0,
-        "profit": 14.0
-      },
-      "碎花面包荞麦枕55*30": {
-        "quantity": 1.0,
-        "amount": 49.0,
-        "profit": 26.0
-      },
-      "老粗布沙发垫": {
-        "quantity": 1.0,
-        "amount": 89.0,
-        "profit": 44.5
-      },
-      "全棉小边枕套48*74": {
-        "quantity": 1.0,
-        "amount": 29.0,
-        "profit": 12.0
-      },
-      "双层午睡纱枕": {
-        "quantity": 1.0,
-        "amount": 45.0,
-        "profit": 25.0
-      }
-    },
     "2026-07-30": {
       "皱皱纱枕套": {
         "quantity": 1.0,
@@ -2378,6 +2351,108 @@
         "quantity": 1.0,
         "amount": 49.0,
         "profit": 13.954
+      }
+    },
+    "2026-08-28": {
+      "超洁晾干被1.5*2m": {
+        "quantity": 1.0,
+        "amount": 169.15,
+        "profit": 69.65
+      },
+      "开学季凉感面包枕": {
+        "quantity": 1.0,
+        "amount": 59.0,
+        "profit": 33.0
+      },
+      "莱卡学生乳胶枕": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 37.0
+      },
+      "水洗棉枕套40*60": {
+        "quantity": 1.0,
+        "amount": 15.0,
+        "profit": 7.5
+      },
+      "棉花": {
+        "quantity": 4.0,
+        "amount": 80.0,
+        "profit": 34.0
+      },
+      "棉被手工费": {
+        "quantity": 2.0,
+        "amount": 30.0,
+        "profit": 0.0
+      },
+      "冰凌沫沫夏被2m": {
+        "quantity": 1.0,
+        "amount": 160.65,
+        "profit": 66.15
+      },
+      "baby被2m": {
+        "quantity": 1.0,
+        "amount": 279.6,
+        "profit": 115.1
+      },
+      "全棉居家绣花四件套": {
+        "quantity": 1.0,
+        "amount": 199.0,
+        "profit": 84.0
+      },
+      "舒香调夏被1.2*1.4m": {
+        "quantity": 1.0,
+        "amount": 59.0,
+        "profit": 29.5
+      },
+      "未来之星儿童枕（大）": {
+        "quantity": 1.0,
+        "amount": 39.0,
+        "profit": 19.717
+      },
+      "速干小方巾": {
+        "quantity": 2.0,
+        "amount": 2.0,
+        "profit": 1.0
+      },
+      "全棉拼角枕套30*50": {
+        "quantity": 1.0,
+        "amount": 13.0,
+        "profit": 7.0
+      },
+      "印花双层纱夏被2m": {
+        "quantity": 1.0,
+        "amount": 143.6,
+        "profit": 59.1
+      },
+      "水洗布": {
+        "quantity": 1.9,
+        "amount": 47.5,
+        "profit": 23.75
+      },
+      "垃圾桶": {
+        "quantity": 1.0,
+        "amount": 3.0,
+        "profit": 1.5
+      },
+      "衬布": {
+        "quantity": 19.0,
+        "amount": 28.5,
+        "profit": 11.4
+      },
+      "舒梦零压枕": {
+        "quantity": 2.0,
+        "amount": 118.0,
+        "profit": 62.0
+      },
+      "星洛砂洗毯": {
+        "quantity": 1.0,
+        "amount": 179.5,
+        "profit": 79.5
+      },
+      "全棉精品AB版三件套1.6*2.1": {
+        "quantity": 1.0,
+        "amount": 169.0,
+        "profit": 89.0
       }
     }
   }
