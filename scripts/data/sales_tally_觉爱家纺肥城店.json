@@ -1,40 +1,8 @@
 {
   "store_name": "觉爱家纺肥城店",
-  "last_updated": "2026-08-28",
-  "window_start": "2026-07-30",
+  "last_updated": "2026-08-29",
+  "window_start": "2026-07-31",
   "daily": {
-    "2026-07-30": {
-      "29茶叶枕": {
-        "quantity": 3.0,
-        "amount": 87.0,
-        "profit": 42.0
-      },
-      "小边老粗布三件套（2*2.3）": {
-        "quantity": 1.0,
-        "amount": 140.0,
-        "profit": 65.5
-      },
-      "全棉斜纹加厚被套 (2x2.3)": {
-        "quantity": 1.0,
-        "amount": 100.0,
-        "profit": 46.5
-      },
-      "舒柔健康学生枕": {
-        "quantity": 1.0,
-        "amount": 59.0,
-        "profit": 32.0
-      },
-      "全棉斜纹加厚床单（1.6*2.2）": {
-        "quantity": 1.0,
-        "amount": 49.0,
-        "profit": 24.5
-      },
-      "原棉老粗布三件套": {
-        "quantity": 1.0,
-        "amount": 39.0,
-        "profit": 12.0
-      }
-    },
     "2026-07-31": {
       "舒梦零压枕": {
         "quantity": 1.0,
@@ -1766,6 +1734,48 @@
         "quantity": 1.0,
         "amount": 29.0,
         "profit": 19.0
+      }
+    },
+    "2026-08-29": {
+      "原棉大豆春秋被1.5": {
+        "quantity": 1.0,
+        "amount": 206.0,
+        "profit": 91.0
+      },
+      "水洗磨毛褥子": {
+        "quantity": 1.0,
+        "amount": 70.0,
+        "profit": 35.0
+      },
+      "水洗棉天然乳胶枕": {
+        "quantity": 3.0,
+        "amount": 267.0,
+        "profit": 132.0
+      },
+      "纱布枕套 大": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 13.954
+      },
+      "(棉绒) 宝宝绒床盖 1.5x2m": {
+        "quantity": 1.0,
+        "amount": 89.0,
+        "profit": 44.5
+      },
+      "冰丝儿童小象枕": {
+        "quantity": 1.0,
+        "amount": 32.0,
+        "profit": 14.5
+      },
+      "2x2.3米冰凌沫沫凉感夏被": {
+        "quantity": 1.0,
+        "amount": 159.0,
+        "profit": 64.5
+      },
+      "小巴拉儿童枕": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 29.0
       }
     }
   }
