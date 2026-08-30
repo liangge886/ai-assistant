@@ -1,55 +1,8 @@
 {
   "store_name": "觉爱家纺肥城店",
-  "last_updated": "2026-08-29",
-  "window_start": "2026-07-31",
+  "last_updated": "2026-08-30",
+  "window_start": "2026-08-01",
   "daily": {
-    "2026-07-31": {
-      "舒梦零压枕": {
-        "quantity": 1.0,
-        "amount": 59.0,
-        "profit": 29.5
-      },
-      "双层纱全棉棉花被 (1.2x1.5m)": {
-        "quantity": 1.0,
-        "amount": 89.0,
-        "profit": 44.5
-      },
-      "冰凌沫沫夏被": {
-        "quantity": 2.0,
-        "amount": 270.0,
-        "profit": 101.0
-      },
-      "1.5x2米棉小格水洗布夏被": {
-        "quantity": 1.0,
-        "amount": 90.0,
-        "profit": 40.5
-      },
-      "竹纤维三件套 2.5x2.6m": {
-        "quantity": 1.0,
-        "amount": 240.0,
-        "profit": 105.5
-      },
-      "亚朵星球三代护颈软枕 中号": {
-        "quantity": 1.0,
-        "amount": 79.0,
-        "profit": 39.5
-      },
-      "喜竹纳福生物基枕": {
-        "quantity": 1.0,
-        "amount": 59.0,
-        "profit": 24.0
-      },
-      "米丘甘朴立体藤凉枕": {
-        "quantity": 1.0,
-        "amount": 49.0,
-        "profit": 24.5
-      },
-      "学生全棉三件套": {
-        "quantity": 1.0,
-        "amount": 90.0,
-        "profit": 10.5
-      }
-    },
     "2026-08-01": {
       "全棉斜纹加厚床单（1.6*2.2）": {
         "quantity": 2.0,
@@ -1776,6 +1729,43 @@
         "quantity": 1.0,
         "amount": 49.0,
         "profit": 29.0
+      }
+    },
+    "2026-08-30": {
+      "羊绒蛋白春秋被1.5米": {
+        "quantity": 6.0,
+        "amount": 474.0,
+        "profit": 240.0
+      },
+      "爱意绵绵大豆春秋被1.6米": {
+        "quantity": 2.0,
+        "amount": 298.0,
+        "profit": 162.0
+      },
+      "小边老粗布三件套（2*2.3）": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 24.5
+      },
+      "原棉老粗布三件套": {
+        "quantity": 1.0,
+        "amount": 39.0,
+        "profit": 12.0
+      },
+      "2x2.3米凉感丝夏被": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 34.5
+      },
+      "水洗棉天然乳胶枕": {
+        "quantity": 1.0,
+        "amount": 89.0,
+        "profit": 44.0
+      },
+      "M5 生物基云浮枕": {
+        "quantity": 1.0,
+        "amount": 185.0,
+        "profit": 90.5
       }
     }
   }
