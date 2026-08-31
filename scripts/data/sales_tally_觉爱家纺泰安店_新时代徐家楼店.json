@@ -1,9 +1,8 @@
 {
   "store_name": "觉爱家纺泰安店（新时代徐家楼店）",
-  "last_updated": "2026-08-30",
-  "window_start": "2026-08-01",
+  "last_updated": "2026-08-31",
+  "window_start": "2026-08-02",
   "daily": {
-    "2026-08-01": {},
     "2026-08-02": {},
     "2026-08-03": {
       "特价复合直边沙发垫": {
@@ -2743,6 +2742,138 @@
         "quantity": 1.0,
         "amount": 236.49,
         "profit": 116.49
+      }
+    },
+    "2026-08-31": {
+      "特价磨毛床单": {
+        "quantity": 1.0,
+        "amount": 39.0,
+        "profit": 20.0
+      },
+      "定制全棉床单2.3*2.3": {
+        "quantity": 1.0,
+        "amount": 55.0,
+        "profit": 27.5
+      },
+      "定制全棉床单2*2.3": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 24.5
+      },
+      "莱卡学生乳胶枕": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 37.0
+      },
+      "羊绒蛋白枕": {
+        "quantity": 1.0,
+        "amount": 39.0,
+        "profit": 20.0
+      },
+      "未来之星儿童枕（小）": {
+        "quantity": 1.0,
+        "amount": 29.0,
+        "profit": 14.206
+      },
+      "特6层绣花盖毯1.1*1.1": {
+        "quantity": 1.0,
+        "amount": 39.0,
+        "profit": 19.5
+      },
+      "莱赛尔天丝夏被2*2.3m": {
+        "quantity": 1.0,
+        "amount": 118.1,
+        "profit": 48.6
+      },
+      "长绒棉居家四件套": {
+        "quantity": 2.0,
+        "amount": 598.0,
+        "profit": 318.0
+      },
+      "全棉床单2.3": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 68.0
+      },
+      "爱意绵绵春秋被2米": {
+        "quantity": 2.0,
+        "amount": 359.1,
+        "profit": 179.1
+      },
+      "喜竹纳福学生枕（小）": {
+        "quantity": 1.0,
+        "amount": 79.0,
+        "profit": 45.25
+      },
+      "双层午睡纱枕": {
+        "quantity": 3.0,
+        "amount": 135.0,
+        "profit": 75.0
+      },
+      "双层纱床盖三件套": {
+        "quantity": 1.0,
+        "amount": 227.05,
+        "profit": 92.05
+      },
+      "全棉色织床盖三件套": {
+        "quantity": 1.0,
+        "amount": 236.55,
+        "profit": 116.55
+      },
+      "舒香调夏被2.*2.3m": {
+        "quantity": 1.0,
+        "amount": 109.6,
+        "profit": 45.1
+      },
+      "皱皱纱枕套": {
+        "quantity": 2.0,
+        "amount": 38.0,
+        "profit": 14.0
+      },
+      "小恐龙成长学生枕": {
+        "quantity": 1.0,
+        "amount": 45.0,
+        "profit": 25.0
+      },
+      "儿童A类双层纱夏被1.2*1.5": {
+        "quantity": 1.0,
+        "amount": 89.0,
+        "profit": 44.5
+      },
+      "双面全棉床盖2*2.2m": {
+        "quantity": 1.0,
+        "amount": 116.05,
+        "profit": 51.55
+      },
+      "宽边莫代尔床盖2.3*2.4m": {
+        "quantity": 1.0,
+        "amount": 116.05,
+        "profit": 51.55
+      },
+      "特价全棉被套2米": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 14.0
+      },
+      "特价全棉被套1.6米": {
+        "quantity": 1.0,
+        "amount": 39.0,
+        "profit": 13.0
+      },
+      "羊绒蛋白春秋被2米": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 52.0
+      },
+      "零感记忆枕（12cm）": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 54.0
+      },
+      "开学季凉感面包枕": {
+        "quantity": 1.0,
+        "amount": 59.0,
+        "profit": 33.0
       }
     }
   }

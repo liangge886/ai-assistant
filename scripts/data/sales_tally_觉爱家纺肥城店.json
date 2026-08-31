@@ -1,50 +1,8 @@
 {
   "store_name": "觉爱家纺肥城店",
-  "last_updated": "2026-08-30",
-  "window_start": "2026-08-01",
+  "last_updated": "2026-08-31",
+  "window_start": "2026-08-02",
   "daily": {
-    "2026-08-01": {
-      "全棉斜纹加厚床单（1.6*2.2）": {
-        "quantity": 2.0,
-        "amount": 98.0,
-        "profit": 49.0
-      },
-      "高端全棉数码印花四件套": {
-        "quantity": 1.0,
-        "amount": 199.0,
-        "profit": 99.5
-      },
-      "原棉老粗布三件套": {
-        "quantity": 5.0,
-        "amount": 195.0,
-        "profit": 60.0
-      },
-      "纯棉床单 1.6×2.3m": {
-        "quantity": 1.0,
-        "amount": 35.0,
-        "profit": 17.5
-      },
-      "清凉一梦记忆枕": {
-        "quantity": 2.0,
-        "amount": 130.0,
-        "profit": 61.0
-      },
-      "39枕套（棉纱大号）": {
-        "quantity": 1.0,
-        "amount": 39.0,
-        "profit": 18.0
-      },
-      "小巴拉学生枕": {
-        "quantity": 1.0,
-        "amount": 59.0,
-        "profit": 34.0
-      },
-      "粗布荞麦枕": {
-        "quantity": 1.0,
-        "amount": 45.0,
-        "profit": 22.5
-      }
-    },
     "2026-08-02": {
       "星洛砂洗毯 2x2.2m": {
         "quantity": 2.0,
@@ -1766,6 +1724,88 @@
         "quantity": 1.0,
         "amount": 185.0,
         "profit": 90.5
+      }
+    },
+    "2026-08-31": {
+      "初视归香奈": {
+        "quantity": 1.0,
+        "amount": 249.0,
+        "profit": 124.5
+      },
+      "喜竹纳福生物基枕": {
+        "quantity": 2.0,
+        "amount": 118.0,
+        "profit": 48.0
+      },
+      "全棉拼角枕套30*50": {
+        "quantity": 2.0,
+        "amount": 20.0,
+        "profit": 8.0
+      },
+      "清氧可水洗枕（儿童枕）": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 35.0
+      },
+      "2x2.3米凉感丝夏被": {
+        "quantity": 3.0,
+        "amount": 207.0,
+        "profit": 103.5
+      },
+      "凉感豆棉枕 小号": {
+        "quantity": 2.0,
+        "amount": 38.0,
+        "profit": 19.0
+      },
+      "纱布枕套 大": {
+        "quantity": 2.0,
+        "amount": 98.0,
+        "profit": 27.908
+      },
+      "繁花床盖三件套 2.5x2.5m": {
+        "quantity": 1.0,
+        "amount": 240.0,
+        "profit": 95.5
+      },
+      "89豆豆被（单人全棉）": {
+        "quantity": 1.0,
+        "amount": 89.0,
+        "profit": 39.0
+      },
+      "1.5x2米凉感丝夏被": {
+        "quantity": 1.0,
+        "amount": 59.0,
+        "profit": 29.5
+      },
+      "悦享生物基枕": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 49.5
+      },
+      "双层纱全棉棉花被 (1.2x1.5m)": {
+        "quantity": 1.0,
+        "amount": 89.0,
+        "profit": 44.5
+      },
+      "传承粗布三件套 2.5x2.5m": {
+        "quantity": 2.0,
+        "amount": 226.0,
+        "profit": 107.0
+      },
+      "全棉斜纹枕套40*60": {
+        "quantity": 1.0,
+        "amount": 15.0,
+        "profit": 9.0
+      },
+      "1.5x2米针织绵豆豆被": {
+        "quantity": 1.0,
+        "amount": 89.0,
+        "profit": 44.5
+      },
+      "水洗棉天然乳胶枕": {
+        "quantity": 1.0,
+        "amount": 89.0,
+        "profit": 44.0
       }
     }
   }
