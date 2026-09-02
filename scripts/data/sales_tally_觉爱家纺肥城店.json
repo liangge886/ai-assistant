@@ -1,75 +1,8 @@
 {
   "store_name": "觉爱家纺肥城店",
-  "last_updated": "2026-09-01",
-  "window_start": "2026-08-03",
+  "last_updated": "2026-09-02",
+  "window_start": "2026-08-04",
   "daily": {
-    "2026-08-03": {
-      "长绒棉绣花被套 (2x2.3)": {
-        "quantity": 1.0,
-        "amount": 130.0,
-        "profit": 55.5
-      },
-      "2x2.3米全棉夏被": {
-        "quantity": 2.0,
-        "amount": 180.0,
-        "profit": 81.0
-      },
-      "2x2.3米凉感丝夏被": {
-        "quantity": 1.0,
-        "amount": 69.0,
-        "profit": 34.5
-      },
-      "丝丝美凉感童席 60×140厘米": {
-        "quantity": 3.0,
-        "amount": 136.0,
-        "profit": 64.0
-      },
-      "亚朵星球三代护颈软枕 中号": {
-        "quantity": 1.0,
-        "amount": 79.0,
-        "profit": 39.5
-      },
-      "皱皱纱四件套": {
-        "quantity": 1.0,
-        "amount": 99.0,
-        "profit": 49.5
-      },
-      "凉感豆棉枕 小号": {
-        "quantity": 1.0,
-        "amount": 19.0,
-        "profit": 9.5
-      },
-      "传承粗布床单 2x2.4m": {
-        "quantity": 1.0,
-        "amount": 53.0,
-        "profit": 23.5
-      },
-      "星洛砂洗毯 2x2.2m": {
-        "quantity": 2.0,
-        "amount": 300.0,
-        "profit": 131.0
-      },
-      "清凉一梦记忆枕": {
-        "quantity": 2.0,
-        "amount": 138.0,
-        "profit": 69.0
-      },
-      "纱布枕套 大": {
-        "quantity": 1.0,
-        "amount": 49.0,
-        "profit": 24.5
-      },
-      "双层纱全棉棉花被 (1.2x1.5m)": {
-        "quantity": 1.0,
-        "amount": 89.0,
-        "profit": 44.5
-      },
-      "纯棉床笠 1.5×2": {
-        "quantity": 1.0,
-        "amount": 119.0,
-        "profit": 59.5
-      }
-    },
     "2026-08-04": {
       "吉祥小马枕": {
         "quantity": 1.0,
@@ -1827,6 +1760,7 @@
         "amount": 59.0,
         "profit": 29.5
       }
-    }
+    },
+    "2026-09-02": {}
   }
 }
