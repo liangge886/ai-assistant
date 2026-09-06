@@ -1,50 +1,8 @@
 {
   "store_name": "觉爱家纺肥城店",
-  "last_updated": "2026-09-05",
-  "window_start": "2026-08-07",
+  "last_updated": "2026-09-06",
+  "window_start": "2026-08-08",
   "daily": {
-    "2026-08-07": {
-      "1.5x2米凉感丝夏被": {
-        "quantity": 1.0,
-        "amount": 59.0,
-        "profit": 29.5
-      },
-      "开学季凉感面包枕": {
-        "quantity": 1.0,
-        "amount": 59.0,
-        "profit": 33.0
-      },
-      "亚朵星球三代护颈软枕 大号": {
-        "quantity": 1.0,
-        "amount": 89.0,
-        "profit": 44.5
-      },
-      "星洛砂洗毯 2x2.2m": {
-        "quantity": 2.0,
-        "amount": 320.0,
-        "profit": 151.0
-      },
-      "纱布枕套 大": {
-        "quantity": 1.0,
-        "amount": 49.0,
-        "profit": 24.5
-      },
-      "全棉斜纹床单": {
-        "quantity": 1.0,
-        "amount": 59.0,
-        "profit": 29.5
-      },
-      "高端全棉数码印花四件套": {
-        "quantity": 1.0,
-        "amount": 190.0,
-        "profit": 90.5
-      },
-      "特价粗布床单（2*2.3）": {
-        "quantity": 1.0,
-        "amount": 39.0,
-        "profit": 19.5
-      }
-    },
     "2026-08-08": {
       "纯棉床单 2.4×2.3m": {
         "quantity": 1.0,
@@ -1820,6 +1778,83 @@
         "quantity": 1.0,
         "amount": 15.0,
         "profit": 7.5
+      }
+    },
+    "2026-09-06": {
+      "永恒之心凝胶枕": {
+        "quantity": 1.0,
+        "amount": 89.0,
+        "profit": 39.5
+      },
+      "星洛砂洗毯 2x2.2m": {
+        "quantity": 2.0,
+        "amount": 302.0,
+        "profit": 133.0
+      },
+      "莱卡学生乳胶枕": {
+        "quantity": 1.0,
+        "amount": 59.0,
+        "profit": 29.5
+      },
+      "水洗棉枕套40*60": {
+        "quantity": 1.0,
+        "amount": 15.0,
+        "profit": 7.5
+      },
+      "全棉斜纹枕套40*60": {
+        "quantity": 1.0,
+        "amount": 15.0,
+        "profit": 9.0
+      },
+      "清氧可水洗学生枕": {
+        "quantity": 1.0,
+        "amount": 89.0,
+        "profit": 46.0
+      },
+      "纯棉被罩 1.8×2.2m": {
+        "quantity": 1.0,
+        "amount": 79.0,
+        "profit": 39.5
+      },
+      "长绒棉绣花被套 (2x2.3)": {
+        "quantity": 2.0,
+        "amount": 270.0,
+        "profit": 121.0
+      },
+      "纯色小包边床盖 2×2.3m": {
+        "quantity": 1.0,
+        "amount": 79.0,
+        "profit": 43.0
+      },
+      "绵代尔印花床盖 2×2.3m": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 36.0
+      },
+      "开学季凉感面包枕": {
+        "quantity": 1.0,
+        "amount": 59.0,
+        "profit": 33.0
+      },
+      "米丘励志学生枕": {
+        "quantity": 1.0,
+        "amount": 39.0,
+        "profit": 19.5
+      },
+      "1.5x2米海风微澜暖被": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 24.5
+      },
+      "冰凌沫沫夏被": {
+        "quantity": 2.0,
+        "amount": 278.0,
+        "profit": 109.0
+      },
+      "锦氨宝宝夏被": {
+        "quantity": 2.0,
+        "amount": 160.0,
+        "profit": 71.0
       }
     }
   }
