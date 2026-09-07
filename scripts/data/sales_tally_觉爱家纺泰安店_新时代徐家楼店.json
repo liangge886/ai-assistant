@@ -1,75 +1,8 @@
 {
   "store_name": "觉爱家纺泰安店（新时代徐家楼店）",
-  "last_updated": "2026-09-06",
-  "window_start": "2026-08-08",
+  "last_updated": "2026-09-07",
+  "window_start": "2026-08-09",
   "daily": {
-    "2026-08-08": {
-      "团购凉感丝夏被1.5m": {
-        "quantity": 3.0,
-        "amount": 169.7,
-        "profit": 81.2
-      },
-      "糯棉冰沙夏被2m": {
-        "quantity": 1.0,
-        "amount": 109.6,
-        "profit": 45.1
-      },
-      "幼棉时代毛巾被1.2*1.5": {
-        "quantity": 1.0,
-        "amount": 67.1,
-        "profit": 27.6
-      },
-      "棉+绒圆角床盖2*2.2": {
-        "quantity": 1.0,
-        "amount": 129.0,
-        "profit": 69.0
-      },
-      "速干小方巾": {
-        "quantity": 4.0,
-        "amount": 3.79,
-        "profit": 1.79
-      },
-      "老粗布儿童枕": {
-        "quantity": 2.0,
-        "amount": 8.77,
-        "profit": 3.77
-      },
-      "方格软凉席1.8": {
-        "quantity": 1.0,
-        "amount": 148.1,
-        "profit": 63.6
-      },
-      "粗布荞麦枕": {
-        "quantity": 1.0,
-        "amount": 39.43,
-        "profit": 16.93
-      },
-      "团购凉感丝夏被2m": {
-        "quantity": 2.0,
-        "amount": 124.31,
-        "profit": 55.31
-      },
-      "全棉小边枕套48*74": {
-        "quantity": 1.0,
-        "amount": 26.97,
-        "profit": 9.97
-      },
-      "超洁晾干被1.5*2m": {
-        "quantity": 1.0,
-        "amount": 185.1,
-        "profit": 85.6
-      },
-      "草本零压枕": {
-        "quantity": 2.0,
-        "amount": 146.96,
-        "profit": 67.96
-      },
-      "帆布圆角三件套25*25": {
-        "quantity": 2.0,
-        "amount": 346.87,
-        "profit": 162.87
-      }
-    },
     "2026-08-09": {
       "特价条纹粗布床单2.5m": {
         "quantity": 1.0,
@@ -3095,6 +3028,63 @@
         "quantity": 2.0,
         "amount": 58.0,
         "profit": 28.0
+      }
+    },
+    "2026-09-07": {
+      "雅格丽加大夏凉被": {
+        "quantity": 1.0,
+        "amount": 109.75,
+        "profit": 49.75
+      },
+      "速干小方巾": {
+        "quantity": 1.0,
+        "amount": 0.85,
+        "profit": 0.35
+      },
+      "全棉床盖三件套（白边）2.3*2.55m": {
+        "quantity": 1.0,
+        "amount": 160.73,
+        "profit": 76.23
+      },
+      "棉纱多功能被子2*2.3": {
+        "quantity": 2.0,
+        "amount": 435.35,
+        "profit": 225.35
+      },
+      "棉纱床盖三件套2.5*2.7": {
+        "quantity": 2.0,
+        "amount": 435.35,
+        "profit": 205.35
+      },
+      "水洗棉枕套40*60": {
+        "quantity": 1.0,
+        "amount": 14.27,
+        "profit": 6.77
+      },
+      "特价纯色长绒棉枕套": {
+        "quantity": 2.0,
+        "amount": 58.09,
+        "profit": 34.09
+      },
+      "全棉纱布暗扣枕套40*60": {
+        "quantity": 3.0,
+        "amount": 52.27,
+        "profit": 23.77
+      },
+      "M4生物基云浮枕": {
+        "quantity": 2.0,
+        "amount": 384.48,
+        "profit": 184.48000000000002
+      },
+      "水洗布": {
+        "quantity": 4.5,
+        "amount": 112.5,
+        "profit": 56.25
+      },
+      "草本零压枕": {
+        "quantity": 1.0,
+        "amount": 76.16,
+        "profit": 36.66
       }
     }
   }
