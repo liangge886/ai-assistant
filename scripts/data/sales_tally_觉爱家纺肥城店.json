@@ -1,35 +1,8 @@
 {
   "store_name": "觉爱家纺肥城店",
-  "last_updated": "2026-09-09",
-  "window_start": "2026-08-11",
+  "last_updated": "2026-09-10",
+  "window_start": "2026-08-12",
   "daily": {
-    "2026-08-11": {
-      "小巴拉儿童枕": {
-        "quantity": 1.0,
-        "amount": 49.0,
-        "profit": 29.0
-      },
-      "双层纱全棉棉花被 (1.2x1.5m)": {
-        "quantity": 1.0,
-        "amount": 80.0,
-        "profit": 35.5
-      },
-      "特价粗布床单（2*2.3）": {
-        "quantity": 1.0,
-        "amount": 39.0,
-        "profit": 19.5
-      },
-      "全棉印花学子三件套": {
-        "quantity": 1.0,
-        "amount": 149.0,
-        "profit": 24.0
-      },
-      "原棉老粗布三件套": {
-        "quantity": 9.0,
-        "amount": 351.0,
-        "profit": 108.0
-      }
-    },
     "2026-08-12": {
       "原棉老粗布三件套": {
         "quantity": 5.0,
@@ -1895,6 +1868,43 @@
         "quantity": 1.0,
         "amount": 160.0,
         "profit": 60.5
+      }
+    },
+    "2026-09-10": {
+      "1.5x2米全棉夏被": {
+        "quantity": 1.0,
+        "amount": 70.0,
+        "profit": 25.5
+      },
+      "皱皱纱四件套": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 49.5
+      },
+      "舒柔健康学生枕": {
+        "quantity": 1.0,
+        "amount": 59.0,
+        "profit": 32.0
+      },
+      "全棉斜纹枕套40*60": {
+        "quantity": 1.0,
+        "amount": 15.0,
+        "profit": 9.0
+      },
+      "觉爱经典格子床垫": {
+        "quantity": 1.0,
+        "amount": 120.0,
+        "profit": 55.0
+      },
+      "棉麻床垫": {
+        "quantity": 1.0,
+        "amount": 129.0,
+        "profit": 69.0
+      },
+      "千寻繁花四件套（规格未注明）": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 42.0
       }
     }
   }
