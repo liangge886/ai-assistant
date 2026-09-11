@@ -1,20 +1,8 @@
 {
   "store_name": "觉爱家纺泰安店（新时代徐家楼店）",
-  "last_updated": "2026-09-10",
-  "window_start": "2026-08-12",
+  "last_updated": "2026-09-11",
+  "window_start": "2026-08-13",
   "daily": {
-    "2026-08-12": {
-      "喜竹纳福学生枕（小）": {
-        "quantity": 2.0,
-        "amount": 158.0,
-        "profit": 79.0
-      },
-      "儿童枕套白花边30*50": {
-        "quantity": 2.0,
-        "amount": 20.0,
-        "profit": 10.0
-      }
-    },
     "2026-08-13": {
       "开学季凉感面包枕": {
         "quantity": 1.0,
@@ -2960,6 +2948,63 @@
         "quantity": 1.0,
         "amount": 379.0,
         "profit": 189.0
+      }
+    },
+    "2026-09-11": {
+      "羊绒蛋白春秋被2米": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 52.0
+      },
+      "定制全棉被罩2*2.3": {
+        "quantity": 1.0,
+        "amount": 89.0,
+        "profit": 44.5
+      },
+      "粗布中枕（圆形)": {
+        "quantity": 1.0,
+        "amount": 12.0,
+        "profit": 6.5
+      },
+      "千寻繁华/如愿四件套": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 44.0
+      },
+      "红石榴凝胶枕10cm": {
+        "quantity": 2.0,
+        "amount": 530.1,
+        "profit": 270.1
+      },
+      "方格软凉席1.5": {
+        "quantity": 1.0,
+        "amount": 126.6,
+        "profit": 52.1
+      },
+      "安心眠枕套": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 13.954
+      },
+      "M4生物基云浮枕": {
+        "quantity": 1.0,
+        "amount": 199.0,
+        "profit": 99.0
+      },
+      "全棉印花学生三件套": {
+        "quantity": 1.0,
+        "amount": 165.89,
+        "profit": 129.89
+      },
+      "全棉床笠0.9": {
+        "quantity": 1.0,
+        "amount": 87.36,
+        "profit": 42.36
+      },
+      "黑金1代枕12cm": {
+        "quantity": 1.0,
+        "amount": 146.25,
+        "profit": 78.25
       }
     }
   }
