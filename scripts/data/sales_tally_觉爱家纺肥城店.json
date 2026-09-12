@@ -1,35 +1,8 @@
 {
   "store_name": "觉爱家纺肥城店",
-  "last_updated": "2026-09-11",
-  "window_start": "2026-08-13",
+  "last_updated": "2026-09-12",
+  "window_start": "2026-08-14",
   "daily": {
-    "2026-08-13": {
-      "山茶花秋密": {
-        "quantity": 1.0,
-        "amount": 300.0,
-        "profit": 130.5
-      },
-      "天丝绒单床盖 2x2.3m": {
-        "quantity": 2.0,
-        "amount": 260.0,
-        "profit": 111.0
-      },
-      "冰面包枕": {
-        "quantity": 1.0,
-        "amount": 49.0,
-        "profit": 24.5
-      },
-      "龙凤双喜-四件套": {
-        "quantity": 1.0,
-        "amount": 539.0,
-        "profit": 240.0
-      },
-      "原棉老粗布三件套": {
-        "quantity": 2.0,
-        "amount": 78.0,
-        "profit": 24.0
-      }
-    },
     "2026-08-14": {
       "纱布枕套 小": {
         "quantity": 1.0,
@@ -1936,6 +1909,7 @@
         "amount": 169.0,
         "profit": 59.0
       }
-    }
+    },
+    "2026-09-12": {}
   }
 }
