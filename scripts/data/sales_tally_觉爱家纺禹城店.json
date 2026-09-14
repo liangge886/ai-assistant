@@ -1,50 +1,8 @@
 {
   "store_name": "觉爱家纺禹城店",
-  "last_updated": "2026-09-13",
-  "window_start": "2026-08-15",
+  "last_updated": "2026-09-14",
+  "window_start": "2026-08-16",
   "daily": {
-    "2026-08-15": {
-      "觉小暖太空恒温春秋被": {
-        "quantity": 1.0,
-        "amount": 99.0,
-        "profit": 47.0
-      },
-      "全棉印花学子三件套": {
-        "quantity": 1.0,
-        "amount": 170.0,
-        "profit": 72.0
-      },
-      "盟结良缘-四件套": {
-        "quantity": 1.0,
-        "amount": 1259.0,
-        "profit": 600.0
-      },
-      "5A抗菌冬被3.0": {
-        "quantity": 1.0,
-        "amount": 139.0,
-        "profit": 76.0
-      },
-      "49冰面包枕": {
-        "quantity": 3.0,
-        "amount": 147.0,
-        "profit": 73.5
-      },
-      "39菱形猫肚枕": {
-        "quantity": 2.0,
-        "amount": 78.0,
-        "profit": 39.0
-      },
-      "79马上有钱财运枕": {
-        "quantity": 1.0,
-        "amount": 79.0,
-        "profit": 39.5
-      },
-      "69床单（老粗布）": {
-        "quantity": 1.0,
-        "amount": 69.0,
-        "profit": 29.0
-      }
-    },
     "2026-08-16": {},
     "2026-08-17": {
       "全棉AB学生三件套": {
@@ -859,6 +817,18 @@
         "quantity": 1.0,
         "amount": 59.0,
         "profit": 33.0
+      }
+    },
+    "2026-09-14": {
+      "99沙发垫": {
+        "quantity": 2.0,
+        "amount": 198.0,
+        "profit": 90.0
+      },
+      "沙发巾（9元/块）": {
+        "quantity": 6.0,
+        "amount": 54.0,
+        "profit": 24.0
       }
     }
   }
