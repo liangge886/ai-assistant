@@ -1,235 +1,8 @@
 {
   "store_name": "觉爱家纺泰安店（新时代徐家楼店）",
-  "last_updated": "2026-09-15",
-  "window_start": "2026-08-17",
+  "last_updated": "2026-09-16",
+  "window_start": "2026-08-18",
   "daily": {
-    "2026-08-17": {
-      "竹纤维三件套2.5": {
-        "quantity": 1.0,
-        "amount": 276.27,
-        "profit": 136.27
-      },
-      "零感记忆枕（12cm）": {
-        "quantity": 1.0,
-        "amount": 94.64,
-        "profit": 49.64
-      },
-      "活性数码新疆棉四件套（t）": {
-        "quantity": 1.0,
-        "amount": 190.23,
-        "profit": 60.23
-      },
-      "高端全棉数码印花四件套": {
-        "quantity": 2.0,
-        "amount": 380.46,
-        "profit": 160.46
-      },
-      "特价条纹粗布床单2m": {
-        "quantity": 1.0,
-        "amount": 36.3,
-        "profit": 11.3
-      },
-      "特价枕头": {
-        "quantity": 2.0,
-        "amount": 191.16,
-        "profit": 91.16
-      },
-      "碎花面包荞麦枕55*30": {
-        "quantity": 1.0,
-        "amount": 45.62,
-        "profit": 22.62
-      },
-      "皱皱纱夏被2米": {
-        "quantity": 1.0,
-        "amount": 148.02,
-        "profit": 68.02
-      },
-      "蚕丝被手工费": {
-        "quantity": 2.0,
-        "amount": 38.97,
-        "profit": -1.03
-      },
-      "40S斜纹棉布": {
-        "quantity": 157.5,
-        "amount": 302.93,
-        "profit": 113.92999999999999
-      },
-      "未来之星儿童枕（大）": {
-        "quantity": 1.0,
-        "amount": 39.0,
-        "profit": 19.5
-      },
-      "水洗棉四件套": {
-        "quantity": 2.0,
-        "amount": 398.0,
-        "profit": 199.0
-      },
-      "舒梦零压枕": {
-        "quantity": 1.0,
-        "amount": 59.0,
-        "profit": 31.0
-      },
-      "加工费": {
-        "quantity": 1.0,
-        "amount": 6.0,
-        "profit": 0.0
-      },
-      "水洗印花布（特）": {
-        "quantity": 72.5,
-        "amount": 188.33,
-        "profit": 94.08
-      },
-      "觉爱洗衣液": {
-        "quantity": 1.0,
-        "amount": 5.99,
-        "profit": -0.108
-      },
-      "90零压力慢回弹床垫": {
-        "quantity": 3.0,
-        "amount": 730.7,
-        "profit": 340.7
-      },
-      "水洗棉褥子": {
-        "quantity": 1.0,
-        "amount": 88.92,
-        "profit": 38.92
-      },
-      "羊绒蛋白枕": {
-        "quantity": 2.0,
-        "amount": 77.08,
-        "profit": 75.08
-      },
-      "特价云舒棉床盖2米": {
-        "quantity": 1.0,
-        "amount": 58.31,
-        "profit": 28.31
-      },
-      "全棉小边枕套48*74": {
-        "quantity": 1.0,
-        "amount": 28.66,
-        "profit": 11.66
-      },
-      "儿童A类双层纱夏被1.2*1.5m": {
-        "quantity": 1.0,
-        "amount": 87.96,
-        "profit": 43.46
-      },
-      "双面全棉床盖2*2.2m": {
-        "quantity": 1.0,
-        "amount": 127.49,
-        "profit": 62.99
-      },
-      "原棉大豆春秋被1.5": {
-        "quantity": 2.0,
-        "amount": 443.22,
-        "profit": 213.22
-      },
-      "棉花": {
-        "quantity": 4.0,
-        "amount": 69.67,
-        "profit": 21.67
-      },
-      "垃圾桶": {
-        "quantity": 2.0,
-        "amount": 5.8100000000000005,
-        "profit": 2.8099999999999996
-      },
-      "棉被手工费": {
-        "quantity": 4.0,
-        "amount": 58.06,
-        "profit": -1.94
-      },
-      "衬布": {
-        "quantity": 42.0,
-        "amount": 60.97,
-        "profit": 23.17
-      },
-      "仟佰格浴巾": {
-        "quantity": 1.0,
-        "amount": 43.67,
-        "profit": 17.67
-      },
-      "零感记忆枕（8cm）": {
-        "quantity": 1.0,
-        "amount": 76.66,
-        "profit": 40.66
-      },
-      "喜竹纳福学生枕（大）": {
-        "quantity": 1.0,
-        "amount": 84.55,
-        "profit": 40.05
-      },
-      "水洗棉枕套40*60": {
-        "quantity": 1.0,
-        "amount": 14.25,
-        "profit": 6.75
-      },
-      "觉爱格子床垫0.9*2": {
-        "quantity": 1.0,
-        "amount": 122.55,
-        "profit": 58.05
-      },
-      "天地情毛巾被1.5": {
-        "quantity": 1.0,
-        "amount": 61.64,
-        "profit": 27.14
-      },
-      "三琪纱布巾被2m": {
-        "quantity": 1.0,
-        "amount": 150.96,
-        "profit": 66.46
-      },
-      "清凉一梦深睡记忆枕（大）": {
-        "quantity": 2.0,
-        "amount": 138.0,
-        "profit": 72.0
-      },
-      "开学季凉感面包枕": {
-        "quantity": 1.0,
-        "amount": 59.0,
-        "profit": 33.0
-      },
-      "竹纤维精加工三件套1.8": {
-        "quantity": 1.0,
-        "amount": 296.65,
-        "profit": 122.15
-      },
-      "帆布圆角三件套25*25": {
-        "quantity": 1.0,
-        "amount": 169.15,
-        "profit": 77.15
-      },
-      "儿童乳胶枕小号": {
-        "quantity": 1.0,
-        "amount": 49.0,
-        "profit": 23.0
-      },
-      "风吹麦浪软席三件套1.5": {
-        "quantity": 1.0,
-        "amount": 126.65,
-        "profit": 52.15
-      },
-      "草本零压枕": {
-        "quantity": 1.0,
-        "amount": 79.0,
-        "profit": 39.5
-      },
-      "全棉纱布暗扣枕套40*60": {
-        "quantity": 1.0,
-        "amount": 18.0,
-        "profit": 8.5
-      },
-      "汗麻成人枕巾": {
-        "quantity": 1.0,
-        "amount": 39.0,
-        "profit": 19.5
-      },
-      "安心眠枕套": {
-        "quantity": 1.0,
-        "amount": 49.0,
-        "profit": 13.954
-      }
-    },
     "2026-08-18": {
       "冰凌沫沫夏被2m": {
         "quantity": 1.0,
@@ -2900,6 +2673,93 @@
         "quantity": 1.0,
         "amount": 179.5,
         "profit": 89.5
+      }
+    },
+    "2026-09-16": {
+      "莱卡学生乳胶枕": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 37.0
+      },
+      "特价全棉被套1.6米": {
+        "quantity": 2.0,
+        "amount": 78.0,
+        "profit": 26.0
+      },
+      "棉茵符针织豆豆被春秋2m": {
+        "quantity": 1.0,
+        "amount": 89.0,
+        "profit": 31.0
+      },
+      "觉爱超睡眠枕": {
+        "quantity": 2.0,
+        "amount": 38.0,
+        "profit": 18.2
+      },
+      "老粗布沙发垫": {
+        "quantity": 1.0,
+        "amount": 89.0,
+        "profit": 44.5
+      },
+      "舒香调夏被1.5*2m": {
+        "quantity": 1.0,
+        "amount": 96.88,
+        "profit": 42.38
+      },
+      "清氧可水洗儿童枕": {
+        "quantity": 1.0,
+        "amount": 61.32,
+        "profit": 28.32
+      },
+      "40S斜纹棉布": {
+        "quantity": 126.0,
+        "amount": 252.0,
+        "profit": 100.8
+      },
+      "加工费": {
+        "quantity": 2.0,
+        "amount": 12.0,
+        "profit": 0.0
+      },
+      "羊绒蛋白春秋被2米": {
+        "quantity": 1.0,
+        "amount": 90.31,
+        "profit": 43.31
+      },
+      "莱赛尔天丝夏被2*2.3m": {
+        "quantity": 1.0,
+        "amount": 126.79,
+        "profit": 57.29
+      },
+      "透气可水洗硅胶枕": {
+        "quantity": 1.0,
+        "amount": 113.05,
+        "profit": 56.05
+      },
+      "未来之星儿童枕（小）": {
+        "quantity": 1.0,
+        "amount": 29.0,
+        "profit": 14.206
+      },
+      "生态麻坐垫": {
+        "quantity": 1.0,
+        "amount": 16.0,
+        "profit": 8.0
+      },
+      "零感记忆枕（6cm）": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 37.0
+      },
+      "硅胶舒睡成长枕4cm": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 49.0
+      },
+      "老粗布儿童枕": {
+        "quantity": 1.0,
+        "amount": 5.0,
+        "profit": 2.5
       }
     }
   }
