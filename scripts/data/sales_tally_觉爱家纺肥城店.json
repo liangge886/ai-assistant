@@ -1,80 +1,8 @@
 {
   "store_name": "觉爱家纺肥城店",
-  "last_updated": "2026-09-16",
-  "window_start": "2026-08-18",
+  "last_updated": "2026-09-17",
+  "window_start": "2026-08-19",
   "daily": {
-    "2026-08-18": {
-      "繁花床盖三件套 2.5x2.5m": {
-        "quantity": 1.0,
-        "amount": 240.0,
-        "profit": 95.5
-      },
-      "双层纱大豆蛋白被 (2x2.3m)": {
-        "quantity": 1.0,
-        "amount": 143.0,
-        "profit": 58.5
-      },
-      "2x2.3米冰凌沫沫凉感夏被": {
-        "quantity": 1.0,
-        "amount": 159.0,
-        "profit": 64.5
-      },
-      "幼眠时代朱荷纱罗童毯 1.2×1.5米": {
-        "quantity": 1.0,
-        "amount": 67.0,
-        "profit": 27.5
-      },
-      "亚朵星球三代护颈软枕 中号": {
-        "quantity": 2.0,
-        "amount": 150.0,
-        "profit": 71.0
-      },
-      "水洗棉天然乳胶枕": {
-        "quantity": 1.0,
-        "amount": 89.0,
-        "profit": 44.0
-      },
-      "全棉拼角枕套30*50": {
-        "quantity": 2.0,
-        "amount": 20.0,
-        "profit": 8.0
-      },
-      "学生全棉三件套": {
-        "quantity": 1.0,
-        "amount": 159.0,
-        "profit": 79.5
-      },
-      "原棉老粗布三件套": {
-        "quantity": 5.0,
-        "amount": 195.0,
-        "profit": 60.0
-      },
-      "开学季凉感面包枕": {
-        "quantity": 1.0,
-        "amount": 59.0,
-        "profit": 33.0
-      },
-      "1.5x2米棉小格水洗布夏被": {
-        "quantity": 2.0,
-        "amount": 178.0,
-        "profit": 79.0
-      },
-      "36枕套（全棉纯色）": {
-        "quantity": 1.0,
-        "amount": 36.0,
-        "profit": 18.0
-      },
-      "星洛砂洗毯 2x2.2m": {
-        "quantity": 1.0,
-        "amount": 152.0,
-        "profit": 67.5
-      },
-      "纯棉床单 2.1×2.3m": {
-        "quantity": 1.0,
-        "amount": 48.0,
-        "profit": 23.5
-      }
-    },
     "2026-08-19": {
       "舒梦零压枕": {
         "quantity": 1.0,
@@ -1887,6 +1815,113 @@
         "quantity": 4.0,
         "amount": 396.0,
         "profit": 138.0
+      }
+    },
+    "2026-09-17": {
+      "树屿全棉床单 2.3×2.5m": {
+        "quantity": 2.0,
+        "amount": 138.0,
+        "profit": 72.0
+      },
+      "定制全棉床单 2.5×2.3m": {
+        "quantity": 2.0,
+        "amount": 80.0,
+        "profit": 25.0
+      },
+      "定制全棉被罩 2×2.3m": {
+        "quantity": 2.0,
+        "amount": 80.0,
+        "profit": -9.0
+      },
+      "定制全棉被罩 1.5*2m": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 12.0
+      },
+      "定制全棉枕套": {
+        "quantity": 2.0,
+        "amount": 38.0,
+        "profit": 9.0
+      },
+      "天丝加绒水洗床盖（规格未注明）": {
+        "quantity": 1.0,
+        "amount": 125.0,
+        "profit": 60.0
+      },
+      "香草美人-四件套": {
+        "quantity": 1.0,
+        "amount": 550.0,
+        "profit": 265.0
+      },
+      "2x2.3米冰凌沫沫凉感夏被": {
+        "quantity": 1.0,
+        "amount": 159.0,
+        "profit": 64.5
+      },
+      "冰凌沫沫夏被": {
+        "quantity": 2.0,
+        "amount": 270.0,
+        "profit": 101.0
+      },
+      "爱意绵绵春秋被2米": {
+        "quantity": 1.0,
+        "amount": 160.0,
+        "profit": 70.0
+      },
+      "床裙款凉豆豆软席": {
+        "quantity": 1.0,
+        "amount": 180.0,
+        "profit": 65.5
+      },
+      "全棉裙边床盖三件套（规格未注明）": {
+        "quantity": 2.0,
+        "amount": 274.0,
+        "profit": 104.0
+      },
+      "宝宝绒床盖 2x2.3m": {
+        "quantity": 2.0,
+        "amount": 198.0,
+        "profit": 89.0
+      },
+      "(棉绒) 宝宝绒床盖 1.5x2m": {
+        "quantity": 2.0,
+        "amount": 178.0,
+        "profit": 89.0
+      },
+      "竹纤维三件套 2.5x2.6m": {
+        "quantity": 1.0,
+        "amount": 228.0,
+        "profit": 93.5
+      },
+      "1.5x2米凉感丝夏被": {
+        "quantity": 1.0,
+        "amount": 50.0,
+        "profit": 20.5
+      },
+      "绵代尔印花床盖 2×2.3m": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 36.0
+      },
+      "双层纱大豆蛋白夏被 (1.5x2m)": {
+        "quantity": 1.0,
+        "amount": 120.0,
+        "profit": 45.5
+      },
+      "舒香丝绸夏被": {
+        "quantity": 1.0,
+        "amount": 50.0,
+        "profit": 20.5
+      },
+      "1.5x2米针织绵豆豆被": {
+        "quantity": 1.0,
+        "amount": 79.0,
+        "profit": 34.5
+      },
+      "小毛巾": {
+        "quantity": 1.0,
+        "amount": 0.0,
+        "profit": 0.0
       }
     }
   }
