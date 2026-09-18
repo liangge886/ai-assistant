@@ -1,65 +1,8 @@
 {
   "store_name": "觉爱家纺肥城店",
-  "last_updated": "2026-09-17",
-  "window_start": "2026-08-19",
+  "last_updated": "2026-09-18",
+  "window_start": "2026-08-20",
   "daily": {
-    "2026-08-19": {
-      "舒梦零压枕": {
-        "quantity": 1.0,
-        "amount": 59.0,
-        "profit": 29.5
-      },
-      "纱布枕套 大": {
-        "quantity": 2.0,
-        "amount": 98.0,
-        "profit": 27.908
-      },
-      "美度决明子枕": {
-        "quantity": 1.0,
-        "amount": 49.0,
-        "profit": 26.0
-      },
-      "优尔思零压床垫0.9*1.95m": {
-        "quantity": 2.0,
-        "amount": 449.0,
-        "profit": 229.0
-      },
-      "清凉一梦记忆枕": {
-        "quantity": 1.0,
-        "amount": 60.0,
-        "profit": 25.5
-      },
-      "双层纱全棉棉花被 (1.2x1.5m)": {
-        "quantity": 1.0,
-        "amount": 89.0,
-        "profit": 44.5
-      },
-      "2x2.3米冰凌沫沫凉感夏被": {
-        "quantity": 1.0,
-        "amount": 150.0,
-        "profit": 55.5
-      },
-      "星洛砂洗毯 2x2.2m": {
-        "quantity": 1.0,
-        "amount": 150.0,
-        "profit": 65.5
-      },
-      "原棉老粗布三件套": {
-        "quantity": 3.0,
-        "amount": 117.0,
-        "profit": 36.0
-      },
-      "冰面包枕": {
-        "quantity": 1.0,
-        "amount": 49.0,
-        "profit": 24.5
-      },
-      "爱意绵绵大豆春秋被1.6米": {
-        "quantity": 1.0,
-        "amount": 149.0,
-        "profit": 81.0
-      }
-    },
     "2026-08-20": {
       "2x2.3米冰凌沫沫凉感夏被": {
         "quantity": 1.0,
@@ -1922,6 +1865,83 @@
         "quantity": 1.0,
         "amount": 0.0,
         "profit": 0.0
+      }
+    },
+    "2026-09-18": {
+      "棉加绒水洗床盖 2m": {
+        "quantity": 1.0,
+        "amount": 107.0,
+        "profit": 50.0
+      },
+      "棉加绒水洗床盖 0.9m": {
+        "quantity": 1.0,
+        "amount": 56.0,
+        "profit": 28.0
+      },
+      "29茶叶枕": {
+        "quantity": 1.0,
+        "amount": 29.0,
+        "profit": 14.0
+      },
+      "直角凉豆茶枕": {
+        "quantity": 1.0,
+        "amount": 25.0,
+        "profit": 12.5
+      },
+      "定制全棉被罩 2×2.3m": {
+        "quantity": 1.0,
+        "amount": 40.0,
+        "profit": -4.5
+      },
+      "定制全棉床单 2.5×2.3m": {
+        "quantity": 1.0,
+        "amount": 40.0,
+        "profit": 12.5
+      },
+      "定制全棉枕套": {
+        "quantity": 1.0,
+        "amount": 19.0,
+        "profit": 4.5
+      },
+      "华美绽放-四件套": {
+        "quantity": 1.0,
+        "amount": 656.0,
+        "profit": 297.0
+      },
+      "全棉斜纹加厚被套 (1.8x2.2)": {
+        "quantity": 1.0,
+        "amount": 90.0,
+        "profit": 40.5
+      },
+      "2x2.3米海风微澜夏被": {
+        "quantity": 1.0,
+        "amount": 105.0,
+        "profit": 20.5
+      },
+      "棉加绒水洗床盖 1.5m": {
+        "quantity": 1.0,
+        "amount": 100.0,
+        "profit": 52.0
+      },
+      "定制全棉床单 1.6×2.3m": {
+        "quantity": 1.0,
+        "amount": 39.0,
+        "profit": 21.5
+      },
+      "水洗棉天然乳胶枕": {
+        "quantity": 1.0,
+        "amount": 89.0,
+        "profit": 44.0
+      },
+      "长绒棉绣花被套 (2x2.3)": {
+        "quantity": 1.0,
+        "amount": 130.0,
+        "profit": 55.5
+      },
+      "树屿全棉床单 2.3×2.5m": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 36.0
       }
     }
   }
