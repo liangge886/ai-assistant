@@ -1,30 +1,8 @@
 {
   "store_name": "觉爱家纺禹城店",
-  "last_updated": "2026-09-23",
-  "window_start": "2026-08-25",
+  "last_updated": "2026-09-24",
+  "window_start": "2026-08-26",
   "daily": {
-    "2026-08-25": {
-      "169冰凌沫沫凉感夏被": {
-        "quantity": 1.0,
-        "amount": 169.0,
-        "profit": 84.5
-      },
-      "69沙洗爱心枕": {
-        "quantity": 1.0,
-        "amount": 69.0,
-        "profit": 34.5
-      },
-      "69被罩 1.6*2.1": {
-        "quantity": 2.0,
-        "amount": 138.0,
-        "profit": 69.0
-      },
-      "99纯棉夏被": {
-        "quantity": 1.0,
-        "amount": 99.0,
-        "profit": 34.0
-      }
-    },
     "2026-08-26": {
       "优尔思零压床垫0.9*1.95m": {
         "quantity": 1.0,
@@ -820,6 +798,18 @@
         "quantity": 1.0,
         "amount": 79.0,
         "profit": 24.0
+      }
+    },
+    "2026-09-24": {
+      "黑金4代枕12cm": {
+        "quantity": 1.0,
+        "amount": 360.0,
+        "profit": 313.333
+      },
+      "全棉AB学生三件套": {
+        "quantity": 1.0,
+        "amount": 169.0,
+        "profit": 89.0
       }
     }
   }

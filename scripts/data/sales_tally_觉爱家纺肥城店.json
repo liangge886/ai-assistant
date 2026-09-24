@@ -1,80 +1,8 @@
 {
   "store_name": "觉爱家纺肥城店",
-  "last_updated": "2026-09-23",
-  "window_start": "2026-08-25",
+  "last_updated": "2026-09-24",
+  "window_start": "2026-08-26",
   "daily": {
-    "2026-08-25": {
-      "羊绒蛋白春秋被1.5米": {
-        "quantity": 1.0,
-        "amount": 79.0,
-        "profit": 40.0
-      },
-      "亚朵星球三代护颈软枕 中号": {
-        "quantity": 1.0,
-        "amount": 71.0,
-        "profit": 31.5
-      },
-      "29枕套（信封加大）": {
-        "quantity": 1.0,
-        "amount": 29.0,
-        "profit": 14.0
-      },
-      "学生全棉三件套": {
-        "quantity": 1.0,
-        "amount": 143.0,
-        "profit": 63.5
-      },
-      "觉爱零压床垫": {
-        "quantity": 1.0,
-        "amount": 224.0,
-        "profit": 89.0
-      },
-      "开学季凉感面包枕": {
-        "quantity": 1.0,
-        "amount": 53.0,
-        "profit": 27.0
-      },
-      "原棉大豆春秋被1.5": {
-        "quantity": 1.0,
-        "amount": 206.0,
-        "profit": 91.0
-      },
-      "羊绒蛋白枕": {
-        "quantity": 1.0,
-        "amount": 39.0,
-        "profit": 20.0
-      },
-      "双面纯棉床盖 1.5x2.2m": {
-        "quantity": 1.0,
-        "amount": 89.0,
-        "profit": 39.5
-      },
-      "星洛砂洗毯 2x2.2m": {
-        "quantity": 1.0,
-        "amount": 150.0,
-        "profit": 65.5
-      },
-      "水洗棉天然乳胶枕": {
-        "quantity": 2.0,
-        "amount": 178.0,
-        "profit": 88.0
-      },
-      "清凉一梦记忆枕": {
-        "quantity": 2.0,
-        "amount": 138.0,
-        "profit": 69.0
-      },
-      "宽边老粗布三件套（2.5*2.5）": {
-        "quantity": 1.0,
-        "amount": 169.0,
-        "profit": 69.5
-      },
-      "马上有钱枕": {
-        "quantity": 1.0,
-        "amount": 89.0,
-        "profit": 44.5
-      }
-    },
     "2026-08-26": {
       "2x2.3米海风微澜夏被": {
         "quantity": 1.0,
@@ -1782,6 +1710,33 @@
         "quantity": 2.0,
         "amount": 1708.0,
         "profit": 809.0
+      }
+    },
+    "2026-09-24": {
+      "宝宝绒床盖 2x2.3m": {
+        "quantity": 1.0,
+        "amount": 99.0,
+        "profit": 44.5
+      },
+      "羊绒蛋白枕": {
+        "quantity": 2.0,
+        "amount": 78.0,
+        "profit": 40.0
+      },
+      "儿童大通荞麦枕": {
+        "quantity": 2.0,
+        "amount": 58.0,
+        "profit": 29.0
+      },
+      "棉加绒水洗床盖 2m": {
+        "quantity": 2.0,
+        "amount": 220.0,
+        "profit": 106.0
+      },
+      "两层竹棉盖毯 1.2×1.5米": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 24.5
       }
     }
   }
