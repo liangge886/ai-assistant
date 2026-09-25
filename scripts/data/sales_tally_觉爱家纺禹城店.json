@@ -1,30 +1,8 @@
 {
   "store_name": "觉爱家纺禹城店",
-  "last_updated": "2026-09-24",
-  "window_start": "2026-08-26",
+  "last_updated": "2026-09-25",
+  "window_start": "2026-08-27",
   "daily": {
-    "2026-08-26": {
-      "优尔思零压床垫0.9*1.95m": {
-        "quantity": 1.0,
-        "amount": 194.0,
-        "profit": 84.0
-      },
-      "全棉AB学生三件套": {
-        "quantity": 1.0,
-        "amount": 169.0,
-        "profit": 89.0
-      },
-      "59颈部助眠分区枕": {
-        "quantity": 1.0,
-        "amount": 59.0,
-        "profit": 29.0
-      },
-      "开学季凉感面包枕": {
-        "quantity": 1.0,
-        "amount": 59.0,
-        "profit": 33.0
-      }
-    },
     "2026-08-27": {
       "99糯棉冰纱两用夏凉被": {
         "quantity": 1.0,
@@ -810,6 +788,28 @@
         "quantity": 1.0,
         "amount": 169.0,
         "profit": 89.0
+      }
+    },
+    "2026-09-25": {
+      "清凉一梦深睡记忆枕（大）": {
+        "quantity": 1.0,
+        "amount": 69.0,
+        "profit": 34.0
+      },
+      "定制全棉床单2*2.3": {
+        "quantity": 1.0,
+        "amount": 49.0,
+        "profit": 24.5
+      },
+      "全棉裙边床盖三件套": {
+        "quantity": 1.0,
+        "amount": 149.0,
+        "profit": 64.0
+      },
+      "定制全棉床单1.6*2.3": {
+        "quantity": 1.0,
+        "amount": 39.0,
+        "profit": 21.5
       }
     }
   }
